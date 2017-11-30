@@ -1,0 +1,194 @@
+"","English.name","Japanese.name","Transcription","Katakana.reading","Picture.naming","Cognate.status","Japanese..L1..age.of.acquisition","English..L2..familiarity","Concreteness..L1.","No.Trans.L1.L2","No.Trans.L2.L1","NoM.L1","NoM.L2","Phonological.similarity","Semantic.similarity","subtlexzipf","Borrowed","age"
+"1","access","アクセス","akusesu","アクセス","No","C",4.5,4.8,3.4,1,5,1,1,3,3.9,10.3,NA,NA
+"2","acid","酸","san","サン","No","NC",4.8,3.5,4,1,3,1,1,1.2,4.5,8.35,"1. clearly borrowed","Old Japanese"
+"3","aid","援助","enjo","エンジョ","No","NC",4.4,3.3,2.9,5,7,1,2,1.4,4.1,9.84,"1. clearly borrowed","Late Old Japanese"
+"4","arm","腕","ude","ウデ","Yes","NC",4,3.6,5.4,1,2,1,2,1,4.2,9.31,"5. no evidence for borrowing","Late Old Japanese"
+"5","arrow","矢印","yajirushi","ヤジルシ","Yes","NC",3.4,3.4,4.4,4,1,2,1,1,3.3,7.12,"5. no evidence for borrowing","Old Japanese"
+"6","ashtray","灰皿","haizara","ハイザラ","Yes","NC",4.2,2,5.4,1,2,2,1,1.1,4.1,6.33,NA,NA
+"7","balloon","風船","fuusen","フウセン","Yes","NC",3.6,3.3,5.6,1,2,1,2,1,4.7,6.06,NA,NA
+"8","banana","バナナ","banana","バナナ","Yes","C",3.3,4,5.7,1,1,1,1,3.4,4.9,7.93,"1. clearly borrowed","Early Modern Japanese"
+"9","bed","ベッド","beddo","ベッド","Yes","C",3.9,4.8,5.7,1,1,1,1,3.7,4.7,9.15,"1. clearly borrowed","Modern Japanese"
+"10","bench","ベンチ","benchi","ベンチ","Yes","C",3.7,4.1,5.6,1,2,1,1,4.2,4.1,7.94,NA,NA
+"11","bicycle","自転車","jitensha","ジテンシャ","Yes","NC",4,4.1,5.7,2,1,1,1,1,4.7,9.55,"4. very little evidence for borrowing","Modern Japanese"
+"12","blank","空白","kuuhaku","クウハク","No","NC",4.6,4.1,4.3,2,3,1,1,1.1,3.7,7.55,NA,NA
+"13","bone","骨","hone","ホネ","Yes","NC",4.1,3.2,4.9,1,1,1,1,1,4.6,9.03,"5. no evidence for borrowing","Late Old Japanese"
+"14","bricks","レンガ","renga","レンガ","Yes","NC",3.4,2.9,5.7,2,3,2,1,1.1,3.7,7,"4. very little evidence for borrowing","Modern Japanese"
+"15","broom","ほうき","houki","ホウキ","Yes","NC",3.4,2.7,5.5,3,1,1,1,1,2.3,6.26,"5. no evidence for borrowing","Late Old Japanese"
+"16","brush","ブラシ","burashi","ブラシ","Yes","C",3.5,4,5.4,1,2,1,2,3.1,4.2,6.9,"1. clearly borrowed","Modern Japanese"
+"17","bus","バス","basu","バス","Yes","C",3.8,3.1,5.8,1,1,1,1,4.1,4.7,10.28,"1. clearly borrowed","Modern Japanese"
+"18","bust","胸","mune","ムネ","No","NC",4.3,3.2,4.9,2,3,1,1,1.2,4.2,9.64,"5. no evidence for borrowing","Old Japanese"
+"19","button","ボタン","botan","ボタン","Yes","C",3.8,4.1,5.6,1,1,1,1,3,4.2,9.37,"1. clearly borrowed","Early Modern Japanese"
+"20","cake","ケーキ","keeki","ケーキ","Yes","C",3.5,4.5,5.4,2,1,1,1,2.6,4.2,8.95,NA,NA
+"21","call","コール","kooru","コール","No","C",4.6,4.7,2.7,1,4,1,2,3,3.6,8.33,NA,NA
+"22","camel","ラクダ","rakuda","ラクダ","Yes","NC",3.2,3.5,5.7,1,2,1,1,1.1,4.1,5.89,"1. clearly borrowed","Old Japanese"
+"23","care","ケア","kea","ケア","No","C",4.6,4.1,2.8,1,8,1,2,3.9,4.1,9.02,NA,NA
+"24","career","キャリア","kyaria","キャリア","No","C",4.4,3.7,3.1,1,5,1,2,2.9,3.6,9.08,NA,NA
+"25","carrot","人参","ninjin","ニンジン","Yes","NC",3.6,3.1,6.1,1,1,1,1,1,4.8,6.84,NA,NA
+"26","case","ケース","keesu","ケース","No","C",4.3,4.5,3.7,1,6,1,2,3.3,3.8,10.22,NA,NA
+"27","caution","注意","chuui","チュウイ","No","NC",4.3,3.6,2.5,4,3,2,2,1.1,4.1,10.44,NA,NA
+"28","cherry","さくらんぼ","sakuranbo","サクランボ","Yes","NC",2.9,4,5.9,1,2,1,1,1,4.1,2.71,NA,NA
+"29","chimney","エントツ","entotsu","エントツ","Yes","NC",3,2.1,5.3,1,1,1,1,1,3.7,6.53,"3. perhaps borrowed","Modern Japanese"
+"30","class","クラス","kurasu","クラス","No","C",4,4.8,4.3,2,2,1,1,3.5,3.7,10.11,"5. no evidence for borrowing","Old Japanese"
+"31","classic","クラシック","kurashikku","クラシック","No","C",4.4,4.3,4.2,1,2,1,2,3.7,3.7,8.56,NA,NA
+"32","clear","クリアー","kuriaa","クリアー","No","C",4.4,4.2,2.6,1,6,1,3,3.7,3.6,6.7,"5. no evidence for borrowing","Old Japanese"
+"33","clue","手がかり","tegakari","テガカリ","No","NC",4.3,3.6,2.8,3,2,1,1,1.1,3.9,7.58,NA,NA
+"34","cool","クール","kuuru","クール","No","C",4.3,4.6,2.7,1,4,1,2,3.9,3.8,8.34,NA,NA
+"35","coral","サンゴ","sango","サンゴ","No","NC",4.2,2.8,5.3,1,1,1,1,1.2,3.7,5.93,NA,NA
+"36","core","コア","koa","コア","No","C",4.9,3.5,2.6,1,4,1,1,3.7,4.1,8.54,NA,NA
+"37","course","コース","koosu","コース","No","C",4.3,4.5,3.4,1,3,1,2,3.9,4.5,10.06,NA,NA
+"38","cow","牛","ushi","ウシ","Yes","NC",3.8,3.3,5.7,3,2,2,1,1,4.6,9.35,"5. no evidence for borrowing","Old Japanese"
+"39","crime","犯罪","hanzai","ハンザイ","No","NC",4.3,3.5,3.4,3,3,2,1,1.1,4.6,10.17,"1. clearly borrowed","Old Japanese"
+"40","cross","クロス","kurosu","クロス","No","C",4.3,3.7,3.2,1,4,1,2,3.5,4.1,8.43,"1. clearly borrowed","Middle Japanese"
+"41","cure","治る","naoru","ナオル","No","NC",4.2,4,3.3,5,4,1,2,1.1,3.7,7.36,"5. no evidence for borrowing","Old Japanese"
+"42","curtain","カーテン","kaaten","カーテン","Yes","C",3.3,3.9,5.5,1,1,1,1,3.4,4.5,7.83,NA,NA
+"43","cycle","サイクル","saikuru","サイクル","No","C",4.6,4,2.5,1,5,1,2,3.3,4,8.37,NA,NA
+"44","deer","シカ","shika","シカ","Yes","NC",3.5,3.1,5.8,2,1,1,1,1,4.7,7.82,"5. no evidence for borrowing","Old Japanese"
+"45","demand","要求","youkyuu","ヨウキュウ","No","NC",4.6,4,2.9,6,3,2,1,1.1,4.3,10.35,NA,NA
+"46","desk","机","tsukue","ツクエ","No","NC",4.4,4.6,5.7,1,1,1,1,1,4.4,8.78,"5. no evidence for borrowing","Old Japanese"
+"47","dolphin","イルカ","iruka","イルカ","Yes","NC",3,3.4,5.7,1,1,1,1,1,4.9,7.47,"5. no evidence for borrowing","Late Old Japanese"
+"48","door","ドア","doa","ドア","Yes","C",3.6,5.4,5.4,1,2,1,1,3.6,4.6,9.84,"1. clearly borrowed","Modern Japanese"
+"49","dress","ドレス","doresu","ドレス","Yes","C",3.8,4.3,5.4,1,4,1,3,3.2,4.1,8.02,"5. no evidence for borrowing","Modern Japanese"
+"50","dresser","たんす","tansu","タンス","Yes","NC",3,2.8,5.6,5,3,1,3,1,3.1,6.08,NA,NA
+"51","eagle","ワシ","washi","ワシ","Yes","NC",3.5,3,5.7,3,2,1,1,1.2,4.5,7.34,"5. no evidence for borrowing","Old Japanese"
+"52","elephant","象","zou","ゾウ","Yes","NC",3.4,3.2,5.8,1,1,1,1,1,4.9,7.8,"1. clearly borrowed","Late Old Japanese"
+"53","exit","出口","deguchi","デグチ","No","NC",4.3,4.2,3.9,1,2,1,2,1.1,4.1,8.29,NA,NA
+"54","fail","失敗","shippai","シッパイ","No","NC",4.7,4,2.5,4,2,1,1,1.1,4.1,10.02,NA,NA
+"55","find","見つける","mitsukeru","ミツケル","No","NC",4,4.6,3.1,3,2,1,2,1.1,4.3,8.79,"5. no evidence for borrowing","Late Old Japanese"
+"56","firm","会社","kaisha","カイシャ","No","NC",4,3.6,3.8,3,5,1,3,1.2,2.9,11.73,NA,NA
+"57","fish","魚","sakana","サカナ","Yes","NC",4.1,4.6,4.3,1,1,1,1,1,4.6,9.57,"5. no evidence for borrowing","Old Japanese"
+"58","flag","旗","hata","ハタ","Yes","NC",4.3,3.8,5.2,1,1,1,1,1,4.3,5.73,"5. no evidence for borrowing","Old Japanese"
+"59","flute","フルート","furuuto","フルート","Yes","C",3.9,4,5.7,1,1,1,1,3.8,4.1,6.97,"1. clearly borrowed","Modern Japanese"
+"60","fool","バカ","baka","バカ","No","NC",3.4,3.7,2.7,3,2,1,1,1,4.1,9.09,"1. clearly borrowed","Middle Japanese"
+"61","foot","足","ashi","アシ","Yes","NC",3.5,4.3,5.6,2,1,2,1,1,3.8,10.44,"5. no evidence for borrowing","Old Japanese"
+"62","fork","フォーク","fooku","フォーク","Yes","C",3.1,3.8,5.6,2,1,2,1,3.9,4.1,7.61,"1. clearly borrowed","Early Modern Japanese"
+"63","fox","キツネ","kitsune","キツネ","Yes","NC",3.1,3.5,5.6,1,1,1,1,1,4.6,6.55,"5. no evidence for borrowing","Old Japanese"
+"64","frog","カエル","kaeru","カエル","Yes","NC",3.1,3.1,5.8,1,1,1,1,1,4.6,7.71,"5. no evidence for borrowing","Old Japanese"
+"65","front","前","mae","マエ","No","NC",4,4.4,3.5,4,3,3,2,1.1,4.3,12.39,"5. no evidence for borrowing","Old Japanese"
+"66","fuel","燃料","nenryou","ネンリョウ","No","NC",4.7,3.6,3.7,3,2,2,2,1.1,4.5,9.31,NA,NA
+"67","fund","資金","shikin","シキン","No","NC",4.5,3.5,3.6,5,5,1,1,1.1,4.1,10.34,NA,NA
+"68","future","将来","shourai","ショウライ","No","NC",4.4,4.8,2.4,1,2,1,1,1.1,4.4,810.49,NA,NA
+"69","genre","ジャンル","janru","ジャンル","No","C",4.4,3.2,2.6,3,2,1,1,2.5,4.1,9.14,NA,NA
+"70","giraffe","キリン","kirin","キリン","Yes","NC",3,3,6.1,1,1,1,1,1,4.3,6.79,NA,NA
+"71","glass","グラス","gurasu","グラス","No","C",3.7,4.4,5.3,1,3,1,2,3.7,4.1,8.18,"1. clearly borrowed","Early Modern Japanese"
+"72","goal","ゴール","gooru","ゴール","No","C",3.7,4.6,3.9,1,4,1,2,3.6,4.6,9.18,NA,NA
+"73","goat","ヤギ","yagi","ヤギ","Yes","NC",2.8,2.6,5.8,1,3,1,1,1,4.5,6.79,"4. very little evidence for borrowing","Middle Japanese"
+"74","gorilla","ゴリラ","gorira","ゴリラ","Yes","C",2.8,3.6,5.9,1,1,1,1,3.3,4.7,6.32,NA,NA
+"75","grapes","ブドウ","budou","ブドウ","Yes","NC",3,3.4,5.8,1,1,1,1,1,4.6,6.74,NA,NA
+"76","guitar","ギター","gitaa","ギター","Yes","C",3.7,4.3,5.6,1,1,1,1,3.1,4.9,9.02,NA,NA
+"77","hammock","ハンモック","hanmokku","ハンモック","Yes","C",4,2.6,5.3,1,1,1,1,3.3,5,4.91,"1. clearly borrowed","Modern Japanese"
+"78","hanger","ハンガー","hangaa","ハンガー","Yes","C",3.1,4.4,5.7,2,1,2,1,3.6,4.1,6.14,NA,NA
+"79","hate","憎む","nikumu","ニクム","No","NC",4.9,4,2.4,1,3,1,1,1.1,4.1,6.36,"5. no evidence for borrowing","Old Japanese"
+"80","head","頭","atama","アタマ","No","NC",3.8,4.7,5.2,1,1,1,1,1.1,4.1,10.97,"5. no evidence for borrowing","Late Old Japanese"
+"81","heart","ハート","haato","ハート","Yes","C",4.4,4.5,3.3,1,3,1,2,3.2,3.7,8.28,"5. no evidence for borrowing","Old Japanese"
+"82","helicopter","ヘリコプター","herikoputaa","ヘリコプター","Yes","C",3.6,4,5.8,1,1,1,1,3.4,4.9,7.31,NA,NA
+"83","helmet","ヘルメット","herumetto","ヘルメット","Yes","C",3.4,3.7,5.4,1,1,1,1,3.6,4.9,7.03,"1. clearly borrowed","Modern Japanese"
+"84","hope","希望","kibou","キボウ","No","NC",4.9,4.9,1.9,1,4,1,2,1.3,4.1,10.36,"1. clearly borrowed","Late Old Japanese"
+"85","ideal","理想","risou","リソウ","No","NC",4.6,3.5,2.2,2,1,1,1,1.2,4.1,9.51,NA,NA
+"86","iron","アイロン","airon","アイロン","Yes","C",3.6,3.6,5.7,1,2,1,2,3.2,2.8,6.67,"1. clearly borrowed","Late Old Japanese"
+"87","jar","つぼ","tsubo","ツボ","No","NC",4.4,2.6,5.2,1,3,3,1,3.6,4.6,6.56,NA,NA
+"88","joint","関節","kansetsu","カンセツ","No","NC",4.4,3,4.5,1,5,1,2,1.1,3.1,8.54,NA,NA
+"89","joke","ジョーク","jooku","ジョーク","No","C",4.5,4.5,3.4,1,2,1,1,3.3,4.6,7.66,NA,NA
+"90","jury","陪審","baishin","バイシン","No","NC",5.4,2.6,4.1,1,2,1,1,1.1,4,7.56,NA,NA
+"91","kangaroo","カンガルー","kangaruu","カンガルー","Yes","C",3.3,3.6,5.9,1,1,1,1,3.5,4.9,6.12,"1. clearly borrowed","Modern Japanese"
+"92","kick","キック","kikku","キック","No","C",3.4,4.5,4.4,1,2,1,1,3.9,4.6,7.7,"5. no evidence for borrowing","Early Modern Japanese"
+"93","kiss","キス","kisu","キス","No","C",4,4.3,4.4,1,2,1,1,3.6,4.7,8.2,"1. clearly borrowed","Modern Japanese"
+"94","ladder","はしご","hashigo","ハシゴ","Yes","NC",3.2,2.8,5.2,1,3,1,1,1,4.1,6.42,"5. no evidence for borrowing","Early Modern Japanese"
+"95","learn","習う","narau","ナラウ","No","NC",3.9,4.5,3.1,1,2,1,1,1.1,4.4,6.93,"5. no evidence for borrowing","Old Japanese"
+"96","left","左","hidari","ヒダリ","No","NC",3.6,4.3,4.3,1,2,1,2,1.1,4.4,9.98,"5. no evidence for borrowing","Old Japanese"
+"97","lemon","レモン","remon","レモン","Yes","C",3.1,4.2,5.8,1,1,1,2,3.4,4.9,7.55,NA,NA
+"98","lesson","レッスン","ressun","レッスン","No","C",4.2,5.1,3.8,1,5,1,1,3.5,4.3,8.94,NA,NA
+"99","lion","ライオン","raion","ライオン","Yes","C",3,3.8,5.6,1,2,1,2,3.7,4.9,7.77,"1. clearly borrowed","Modern Japanese"
+"100","lips","唇","kuchibiru","クチビル","Yes","NC",3.6,3.7,5.5,1,1,1,1,1,4.7,8.08,"5. no evidence for borrowing","Old Japanese"
+"101","loan","ローン","roon","ローン","No","C",4.9,3.7,3.7,1,6,2,1,4,3.9,9.17,NA,NA
+"102","lobster","ザリガニ","zarigani","ザリガニ","Yes","NC",3,3.1,5.8,2,5,1,1,1,3.5,5.88,NA,NA
+"103","local","ローカル","rookaru","ローカル","No","C",4.3,4.8,3.4,1,3,1,1,3.4,3.9,8.4,NA,NA
+"104","loose","緩い","yurui","ユルイ","No","NC",4.4,3.8,2.8,3,6,1,1,1.2,3.9,6.14,NA,NA
+"105","lucky","ラッキー","rakkii","ラッキー","No","C",4,5.1,2.4,1,3,1,2,3.8,4.3,8.24,NA,NA
+"106","matter","物事","monogoto","モノゴト","No","NC",4.6,4.1,3,4,3,2,1,1.1,3.6,8.79,NA,NA
+"107","maze","迷路","meiro","メイロ","No","NC",3.9,2.2,4.6,2,2,1,2,1.1,2.9,6.86,NA,NA
+"108","morale","モラル","moraru","モラル","No","C",4.6,3.2,2.7,1,5,1,1,2.9,4.1,7.96,NA,NA
+"109","naked","裸","hadaka","ハダカ","No","NC",3.4,3.1,4.9,2,3,1,1,1,4.3,8.14,"5. no evidence for borrowing","Late Old Japanese"
+"110","necklace","ネクレス","nekuresu","ネクレス","Yes","C",3.9,4.5,5.5,1,3,1,1,3.6,4.8,6.6,"1. clearly borrowed","Modern Japanese"
+"111","normal","普通","futsuu","フツウ","No","NC",4.1,4.4,2.1,4,2,1,1,1.1,4.4,10.81,NA,NA
+"112","nose","鼻","hana","ハナ","Yes","NC",3.9,4.1,5.5,1,1,1,1,1.1,4.9,9.28,"5. no evidence for borrowing","Old Japanese"
+"113","past","過去","kako","カコ","No","NC",4.6,4.1,2.2,2,2,1,1,1,4.3,10.67,NA,NA
+"114","peanut","ピーナツ","piinatsu","ピーナツ","Yes","C",3.3,4,5.8,1,2,1,1,3.3,4.9,4.79,NA,NA
+"115","pelican","ペリカン","perikan","ペリカン","Yes","C",3.3,2.7,5.8,1,1,1,1,3.4,4.8,5.17,NA,NA
+"116","pencil","鉛筆","enpitsu","エンピツ","Yes","NC",3.6,3.9,5.5,1,1,1,1,1.1,4.8,7.43,NA,NA
+"117","penguin","ペンギン","pengin","ペンギン","Yes","C",3.1,3.7,5.8,1,1,1,1,3.3,5,7.28,NA,NA
+"118","pig","豚","buta","ブタ","Yes","NC",3.6,3.5,5.7,1,1,1,1,1.1,4.6,8.54,"5. no evidence for borrowing","Middle Japanese"
+"119","pipe","パイプ","paipu","パイプ","Yes","C",4,3.1,5,1,4,1,1,3.7,4.4,7.95,"1. clearly borrowed","Modern Japanese"
+"120","place","場所","basho","バショ","No","NC",4.2,4.6,3.3,5,1,1,2,1,4.3,11.12,"5. no evidence for borrowing","Early Modern Japanese"
+"121","plain","明白","meihaku","メイハク","No","NC",4.9,3.6,2.4,3,12,2,1,1,3.3,8.19,"1. clearly borrowed","Middle Japanese"
+"122","pool","プール","puuru","プール","Yes","C",3.8,3.6,5.5,1,3,1,3,3.6,4.3,8.68,NA,NA
+"123","prison","刑務所","keimusho","ケイムショ","No","NC",4.4,3.1,5.4,2,3,1,2,1.2,4.5,8.36,"3. perhaps borrowed","Modern Japanese"
+"124","profit","利益","rieki","リエキ","No","NC",4.5,3.3,2.9,4,2,2,1,1,4.5,10.37,NA,NA
+"125","pyramid","ピラミッド","piramiddo","ピラミッド","Yes","C",3.7,3.2,5.3,1,3,1,1,3.4,4.6,7.63,NA,NA
+"126","rabbit","ウサギ","usagi","ウサギ","Yes","NC",3,3.7,6.1,1,2,1,1,1,5,7.68,"3. perhaps borrowed","Old Japanese"
+"127","race","レース","reesu","レース","No","C",4.5,4.2,4.4,1,3,1,1,3.2,3.8,9.24,NA,NA
+"128","radio","ラジオ","rajio","ラジオ","Yes","C",3.9,4.2,5.4,1,1,1,2,2.5,4.6,9.47,"1. clearly borrowed","Modern Japanese"
+"129","rain","雨","ame","アメ","No","NC",3.6,4.5,5.1,1,2,1,1,1.3,4.1,10.11,"5. no evidence for borrowing","Old Japanese"
+"130","rank","ランク","ranku","ランク","No","C",4.1,4.4,3.2,1,7,1,1,3.7,4.1,8.46,NA,NA
+"131","real","リアル","riaru","リアル","No","C",4.5,4.3,2.5,1,4,1,2,3.3,4.2,8.94,NA,NA
+"132","regular","レギュラー","regyuraa","レギュラー","No","C",4.2,4.6,3.2,1,5,1,2,3.3,3.7,7.66,NA,NA
+"133","release","リリース","ririisu","リリース","No","C",4.6,3.7,3.1,1,7,1,1,3.7,3.9,9.29,NA,NA
+"134","rental","レンタル","rentaru","レンタル","No","C",4.2,4.5,3.9,1,8,1,2,3.3,4.4,8.43,NA,NA
+"135","return","リターン","ritaan","リターン","No","C",4.3,4.2,3.2,1,8,1,1,3.4,4.3,7.67,NA,NA
+"136","ring","指輪","yubiwa","ユビワ","Yes","NC",3.9,4,5.3,1,5,1,2,1.1,4,7.7,"5. no evidence for borrowing","Early Modern Japanese"
+"137","rocket","ロケット","roketto","ロケット","Yes","C",3.8,3.5,5.2,1,1,1,3,3.6,4.5,8.4,NA,NA
+"138","roll","ロール","rooru","ロール","No","C",3.9,3.6,3.1,2,6,2,1,3.2,4,8.09,"5. no evidence for borrowing","Early Modern Japanese"
+"139","rule","ルール","ruuru","ルール","No","C",4.1,4.5,3.1,1,7,1,1,3.5,4.3,9.87,NA,NA
+"140","sailor","水兵","suihei","スイヘイ","No","NC",5.3,2.7,5.2,2,9,1,2,1.1,4.1,5.52,NA,NA
+"141","scale","スケール","sukeeru","スケール","No","C",4.5,3.6,2.8,1,5,1,1,3.3,4,8.23,"5. no evidence for borrowing","Late Old Japanese"
+"142","scissors","はさみ","hasami","ハサミ","Yes","NC",3.3,2.7,5.7,1,1,1,4,1.1,4.7,6.62,"5. no evidence for borrowing","Late Old Japanese"
+"143","score","スコア","sukoa","スコア","No","C",4.5,4.2,3.4,1,4,1,1,3.7,4.3,8.48,NA,NA
+"144","screen","スクリーン","sukuriin","スクリーン","No","C",4.3,4.5,4.9,1,2,1,2,3.8,4.4,8.55,NA,NA
+"145","screw","ネジ","neji","ネジ","Yes","NC",3.2,3.1,3,1,4,1,1,1,3.5,7.23,"5. no evidence for borrowing","Modern Japanese"
+"146","sense","センス","sensu","センス","No","C",4.3,4.8,2.7,1,4,1,2,3.8,3.8,8.65,"1. clearly borrowed","Middle Japanese"
+"147","share","シェア","shea","シェア","No","C",4.4,4.7,5.4,1,4,1,2,3.9,4,8.65,"5. no evidence for borrowing","Old Japanese"
+"148","shark","サメ","same","サメ","Yes","NC",3.1,3.1,5.2,2,2,1,1,1.1,4.9,6.63,"4. very little evidence for borrowing","Old Japanese"
+"149","shirt","ワイシャツ","waishatsu","ワイシャツ","Yes","C",3.8,4.4,2.7,2,1,1,2,1.7,3.4,5.93,"1. clearly borrowed","Modern Japanese"
+"150","shock","ショック","shokku","ショック","No","C",4.4,4.4,5.4,1,5,1,1,3.7,4.3,9.09,NA,NA
+"151","show","ショー","shoo","ショー","No","C",4.2,4.4,3.6,1,5,1,1,3.4,4,9.09,"5. no evidence for borrowing","Old Japanese"
+"152","shower","シャワー","shawaa","シャワー","No","C",3.6,4.5,5.3,1,2,1,2,3.6,4.1,8.19,NA,NA
+"153","sign","サイン","sain","サイン","No","C",4.4,4.6,4,2,8,2,2,4,3.3,8.86,NA,NA
+"154","single","シングル","shinguru","シングル","No","C",4.3,4.3,3.1,1,6,1,2,3.2,4.1,8.41,NA,NA
+"155","size","サイズ","saizu","サイズ","No","C",4,4.7,3.3,1,2,1,2,3.7,4.3,9.74,NA,NA
+"156","ski","スキー","sukii","スキー","Yes","C",4,4.1,5.6,1,1,1,1,4.1,4.6,8.84,NA,NA
+"157","skill","スキル","sukiru","スキル","No","C",4.6,4.5,3.2,1,4,1,1,3.5,4.3,9.15,NA,NA
+"158","skirt","スカート","sukaato","スカート","Yes","C",3.5,4,5.6,1,1,1,1,3.2,4.8,7.77,"1. clearly borrowed","Modern Japanese"
+"159","slipper","スリッパ","surippa","スリッパ","Yes","C",3.3,3.5,5.6,1,2,1,2,3.4,4.2,3.43,NA,NA
+"160","slow","スロー","suroo","スロー","No","C",4.2,4.3,2.7,1,2,1,1,3.6,4.1,8.13,"5. no evidence for borrowing","Middle Japanese"
+"161","smell","香り","kaori","カオリ","No","NC",4.2,3.7,2.9,4,2,2,1,1,4,9.08,NA,NA
+"162","snake","ヘビ","hebi","ヘビ","Yes","NC",3.2,3.4,5.6,1,1,1,2,1.1,4.9,7.81,"5. no evidence for borrowing","Old Japanese"
+"163","snowman","雪だるま","yukidaruma","ユキダルマ","Yes","NC",2.8,3,5.2,1,3,1,1,1,4.6,5.95,NA,NA
+"164","sock","靴下","kutsushita","クツシタ","Yes","NC",3.5,3,5.8,1,2,1,2,1,4.6,6.77,"5. no evidence for borrowing","Modern Japanese"
+"165","solid","固体","kotai","コタイ","No","NC",4.7,3,3.2,3,4,1,1,1.2,4.1,8.33,NA,NA
+"166","spoon","スプーン","supuun","スプーン","Yes","C",2.8,4.4,5.9,1,3,1,2,4.3,4.8,7.26,"1. clearly borrowed","Early Modern Japanese"
+"167","stroke","なでる","naderu","ナデル","No","NC",3.5,3.2,4.2,2,7,1,1,1,2.3,5.16,NA,NA
+"168","style","スタイル","sutairu","スタイル","No","C",4.5,4.5,2.3,1,8,1,4,3.5,3.9,9.7,NA,NA
+"169","swan","白鳥","hakuchou","ハクチョウ","Yes","NC",3.7,3.1,5.6,1,1,1,1,1,4.6,7.11,NA,NA
+"170","tank","戦車","sensha","センシャ","Yes","NC",4.1,3.6,5.5,3,4,2,1,1,3.4,7.89,NA,NA
+"171","task","タスク","tasku","タスク","No","C",4.6,4.1,2.9,1,4,1,2,3.9,3.9,7.76,NA,NA
+"172","telephone","電話","denwa","デンワ","Yes","NC",4,4.3,5.1,4,1,2,2,1,4.9,11.19,"2. probably borrowed","Modern Japanese"
+"173","television","テレビ","terebi","テレビ","Yes","C",3.6,4.4,5.7,1,1,1,1,2.4,4.9,10.86,"1. clearly borrowed","Modern Japanese"
+"174","tent","テント","tento","テント","Yes","C",3.7,3.4,5.2,1,1,1,1,3.9,4.8,7.99,"1. clearly borrowed","Modern Japanese"
+"175","tiger","トラ","tora","トラ","Yes","NC",3.2,3.4,5.7,1,1,1,1,1.7,4.8,8.46,NA,NA
+"176","toaster","トースター","toosutaa","トースター","Yes","C",3.5,3.6,5.8,1,1,1,1,3.5,4.7,5.24,NA,NA
+"177","tomato","トマト","tomato","トマト","Yes","C",3.8,4.2,5.9,1,1,1,1,2.8,4.9,8.27,NA,NA
+"178","tractor","トラクター","torakutaa","トラクター","Yes","C",3.7,2.7,5.2,1,1,1,1,3.6,4.8,6.42,NA,NA
+"179","trap","ワナ","wana","ワナ","No","NC",4,3.5,3.9,1,1,1,1,1,4.3,6.29,"5. no evidence for borrowing","Old Japanese"
+"180","truck","トラック","torakku","トラック","Yes","C",4.1,3.6,5.6,1,1,2,1,3.5,3.9,11.6,NA,NA
+"181","trumpet","トランペット","toranpetto","トランペット","Yes","C",3.6,3.5,5.8,1,2,1,1,3.7,5,6.65,"1. clearly borrowed","Modern Japanese"
+"182","turtle","カメ","kame","カメ","Yes","NC",3.4,3.3,5.7,1,1,1,1,1,4.8,8.05,"5. no evidence for borrowing","Old Japanese"
+"183","umbrella","傘","kasa","カサ","Yes","NC",3.3,3.7,5.6,1,1,1,1,1,4.9,8.15,NA,NA
+"184","vest","ベスト","besuto","ベスト","Yes","C",3.8,3.4,3.6,1,2,2,1,3.4,4.2,9.27,NA,NA
+"185","view","眺め","nagame","ナガメ","No","NC",4.6,4.2,3.2,3,11,2,1,1,4.1,9.22,NA,NA
+"186","violin","バイオリン","bairorin","バイオリン","Yes","C",3.7,3.7,5.7,1,1,1,2,3.3,4.8,7.41,NA,NA
+"187","wake","覚める","sameru","サメル","No","NC",4.2,3.6,2.8,2,3,1,1,1,4.1,6.88,NA,NA
+"188","warm","暖かい","atatakai","アタタカイ","No","NC",4.1,4,3.3,2,3,1,1,1,4.6,8.29,"5. no evidence for borrowing","Late Old Japanese"
+"189","waste","浪費","rouhi","ロウヒ","No","NC",5,3.6,3.2,2,5,2,2,1,4,7.32,NA,NA
+"190","wolf","オオカミ","ookami","オオカミ","Yes","NC",3.8,3,5.4,1,1,1,2,1.1,4.9,7.47,"5. no evidence for borrowing","Old Japanese"
+"191","work","ワーク","waaku","ワーク","No","C",4.7,4.8,3.1,1,2,1,1,3.6,4,9.07,"5. no evidence for borrowing","Middle Japanese"
+"192","youth","ユース","yuusu","ユース","No","C",4.9,3.5,3.4,2,3,2,1,3.4,3.9,7.94,NA,NA
+"193","zebra","シマウマ","shimauma","シマウマ","Yes","NC",2.9,3.1,5.7,1,1,1,2,1,4.7,5.06,NA,NA

@@ -1,0 +1,302 @@
+---
+title: "Borrowing, age of acquisition and rates of change"
+output: pdf_document
+---
+
+```{r echo=F,eval=F}
+setwd("~/Documents/MPI/MonaghanAoA/Stats 2/analysis/")
+```
+
+```{r echo=F}
+getMEText = function(r,ef, wald=NULL, showWald=F){
+  
+  AIC = r[2,]$AIC
+  loglikDiff = signif(diff(r$logLik),2)
+  chi = round(r$Chisq[2],2)
+  df = r$`Chi Df`[2]
+  p = signif(r$`Pr(>Chisq)`[2],2)
+  
+  wald.text = ""
+  
+  if(!is.null(wald)){
+    est = signif(wald[1],2)
+    stder = signif(wald[2],2)
+    t = signif(wald[3],2)
+    wptext = ""
+    wald.text =  paste("beta = ",est,",")
+    if(showWald){
+      if(!is.na(wald[4])){
+      wptext = paste(", Wald p =",signif(wald[4],2))
+      }
+    wald.text = paste("beta = ",est,", std.err = ",stder, ", Wald t = ",t,wptext,';')
+    }
+  }
+  
+  begin = 'There was no significant'
+  if(p <0.09){
+    begin = "There was a marginal"
+  }
+  if(p < 0.05){
+    begin = 'There was a significant'  
+  }
+  
+  
+  return(paste(begin,ef,"(",wald.text,"log likelihood difference =",
+               loglikDiff,", df = ",df,", Chi Squared =", chi,", p = ",p,")."))
+}
+```
+
+# Introduction
+
+We test whether rates of lexical replacement can be predicted by age of acuisition.  The key variables in the dataset `pagel/loanword9.csv` are:
+
+-  word: orthographic form
+-  borrowing: whether the word is borrowed into English, according to WOLD
+-  phonology: phonological form, according to CELEX
+-  phonlength: number of phonological segments
+-  AoA: age of acuqisition, according to Kuperman et al. (2012)
+-  subtlexzipf: frequency from SUBTLEX
+-  pagel_rate:  rate of lexical replacement according to Pagel, Atkinson & Meade (2007)
+-  cat: part of speech of the word
+
+Pagel, Atkinson & Meade find that lexical replacement rates are higher for less frequent words, though the baseline rate differs by part of speech.  We use mixed effects modelling to investigate the effects of length, age of acquisition and concreteness, with random intercepts for part of speech.
+
+# Load libraries
+
+```{r message=FALSE, warning=F}
+library(lme4)
+library(sjPlot)
+library(ggplot2)
+library(gplots)
+library(gridExtra)
+```
+
+# Load data
+
+Scale and center all variables:
+
+```{r}
+d = read.csv("../pagel/loanword9.csv", stringsAsFactors = F)
+d$pagel_rate = as.numeric(d$pagel_rate)
+
+d$AoA = as.numeric(d$AoA)
+d$subtlexzipf = as.numeric(d$subtlexzipf)
+d$phonlength = as.numeric(d$phonlength)
+d$conc = as.numeric(d$conc)
+
+# group borrowing confidence
+d$borrowing[d$borrowing==2] = 1
+d$borrowing[d$borrowing==3] = NA
+d$borrowing[d$borrowing==4] = 5
+d$borrowing[d$borrowing==7] = NA
+
+# complete cases only
+d = d[complete.cases(d[,c("borrowing",'AoA','phonlength','conc','pagel_rate')]),]
+```
+
+Plot raw data:
+
+```{r}
+plotmeans(d$pagel_rate~d$borrowing)
+ggplot(d, aes(AoA, as.numeric(pagel_rate))) +
+  geom_point() + stat_smooth(method="lm") + 
+  ylab("Rate of replacement")
+```
+
+Scale variables for analysis:
+
+```{r}
+d$pagel_rate = scale(d$pagel_rate)
+d$AoA.scale = scale(d$AoA)
+d$subtlexzipf.scale = scale(d$subtlexzipf)
+d$phonlength.scale = scale(d$phonlength)
+d$conc.scale = scale(d$conc)
+
+# most frequent category as intercept
+d$borrowing = factor(d$borrowing,levels=c(5,1),labels = c("no","yes"))
+d$borrowing.num = as.numeric(d$borrowing)-1
+```
+
+
+# Modelling
+
+Null model:
+
+```{r}
+m0 = lmer(pagel_rate ~ 1 + (1|cat), data=d)
+```
+
+As expected, borrowed words have a higer rate of change:
+
+```{r}
+m1 = lmer(pagel_rate ~
+          borrowing +
+          (1|cat),
+         data = d)
+anova(m0,m1)
+```
+
+The original model in Pagel et al. found relationships between rate of change, frequency and length:
+
+```{r}
+m2 = lmer(pagel_rate ~
+          borrowing +
+          subtlexzipf.scale +
+          (1 | cat),
+        data = d)
+m3 = lmer(pagel_rate ~
+          borrowing +
+          subtlexzipf.scale +
+          phonlength.scale +
+          (1 | cat),
+        data = d)
+anova(m1,m2,m3)
+summary(m3)
+```
+
+Indeed, both length and freuqnecy are significant predictors of rate of change. 
+
+We can test whether there are non-linear effects for frequency and length:
+
+```{r}
+m3.freq2 = lmer(pagel_rate ~
+          borrowing +
+          subtlexzipf.scale +
+          I(subtlexzipf.scale^2) +
+          phonlength.scale +
+          (1 | cat),
+        data = d)
+m3.len2 = lmer(pagel_rate ~
+          borrowing +
+          subtlexzipf.scale +
+          I(phonlength.scale^2) +
+          phonlength.scale +
+          (1 | cat),
+        data = d)
+anova(m3, m3.freq2)
+anova(m3, m3.len2)
+```
+
+There is no significant non-linear (quadratic) effect of frequency or length.
+
+We can now add age of acquisition:
+
+```{r}
+m4 = lmer(pagel_rate ~
+           borrowing +
+           phonlength.scale + 
+           subtlexzipf.scale +
+           AoA.scale +
+          (1 |cat),
+         data = d)
+anova(m3,m4)
+summary(m4)
+```
+
+Age of acquisition significantly improves the model and has an effect size similar to length (also, frequency has a much weaker effect).
+
+Add concreteness:
+
+```{r}
+m5 = lmer(pagel_rate ~
+           phonlength.scale + 
+           subtlexzipf.scale +
+           AoA.scale +
+           borrowing +
+           conc.scale +
+            (1|cat),
+         data = d)
+anova(m4,m5)
+```
+
+Concreteness does not significantly improve the fit of the model.
+
+
+## Final model:
+
+```{r}
+finalModel = m4
+summary(finalModel)
+```
+
+Random intercepts for part of speech:
+
+```{r}
+sjp.lmer(finalModel)
+```
+
+## Model estimates
+
+```{r}
+px =sjp.lmer(finalModel, 'eff', c("AoA.scale","phonlength.scale","subtlexzipf.scale"),
+             show.ci = T, prnt.plot = F, facet.grid = F)
+pr.sc = attr(d$pagel_rate,"scaled:scale")
+pr.cn = attr(d$pagel_rate,"scaled:center")
+# length
+p1 = px$plot.list[[1]]
+p1$data$x = p1$data$x *attr(d$phonlength.scale,"scaled:scale") +
+  attr(d$phonlength.scale,"scaled:center") 
+p1$data$y = p1$data$y * pr.sc + pr.cn
+p1$data$lower = p1$data$lower * pr.sc + pr.cn
+p1$data$upper = p1$data$upper * pr.sc + pr.cn
+p1 = p1 + ggtitle("Rates of change (English)") + 
+  xlab("Word Length") + 
+  ylab("")+
+  ylab("Rate of lexical replacement")+
+  coord_cartesian(ylim=c(1.5,6))
+
+# frequency
+p2 = px$plot.list[[2]]
+p2$data$x = p2$data$x *attr(d$subtlexzipf.scale,"scaled:scale") +
+  attr(d$subtlexzipf.scale,"scaled:center") 
+p2$data$y = p2$data$y * pr.sc + pr.cn
+p2$data$lower = p2$data$lower * pr.sc + pr.cn
+p2$data$upper = p2$data$upper * pr.sc + pr.cn
+p2 = p2 + ggtitle("") + 
+  xlab("Frequency") + 
+  ylab("")+
+  coord_cartesian(ylim=c(1.5,6))
+
+# Age of acquisition
+p3 = px$plot.list[[3]]
+p3$data$x = p3$data$x *attr(d$AoA.scale,"scaled:scale") +
+  attr(d$AoA.scale,"scaled:center") 
+p3$data$y = p3$data$y * pr.sc + pr.cn
+p3$data$lower = p3$data$lower * pr.sc + pr.cn
+p3$data$upper = p3$data$upper * pr.sc + pr.cn
+p3 = p3 + ggtitle("") + 
+  xlab("Age of acquisition") + 
+  ylab("") +
+  coord_cartesian(ylim=c(1.5,6))
+pdf(file='../results/graphs/Pagel_RatesOfChange.pdf',
+    height =3,width = 8)
+grid.arrange(p1,p2,p3, nrow=1)
+dev.off()
+grid.arrange(p1,p2,p3, nrow=1)
+```
+
+# Summary
+
+`r getMEText(anova(m0,m1), "main effect of whether the word is borrowed")`
+
+`r getMEText(anova(m1,m2), "main effect of frequency")`
+
+`r getMEText(anova(m2,m3), "main effect of word length")`
+
+`r getMEText(anova(m3,m4), "main effect of age of acquisition")`
+
+`r getMEText(anova(m4,m5), "main effect of concreteness")`
+
+Rates of change are higher for:
+
+-  Borrowed words
+-  Less frequent words
+-  Longer words
+-  Words acquired later in childhood
+
+
+# References
+
+Kuperman, V., Stadthagen-Gonzalez, H., & Brysbaert, M. (2012). Age-of-acquisition ratings for 30,000 English words. Behavior Research Methods, 44(4), 978-990.
+
+Pagel, M., Atkinson, Q. D., & Meade, A. (2007). Frequency of word-use predicts rates of lexical evolution throughout Indo-European history. Nature, 449(7163), 717-720.

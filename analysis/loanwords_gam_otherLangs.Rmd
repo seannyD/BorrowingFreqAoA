@@ -1,0 +1,188 @@
+---
+title: "Age of acquisition and borrowing: French, Indonesian and Japanese"
+output: pdf_document
+---
+
+
+```{r echo=F,eval=F}
+setwd("~/Documents/MPI/MonaghanAoA/Stats 2/analysis/")
+```
+
+# Introduction
+
+Some data was available for French and Japanese.  However, the number of datapoints for Japanese is very low, and the reliability of the loanword status for French is not good.
+
+# Load libraries
+
+```{r warning=F, message=F}
+library(mgcv)
+library(sjPlot)
+library(lattice)
+library(ggplot2)
+library(gplots)
+library(dplyr)
+library(party)
+library(lmtest)
+library(gridExtra)
+library(lme4)
+
+logit2per = function(X){
+  return(exp(X)/(1+exp(X)))
+}
+
+rescaleGam = function(px, n, xvar, xlab=""){
+  y = logit2per(px[[n]]$fit)
+  x = px[[n]]$x *attr(xvar,"scaled:scale") + attr(xvar,"scaled:center")
+  se.upper = logit2per(px[[n]]$fit+px[[n]]$se)
+  se.lower = logit2per(px[[n]]$fit-px[[n]]$se)
+  dx = data.frame(x=x,y=y,ci.upper=se.upper,ci.lower=se.lower)
+  plen = ggplot(dx, aes(x=x,y=y))+
+    geom_ribbon(aes(ymin=ci.lower,ymax=ci.upper), alpha=0.3)+
+    geom_line(size=1) +
+    xlab(xlab)+
+    ylab("Probability of borrowing")+
+    coord_cartesian(ylim = c(0,1))
+  return(plen)
+}
+```
+
+# Load data
+
+```{r}
+load("../data/loanwords_French.Rdat")
+load("../data/loanwords_Indonesian.Rdat")
+load("../data/loanwords_Japanese.Rdat")
+```
+
+
+# French
+
+French data has `r nrow(french)` datapoints.  Note that the French data only includes monomorphemic words, and have a smaller length range than the Dutch or English data.  The estimates of borrowing also come from lists of borrowed words from specific languages, rather than an expert judgement on each word in the data.
+
+Raw data:
+
+```{r}
+rd1 = ggplot(french, aes(as.numeric(subtlexzipfscale),bor15)) +
+  geom_smooth() + ylab("") +
+  coord_cartesian(ylim=c(0,0.4))+
+  ggtitle("")
+rd2 = ggplot(french, aes(AoA,bor15)) +
+  geom_smooth()+ ylab("")+
+  coord_cartesian(ylim=c(0,0.4))+
+  ggtitle("")
+rd3 = ggplot(french, aes(as.numeric(phonlength),bor15)) +
+  geom_smooth(method = 'lm')+ 
+  ylab("Probability of borrowing")+
+  ggtitle("French")+
+  coord_cartesian(ylim=c(0,0.4))
+grid.arrange(rd3,rd1,rd2, nrow=1)
+```
+
+GAM:
+
+```{r}
+m0.french = bam(bor15.cat ~
+      s(phonlengthscale,k=3) + 
+      s(AoAscale) + 
+      s(subtlexzipfscale) +
+      s(cat,bs='re')+
+      s(cat,phonlengthscale,bs='re')+
+      s(cat,AoAscale,bs='re')+
+      s(cat,subtlexzipfscale,bs='re'),
+    data = french,
+    family='binomial')
+summary(m0.french)
+px = plot.gam(m0.french,select=3, xlab="Frequency", ylab="Log odds of borrowing",shade = T)
+```
+
+Significant effect of frequency.
+
+```{r}
+f1 = rescaleGam(px, 1, french$phonlengthscale,"Word length") + ggtitle("French")
+f2 = rescaleGam(px, 2, french$AoAscale,"Age of acquisition") + ggtitle("")
+f3 = rescaleGam(px, 3, french$subtlexzipfscale,"Frequency") + ggtitle("")
+grid.arrange(f1,f3,f2, nrow=1) 
+pdf("../results/graphs/French_ModelResults.pdf",
+    height =3,width = 8)
+grid.arrange(f1,f3,f2, nrow=1) 
+dev.off()
+```
+
+\newpage
+
+# Indonesian
+
+Data from [Sianipar, van Groenestijn and Dijkstra (2016)](https://www.frontiersin.org/articles/10.3389/fpsyg.2016.01907/full).  There were only matches for `r sum(!is.na(indonesian$bor15))` words, so we count ratings of 1 (definately borrowed) and 2 (probably borrowed) as borrowed, and 4 (little evidence) and 5 (no evidence) as not borrowed.  We also use a simpler linear mixed effects model.
+
+```{r}
+m0.indonesian = glmer(bor15.cat ~ 
+      ALL_Frequency_Mean.scaled +
+      ALL_Concreteness_Mean.scaled+
+      ALL_Valence_Mean.scaled+
+      ALL_Arousal_Mean.scaled+
+      ALL_Dominance_Mean.scaled+
+      ALLPredictability_Mean.scaled+
+        (1|cat),
+    data = indonesian,
+      family="binomial")
+summary(m0.indonesian)
+```
+
+The model above contains a number of affective parameters.  Taking these out removes the effect for frequency:
+
+```{r}
+m1.indonesian = glmer(bor15.cat ~ 
+      ALL_Frequency_Mean.scaled +
+      ALL_Concreteness_Mean.scaled +
+        (1|cat),
+    data = indonesian,
+      family="binomial")
+summary(m1.indonesian)
+```
+
+
+\newpage
+
+# Japanese
+
+Note that the japanese data only has 193 datapoints, so we'll use model comparison with a standard liner model to test for effects.
+
+```{r}
+m0.japanese = glm(bor15.cat ~
+      1,
+    data = jap,
+    family='binomial')
+
+m1.japanese = glm(bor15.cat ~
+      phonlengthscale,
+    data = jap,
+    family='binomial')
+anova(m0.japanese, m1.japanese)
+```
+
+No improvement for length.
+
+```{r}
+m2.japanese = glm(bor15.cat ~
+      1 + subtlexzipfscale,
+    data = jap,
+    family='binomial')
+lrtest(m0.japanese, m2.japanese)
+```
+
+No improvement for frequency.
+
+```{r}
+m3.japanese = glm(bor15.cat ~
+      1 + AoAscale,
+    data = jap,
+    family='binomial')
+lrtest(m0.japanese, m3.japanese)
+```
+
+No improvement for age of acquisition.
+
+
+```{r}
+summary(m3.japanese)
+```

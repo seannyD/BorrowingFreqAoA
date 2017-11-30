@@ -1,0 +1,187 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw", 
+        {
+            "@language": "en"
+        }
+    ], 
+    "dc:bibliographicCitation ": "Roland Schuhmann. 2009. Old High German vocabulary.\nIn: Haspelmath, Martin & Tadmor, Uri (eds.)\nWorld Loanword Database.\nLeipzig: Max Planck Institute for Evolutionary Anthropology.\n(Available online at http://wold.clld.org/vocabulary/11, Accessed on 2016-06-24.)\n", 
+    "dc:creator": "Roland Schuhmann", 
+    "dc:format": "cldf-1.0", 
+    "dc:identifier": "http://wold.clld.org/vocabulary/11", 
+    "dc:isPartOf": "http://wold.clld.org/", 
+    "dc:issued": "2009-08-15", 
+    "dc:license": "http://creativecommons.org/licenses/by/3.0/de/", 
+    "dc:publisher": "Max Planck Institute for Evolutionary Anthropology, Leipzig", 
+    "dc:title": "Old High German", 
+    "dcat:accessURL": "http://wold.clld.org/download", 
+    "dialect": {
+        "header": true, 
+        "delimiter": ",", 
+        "encoding": "utf-8"
+    }, 
+    "tables": [
+        {
+            "url": "wold-vocabulary-11.csv", 
+            "dc:type": "cldf-values", 
+            "tableSchema": {
+                "aboutUrl": "http://wold.clld.org/values/{ID}", 
+                "primaryKey": "ID", 
+                "columns": [
+                    {
+                        "datatype": "string", 
+                        "name": "ID"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Language_ID", 
+                        "valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Language_name"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Parameter_ID", 
+                        "valueUrl": "http://concepticon.clld.org/parameters/{Parameter_ID}"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Parameter_name"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "WOLD_Meaning_ID", 
+                        "valueUrl": "http://wold.clld.org/meaning/{WOLD_Meaning_ID}"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Value"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Source"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Comment"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Word_ID", 
+                        "valueUrl": "http://wold.clld.org/word/{Word_ID}"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Borrowed"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Borrowed_score"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Analyzability"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "Simplicity_score"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "age"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "contact_situation"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "age_label"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "borrowed_base"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "calqued"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "colonial_word"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "comment_on_borrowed"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "comment_on_word_form"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "effect"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "etymological_note"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "gloss"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "grammatical_info"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "integration"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "lexical_stratum"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "loan_history"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "numeric_frequency"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "original_script"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "other_comments"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "reference"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "register"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "relative_frequency"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "salience"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "name": "word_source"
+                    }
+                ]
+            }
+        }
+    ]
+}
