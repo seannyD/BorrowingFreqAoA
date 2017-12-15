@@ -1,5 +1,5 @@
 ---
-title: "Age of acquisition and borrowing: Dutch"
+title: "Cognitive influences in language evolution: Dutch data"
 output: pdf_document
 ---
 
@@ -49,10 +49,10 @@ rescaleGam = function(px, n, xvar, xlab=""){
 
 # Load data
 
+The Dutch data is processed very similarly to the English data.  The full process can be found in the `processing` folder, but here we just load the final prepared data frame:
+
 ```{r}
 load("../data/loanwords_Dutch.Rdat")
-load("../data/loanwords_Japanese.Rdat")
-load("../data/loanwords_French.Rdat")
 ```
 
 # Part of speech
@@ -185,10 +185,9 @@ So no interactions are necessary.
 
 ## Model estiamtes
 
-Plot the model estimates, changing the dependent scale to probability and the independent variables to their original scales.
+Plot the model estimates, changing the dependent scale to probability and the independent variables to their original scales (code is hidden, but available in the Rmd file).
 
-```{r}
-
+```{r echo=F}
 px = plot.gam(m0.dutch,select=1, xlab="Word length", ylab="Log odds of borrowing",shade = T)
 
 plen = rescaleGam(px, 1, dutch$phonlengthscale,"Word length") + ggtitle("Dutch")
@@ -203,6 +202,59 @@ pdf(file='../results/graphs/Dutch_ModelResults.pdf',
     height =3,width = 8)
 grid.arrange(plen,pfreq,paoa, nrow=1)
 dev.off()
+```
+
+Plot the model estimates, removing the influence of the random effects using the library `itsadug` (code is hidden, but available in the Rmd file).
+
+```{r echo=F}
+getSmoothPlot = function(model, view, label){
+  px = plot_smooth(model,view=view, 
+                   rm.ranef = T,print.summary=F)
+  px$fv$fit = logit2per(px$fv$fit)
+  px$fv$ul = logit2per(px$fv$ul)
+  px$fv$ll = logit2per(px$fv$ll)
+  px$fv[,view] = px$fv[,view] * attr(dutch[,view],"scaled:scale") + attr(dutch[,view],"scaled:center")
+  
+  ggplot(px$fv, aes_string(x=view,y="fit")) + 
+    geom_ribbon(aes(ymin=ll,ymax=ul), alpha=0.3) +
+    geom_line(size=1) +
+    ylab("Probability of borrowing") +
+    xlab(label) +
+    coord_cartesian(ylim=c(0,0.6))
+}
+
+pfreq =getSmoothPlot(m0.dutch,"subtlexzipfscale","Frequency")
+plen =getSmoothPlot(m0.dutch,"phonlengthscale","Word Length")
+paoa =getSmoothPlot(m0.dutch,"AoAscale","Age of acquisition")
+pconc =getSmoothPlot(m0.dutch,"concscale","Concreteness")
+pconc
+
+grid.arrange(plen,pfreq,paoa, nrow=1)
+pdf("../results/graphs/Dutch_ModelResults_NoRF.pdf",
+    height =3,width = 8)
+grid.arrange(plen,pfreq,paoa, nrow=1)
+dev.off()
+```
+
+
+Random effects for Part of speech
+
+```{r}
+mc = m0.dutch$coefficients
+mc[grepl("s\\(cat\\)",names(mc))]
+
+raw = tapply(dutch$bor15,dutch$cat,mean)
+model.est = logit2per(m0.dutch$coefficients[1] +
+              mc[grepl("s\\(cat\\)",names(mc))])
+
+plot(raw, model.est,
+  xlab="Raw proportions",
+  ylab="Model estimates",
+  col="white",
+     ylim=c(0,0.3),
+     xlim=c(0,0.3))  
+abline(0,1,col='gray')
+text(raw, model.est, names(raw))
 ```
 
 # Predicting date of entry

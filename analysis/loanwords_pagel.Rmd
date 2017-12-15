@@ -1,5 +1,5 @@
 ---
-title: "Borrowing, age of acquisition and rates of change"
+title: "Cognitive influences in language evolution: Rates of change"
 output: pdf_document
 ---
 
@@ -69,6 +69,7 @@ library(sjPlot)
 library(ggplot2)
 library(gplots)
 library(gridExtra)
+library(mgcv)
 ```
 
 # Load data
@@ -217,6 +218,8 @@ Concreteness does not significantly improve the fit of the model.
 ```{r}
 finalModel = m4
 summary(finalModel)
+# Rough measure of model fit (R2):
+cor(predict(finalModel),d$pagel_rate)^2
 ```
 
 Random intercepts for part of speech:
@@ -274,6 +277,25 @@ grid.arrange(p1,p2,p3, nrow=1)
 dev.off()
 grid.arrange(p1,p2,p3, nrow=1)
 ```
+
+## Non-linear model
+
+We can test a non-linear model
+
+```{r}
+d$cat = factor(d$cat)
+d$cat = relevel(d$cat,"Noun")
+m0.GAM  = bam(pagel_rate~
+    s(phonlength.scale, k=5) + 
+    s(subtlexzipf.scale) + 
+    s(AoA.scale) +
+    s(cat,bs='re'),
+    data = d)
+summary(m0.GAM)
+```
+
+The results are very similar, and all edf scores are very close to 1 (linear).  Given the small amount of data, we prefer the linear mixed effects model above.
+
 
 # Summary
 

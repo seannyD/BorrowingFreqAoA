@@ -58,5 +58,8 @@ dutch$phonlengthscale <- scale(as.numeric(dutch$length))
 dutch$concscale <- scale(as.numeric(dutch$concreteness))
 
 dutch$bor15.cat = factor(dutch$bor15)
+
+dutch$cat = relevel(dutch$cat,"N")
+
 save(dutch,file="../data/loanwords_Dutch.Rdat")
 
