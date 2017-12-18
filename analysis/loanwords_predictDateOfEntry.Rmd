@@ -1,0 +1,359 @@
+---
+title: "Predicting date of entry"
+output: pdf_document
+---
+
+
+# Introduction
+
+Here we try to predict a word's date of entry into a language based on cognitive factors.
+
+For age at which the borrowing occurred, we took the estimate of first entry into the recipient language from the WOLD database. For classifications that were given by historical language origin, rather than date, we took the estimations of the age for English from Grant (2009) and for Dutch from van der Sijs (2009), e.g., Proto-Germanic was taken as 2500BCE, and Proto West-Germanic was taken as 0CE. When the language origin indicated a range of years (e.g., Early Old English had date range 449-900CE), the later date was taken (e.g., for Early Old English, 900CE). Log of years before 2000CE was entered into the analyses as the point of borrowing. For word forms with distinct meanings (but similar borrowing status) we distinguished the earliest date of entry and the latest date of entry, e.g., for the English word “palm” the meaning related to the hand was first attested around 1300CE, and the meaning related to the tree was first attested in Early Old English (900CE). There were few words, however, with distinct ages of borrowing, and over the set of words for which there was clear evidence of borrowing, the correlation between earliest date of entry and latest date of entry was r > .99, p < .001, for both languages, and so for the remaining analyses, we only used the earliest date of entry measure.
+
+## Results
+
+The first set of analyses investigated whether a word was borrowed or not. However, a more fine-grained measure of time since a word is borrowed can also be computed from the WOLD, though this provides only an analysis of the time since last change for vocabulary items that have a documented borrowing or language origin, not taking into account the words that remain stable. In order to investigate whether the point of first evidence of borrowing could be predicted by the psycholinguistic variables, we took only those words with clear evidence of borrowing and predicted the log of the years prior to 2000CE at which the borrowing was first attested. The same psycholinguistic variables as in the first analysis were predictors, and we included a random effect for part of speech.
+
+For English, the date of entry was significantly predicted by word length (584 words, edf = 2.5, F = 7.43, p < 0.0001) and frequency (edf = 2.2, F = 0.14, p = 0.002, R2 for full model = 0.18).  Longer words and less frequent words are more likely to have been borrowed more recently.  
+
+For Dutch, the date of entry was significantly predicted by age of acquisition (202 words, edf = 2.7, F = 3.2, p = 0.02).  Words learned later are more likely to have been borrowed more recently.  Frequency and length were not significant predictors.  Indeed, the trend for frequency went in the opposite direction from the trend for English.  The differences in results may be because there were only 202 borrowed words to analyse in Dutch, half as many as for English.
+
+
+```{r echo=F,eval=F}
+setwd("~/Documents/MPI/MonaghanAoA/Stats 2/analysis/")
+```
+
+
+# Model code
+
+Load libraries
+
+```{r warning=F, message=F}
+library(mgcv)
+library(sjPlot)
+library(lattice)
+library(ggplot2)
+library(dplyr)
+library(party)
+library(lmtest)
+library(gridExtra)
+library(scales)
+library(itsadug)
+library(ggfortify)
+library(factoextra)
+library(gridExtra)
+library(reshape2)
+library(car)
+library(caret)
+library(scales)
+
+logit2per = function(X){
+  return(exp(X)/(1+exp(X)))
+}
+
+rescaleGam = function(px, n, xvar, xlab=""){
+  y = logit2per(px[[n]]$fit)
+  x = px[[n]]$x *attr(xvar,"scaled:scale") + attr(xvar,"scaled:center")
+  se.upper = logit2per(px[[n]]$fit+px[[n]]$se)
+  se.lower = logit2per(px[[n]]$fit-px[[n]]$se)
+  dx = data.frame(x=x,y=y,ci.upper=se.upper,ci.lower=se.lower)
+  plen = ggplot(dx, aes(x=x,y=y))+
+    geom_ribbon(aes(ymin=ci.lower,ymax=ci.upper), alpha=0.3)+
+    geom_line(size=1) +
+    xlab(xlab)+
+    ylab("Probability of borrowing")+
+    coord_cartesian(ylim = c(0,1))
+  return(plen)
+}
+
+```
+
+# Load data
+
+## English data
+
+```{r}
+dataloan <- read.csv("../data/loanword8.csv",stringsAsFactors = F)
+dataloan$bor15 <- ifelse(dataloan$borrowing==1,1, ifelse(dataloan$borrowing==5,0,NA))
+dataloan$bor15.cat <- factor(dataloan$bor15)
+```
+
+Convert to numbers.
+
+```{r warning=F}
+dataloan$subtlexzipf = as.numeric(dataloan$subtlexzipf)
+dataloan$AoA = as.numeric(dataloan$AoA)
+dataloan$conc = as.numeric(dataloan$conc)
+
+aoaSD = sd(dataloan$AoA,na.rm = T)
+aoaMean = mean(dataloan$AoA/aoaSD,na.rm=T)
+dataloan$cat = factor(dataloan$cat)
+```
+
+Select only complete cases.
+
+```{r}
+dataloan2 = dataloan[complete.cases(dataloan[,
+               c("phonlength","AoA",
+               "subtlexzipf", "cat",
+               'conc','bor15')]),]
+```
+
+Scale and center:
+
+```{r}
+dataloan2$AoAscale <- scale(dataloan2$AoA)
+
+dataloan2$subtlexzipfscale <- scale(dataloan2$subtlexzipf)
+
+phonlength.center = median(dataloan2$phonlength)
+dataloan2$phonlengthscale <-
+  dataloan2$phonlength - phonlength.center
+phonlength.scale = sd(dataloan2$phonlengthscale)
+dataloan2$phonlengthscale = dataloan2$phonlengthscale/phonlength.scale
+
+attr(dataloan2$phonlengthscale,"scaled:scale") = phonlength.scale
+attr(dataloan2$phonlengthscale,"scaled:center") = phonlength.center
+
+dataloan2$concscale <- scale(dataloan2$conc)
+
+dataloan2$cat = relevel(dataloan2$cat,"Noun")
+
+dataloan2$AoA_objscaled = scale(dataloan2$AoA_obj)
+```
+
+## Dutch data
+
+```{r}
+load("../data/loanwords_Dutch.Rdat")
+```
+
+
+# English analysis
+
+```{r}
+dataloan2$age_oldest_num = as.numeric(dataloan2$age_oldest_num)
+# remove non-borrowed words
+dataloan2[dataloan2$bor15!=1,]$age_oldest_num = NA
+# Take log years
+dataloan2$age_oldest_num.scaled = log10(dataloan2$age_oldest_num)
+# Scale and center
+dataloan2$age_oldest_num.scaled = scale(dataloan2$age_oldest_num.scaled)
+
+```
+
+Plot raw data
+
+```{r warning=F}
+hist(dataloan2[dataloan2$bor15==1,]$age_oldest_num)
+
+g.ageAoA = ggplot(dataloan2[dataloan2$bor15==1,], 
+                  aes(x=AoA, y=age_oldest_num))+
+  geom_smooth() +
+  coord_cartesian(ylim=c(250,1000))
+scale_y_reverse()
+
+
+g.ageLen = ggplot(dataloan2[dataloan2$bor15==1,], 
+                  aes(x=phonlength, y=age_oldest_num))+
+  geom_smooth()+
+  coord_cartesian(ylim=c(250,1000))
+scale_y_reverse()
+
+g.ageFreq = ggplot(dataloan2[dataloan2$bor15==1,],
+                   aes(x=subtlexzipf, y=age_oldest_num))+
+  geom_smooth()+
+  coord_cartesian(ylim=c(250,1000))
+scale_y_reverse()
+
+grid.arrange(g.ageLen,g.ageFreq,g.ageAoA, nrow=1)
+```
+
+GAM model:
+  
+  ```{r}
+m0.age = bam(age_oldest_num.scaled~
+               s(phonlengthscale) + 
+               s(AoAscale) + 
+               s(subtlexzipfscale) +
+               s(concscale) +
+               s(cat,bs='re')+
+               s(cat,phonlengthscale,bs='re')+
+               s(cat,AoAscale,bs='re')+
+               s(cat,subtlexzipfscale,bs='re')+
+               s(cat,concscale,bs='re'),
+             data = dataloan2[dataloan2$bor15==1,])
+summary(m0.age)
+```
+
+Plot the model estimates.  The code is hidden, but you can view it in the Rmd file.
+
+```{r echo=F}
+rescaleDate = function(X){
+  10^(X * attr(dataloan2$age_oldest_num.scaled,'scaled:scale') +
+        attr(dataloan2$age_oldest_num.scaled,'scaled:center'))
+}
+
+rescaleDateGraph = function(var,lab){
+  px = plot_smooth(m0.age,view=var, rm.ranef = T,
+                   print.summary=F)
+  px$fv$fit = rescaleDate(px$fv$fit) 
+  px$fv$ul = rescaleDate(px$fv$ul) 
+  px$fv$ll = rescaleDate(px$fv$ll) 
+  
+  px$fv[,var] = px$fv[,var] * attr(dataloan2[,var],"scaled:scale") + attr(dataloan2[,var],"scaled:center")
+  
+  gx = ggplot(px$fv, aes_string(x=var,y="fit")) + 
+    geom_ribbon(aes(ymin=ll,ymax=ul), alpha=0.3) +
+    geom_line(size=1) +
+    ylab("Date of borrowing (years before 2000)") +
+    xlab(lab) +
+    coord_cartesian(ylim=c(300,1000))
+  scale_y_reverse() 
+  return(gx) 
+}
+
+gAoAA = rescaleDateGraph("AoAscale","Age of acquisition")+
+  ggtitle("")
+gFreqA = rescaleDateGraph("subtlexzipfscale","Frequency")+
+  ggtitle("")
+gLenA = rescaleDateGraph("phonlengthscale","Word Length") +
+  ggtitle("English")
+
+grid.arrange(gLenA, gFreqA, gAoAA, nrow=1)
+pdf("../results/graphs/English_ModelResults_AgeOfBorrowing_NoRF.pdf",
+    height =3,width = 8)
+grid.arrange(gLenA, gFreqA, gAoAA, nrow=1)
+dev.off()
+
+pdf("../results/graphs/English_ModelResults_AgeOfBorrowing_NoRF_LenAndFreq.pdf",
+    height =3,width = 2*(8/3))
+grid.arrange(gLenA, gFreqA, nrow=1)
+dev.off()
+
+```
+
+\newpage
+
+# Ductch analysis
+
+The dates of entry for Dutch are much more dispersed than for English, so we transform them further using the Box-Cox method:
+  
+```{r}
+# remove non-borrowed words
+dutch[dutch$bor15!=1,]$age.oldest.num = NA
+# Take log years
+dutch$age.oldest.num.scaled = log10(dutch$age.oldest.num)
+# scale with boxcox
+pp = preProcess(dutch[,c('age.oldest.num.scaled','AoAscale')], method="BoxCox")
+dutch$age.oldest.num.scaled = bcPower(dutch$age.oldest.num.scaled, lambda = pp$bc$age.oldest.num.scaled$lambda)
+dutch$age.oldest.num.scaled = scale(dutch$age.oldest.num.scaled)
+```
+
+Plot raw data
+
+```{r warning=F}
+hist(dutch[dutch$bor15==1,]$age.oldest.num.scaled)
+
+g.ageAoA = ggplot(dutch[dutch$bor15==1,], 
+                  aes(x=as.numeric(AoAscale), y=age.oldest.num))+
+  geom_smooth() +
+  scale_y_reverse(lim=c(1000,250))
+
+
+g.ageLen = ggplot(dutch[dutch$bor15==1,], 
+                  aes(x=length, y=age.oldest.num))+
+  geom_smooth()+
+  scale_y_reverse(lim=c(1000,250))
+
+g.ageFreq = ggplot(dutch[dutch$bor15==1,],
+                   aes(x=as.numeric(subtlexzipfscale), y=age.oldest.num))+
+  geom_smooth()+
+  scale_y_reverse(lim=c(1000,250))
+
+grid.arrange(g.ageLen,g.ageFreq,g.ageAoA, nrow=1)
+```
+
+GAM model:  Because there are fewer datapoints, we build up the mode one variable at a time, keeping the variable if it significantly improves the fit of the model.
+
+```{r}
+m0.age = bam(age.oldest.num.scaled~
+               1 +
+               s(cat,bs='re')+
+               s(cat,phonlengthscale,bs='re')+
+               s(cat,AoAscale,bs='re')+
+               s(cat,subtlexzipfscale,bs='re'),
+             data = dutch[dutch$bor15==1,])
+m1.age = update(m0.age, ~.+ s(AoAscale))
+lrtest(m0.age,m1.age)
+# Significant
+m2.age = update(m1.age, ~.+ s(phonlengthscale, k=3))
+lrtest(m1.age,m2.age)
+# Not significant
+m3.age = update(m1.age, ~.+ s(subtlexzipfscale))
+lrtest(m1.age,m3.age)
+# Not significant
+m4.age = update(m1.age, ~.+ s(concscale))
+lrtest(m1.age,m4.age)
+# Not sigificant
+```
+
+Final model has just age of acquisition as a main effect, so let's take away the random effects for other variables:
+
+```{r}
+m5.age = bam(age.oldest.num.scaled~
+s(AoAscale) +
+s(cat,bs='re') +
+s(cat,AoAscale,bs='re'),
+data = dutch[dutch$bor15==1,])
+summary(m5.age)
+```
+
+
+Plot the model estimates.  The code is hidden, but you can view it in the Rmd file.  Note that the estimates actually come from different models.  Only the age of acuqisition result is relevant to the main results in the paper, but the others are shown for illustration.
+
+```{r echo=F}
+rescaleDate = function(X){
+10^(X * attr(dutch$age.oldest.num.scaled,'scaled:scale') +
+attr(dutch$age.oldest.num.scaled,'scaled:center'))
+}
+
+rescaleDateGraph = function(model,var,lab){
+px = plot_smooth(model,view=var, rm.ranef = T,
+print.summary=F)
+px$fv$fit = rescaleDate(px$fv$fit) 
+px$fv$ul = rescaleDate(px$fv$ul) 
+px$fv$ll = rescaleDate(px$fv$ll) 
+
+px$fv[,var] = px$fv[,var] * attr(dutch[,var],"scaled:scale") + attr(dutch[,var],"scaled:center")
+
+gx = ggplot(px$fv, aes_string(x=var,y="fit")) + 
+geom_ribbon(aes(ymin=ll,ymax=ul), alpha=0.3) +
+geom_line(size=1) +
+ylab("Date of borrowing (years before 2000)") +
+xlab(lab) +
+coord_cartesian(ylim=c(0,6000))+
+scale_y_reverse()
+
+return(gx) 
+}
+
+gAoAA = rescaleDateGraph(m5.age, "AoAscale","Age of acquisition")+
+ggtitle("")
+gFreqA = rescaleDateGraph(m3.age,"subtlexzipfscale","Frequency")+
+ggtitle("")
+gLenA = rescaleDateGraph(m2.age,"phonlengthscale","Word Length") +
+ggtitle("Dutch")
+
+grid.arrange(gLenA, gFreqA, gAoAA, nrow=1)
+pdf("../results/graphs/Dutch_ModelResults_AgeOfBorrowing_NoRF.pdf",
+height =3,width = 8)
+grid.arrange(gLenA, gFreqA, gAoAA, nrow=1)
+dev.off()
+
+pdf("../results/graphs/Dutch_ModelResults_AgeOfBorrowing_NoRF_AoA.pdf",
+height =3,width = 8/3)
+gAoAA + ggtitle("Dutch")
+dev.off()
+
+```

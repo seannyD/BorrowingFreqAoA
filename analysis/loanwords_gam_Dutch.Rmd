@@ -3,6 +3,9 @@ title: "Cognitive influences in language evolution: Dutch data"
 output: pdf_document
 ---
 
+# Introduction
+
+This is the model code for Monaghan & Roberts, "Cognitive influences in language evolution: Psycholinguistic predictors of loan word borrowing".  It takes data from the WOLD database of borrowing for Dutch and tries to predict whether a word has been borrowed or not according to various psycholinguitic measures.
 
 ```{r echo=F,eval=F}
 setwd("~/Documents/MPI/MonaghanAoA/Stats 2/analysis/")
@@ -257,126 +260,4 @@ abline(0,1,col='gray')
 text(raw, model.est, names(raw))
 ```
 
-# Predicting date of entry
-
-The dates of entry for Dutch are much more dispersed than for English, so we transform them further using the Box-Cox method:
-
-```{r}
-# remove non-borrowed words
-dutch[dutch$bor15!=1,]$age.oldest.num = NA
-# Take log years
-dutch$age.oldest.num.scaled = log10(dutch$age.oldest.num)
-# scale with boxcox
-pp = preProcess(dutch[,c('age.oldest.num.scaled','AoAscale')], method="BoxCox")
-dutch$age.oldest.num.scaled = bcPower(dutch$age.oldest.num.scaled, lambda = pp$bc$age.oldest.num.scaled$lambda)
-dutch$age.oldest.num.scaled = scale(dutch$age.oldest.num.scaled)
-```
-
-Plot raw data
-
-```{r warning=F}
-hist(dutch[dutch$bor15==1,]$age.oldest.num.scaled)
-
-g.ageAoA = ggplot(dutch[dutch$bor15==1,], 
-      aes(x=as.numeric(AoAscale), y=age.oldest.num))+
-         geom_smooth() +
-  scale_y_reverse(lim=c(1000,250))
-
-
-g.ageLen = ggplot(dutch[dutch$bor15==1,], 
-  aes(x=length, y=age.oldest.num))+
-         geom_smooth()+
-  scale_y_reverse(lim=c(1000,250))
-
-g.ageFreq = ggplot(dutch[dutch$bor15==1,],
-  aes(x=as.numeric(subtlexzipfscale), y=age.oldest.num))+
-         geom_smooth()+
-  scale_y_reverse(lim=c(1000,250))
-
-grid.arrange(g.ageLen,g.ageFreq,g.ageAoA, nrow=1)
-```
-
-GAM model:  Because there are fewer datapoints, we build up the mode one variable at a time, keeping the variable if it significantly improves the fit of the model.
-
-```{r}
-m0.age = bam(age.oldest.num.scaled~
-    1 +
-    s(cat,bs='re')+
-    s(cat,phonlengthscale,bs='re')+
-    s(cat,AoAscale,bs='re')+
-    s(cat,subtlexzipfscale,bs='re'),
-    data = dutch[dutch$bor15==1,])
-m1.age = update(m0.age, ~.+ s(AoAscale))
-lrtest(m0.age,m1.age)
-# Significant
-m2.age = update(m1.age, ~.+ s(phonlengthscale, k=3))
-lrtest(m1.age,m2.age)
-# Not significant
-m3.age = update(m1.age, ~.+ s(subtlexzipfscale))
-lrtest(m1.age,m3.age)
-# Not significant
-m4.age = update(m1.age, ~.+ s(concscale))
-lrtest(m1.age,m4.age)
-# Not sigificant
-```
-
-Final model has just age of acquisition as a main effect, so let's take away the random effects for other variables:
-
-```{r}
-m5.age = bam(age.oldest.num.scaled~
-    s(AoAscale) +
-    s(cat,bs='re') +
-    s(cat,AoAscale,bs='re'),
-    data = dutch[dutch$bor15==1,])
-summary(m5.age)
-```
-
-
-Plot the model estimates.  The code is hidden, but you can view it in the Rmd file.  Note that the estimates actually come from different models.  Only the age of acuqisition result is relevant to the main results in the paper, but the others are shown for illustration.
-
-```{r echo=F}
-rescaleDate = function(X){
-  10^(X * attr(dutch$age.oldest.num.scaled,'scaled:scale') +
-  attr(dutch$age.oldest.num.scaled,'scaled:center'))
-}
-
-rescaleDateGraph = function(model,var,lab){
-  px = plot_smooth(model,view=var, rm.ranef = T,
-                   print.summary=F)
-  px$fv$fit = rescaleDate(px$fv$fit) 
-  px$fv$ul = rescaleDate(px$fv$ul) 
-  px$fv$ll = rescaleDate(px$fv$ll) 
-  
-  px$fv[,var] = px$fv[,var] * attr(dutch[,var],"scaled:scale") + attr(dutch[,var],"scaled:center")
-  
-  gx = ggplot(px$fv, aes_string(x=var,y="fit")) + 
-    geom_ribbon(aes(ymin=ll,ymax=ul), alpha=0.3) +
-    geom_line(size=1) +
-    ylab("Date of borrowing (years before 2000)") +
-    xlab(lab) +
-    coord_cartesian(ylim=c(0,6000))+
-    scale_y_reverse()
-    
- return(gx) 
-}
-
-gAoAA = rescaleDateGraph(m5.age, "AoAscale","Age of acquisition")+
-  ggtitle("")
-gFreqA = rescaleDateGraph(m3.age,"subtlexzipfscale","Frequency")+
-  ggtitle("")
-gLenA = rescaleDateGraph(m2.age,"phonlengthscale","Word Length") +
-  ggtitle("Dutch")
-
-grid.arrange(gLenA, gFreqA, gAoAA, nrow=1)
-pdf("../results/graphs/Dutch_ModelResults_AgeOfBorrowing_NoRF.pdf",
-    height =3,width = 8)
-grid.arrange(gLenA, gFreqA, gAoAA, nrow=1)
-dev.off()
-
-pdf("../results/graphs/Dutch_ModelResults_AgeOfBorrowing_NoRF_AoA.pdf",
-    height =3,width = 8/3)
-gAoAA + ggtitle("Dutch")
-dev.off()
-
-```
 

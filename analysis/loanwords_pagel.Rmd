@@ -77,7 +77,7 @@ library(mgcv)
 Scale and center all variables:
 
 ```{r}
-d = read.csv("../pagel/loanword9.csv", stringsAsFactors = F)
+d = read.csv("../data/pagel/loanword9.csv", stringsAsFactors = F)
 d$pagel_rate = as.numeric(d$pagel_rate)
 
 d$AoA = as.numeric(d$AoA)

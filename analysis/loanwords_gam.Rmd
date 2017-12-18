@@ -3,10 +3,29 @@ title: "Cognitive influences in language evolution: English data"
 output: pdf_document
 ---
 
+# Introduction
+
+This is the model code for Monaghan & Roberts, "Cognitive influences in language evolution: Psycholinguistic predictors of loan word borrowing".  It takes data from the WOLD database of borrowing for English and tries to predict whether a word has been borrowed or not according to various psycholinguitic measures.
+
+The main fields in the data frame are:
+
+-  word: Orthographic form
+-  borrowing: variable from WOLD indicating level of evidence for borrowing:
+  -  1 = definately borrowed
+  -  5 = no evidence of borrowing
+-  age_oldest, age_youngest: Dates from WOLD indicating estiamte of data of entry into English
+-  phonology:  Phonological form
+-  phonlength:  Number of segments in the phonological form
+-  AoA: Age of acquisition ratings from Kuperman, Stadthagen-Gonzalez, and Brysbaert (2012).
+-  AoA_obj: Objective, test-based age of acuqisition from Brysbaert & Biemiller (2017)
+-  subtlexzipf:  Log frequency of word from the SUBTLEX database
+-  conc:  Concreteness ratings from Brysbaert, Warriner, & Kuperman (2014)
+-  cat: Dominant part of speech according to SUBTLEX.
+-  bor15:  Conversion of the WOLD borrowing variable into a numeric (0 = not borrowed, 1 = borrowed)
+
 
 ```{r echo=F,eval=F}
 setwd("~/Documents/MPI/MonaghanAoA/Stats 2/analysis/")
-# TODO: plot model effects without random effects for main model (done for objective measures)
 ```
 
 
@@ -50,21 +69,6 @@ rescaleGam = function(px, n, xvar, xlab=""){
 ```
 
 # Load data
-
--  word: Orthographic form
--  borrowing: variable from WOLD indicating level of evidence for borrowing:
-  -  1 = definately borrowed
-  -  5 = no evidence of borrowing
--  age_oldest, age_youngest: Dates from WOLD indicating estiamte of data of entry into English
--  phonology:  Phonological form
--  phonlength:  Number of segments in the phonological form
--  AoA: Age of acquisition ratings from Kuperman, Stadthagen-Gonzalez, and Brysbaert (2012).
--  AoA_obj: Objective, test-based age of acuqisition from Brysbaert & Biemiller (2017)
--  subtlexzipf:  Log frequency of word from the SUBTLEX database
--  conc:  Concreteness ratings from Brysbaert, Warriner, & Kuperman (2014)
--  cat: Dominant part of speech according to SUBTLEX.
--  bor15:  Conversion of the WOLD borrowing variable into a numeric (0 = not borrowed, 1 = borrowed)
-
 
 ```{r}
 dataloan <- read.csv("../data/loanword8.csv",stringsAsFactors = F)
@@ -483,111 +487,6 @@ pconcobj
 grid.arrange(plenobj,pfreqobj,paoaobj, nrow=1)
 ```
 
-\newpage
-
-# Predicting date of entry
-
-```{r}
-dataloan2$age_oldest_num = as.numeric(dataloan2$age_oldest_num)
-# remove non-borrowed words
-dataloan2[dataloan2$bor15!=1,]$age_oldest_num = NA
-# Take log years
-dataloan2$age_oldest_num.scaled = log10(dataloan2$age_oldest_num)
-# Scale and center
-dataloan2$age_oldest_num.scaled = scale(dataloan2$age_oldest_num.scaled)
-
-```
-
-Plot raw data
-
-```{r warning=F}
-hist(dataloan2[dataloan2$bor15==1,]$age_oldest_num)
-
-g.ageAoA = ggplot(dataloan2[dataloan2$bor15==1,], 
-      aes(x=AoA, y=age_oldest_num))+
-         geom_smooth() +
-  coord_cartesian(ylim=c(250,1000))
-  scale_y_reverse()
-
-
-g.ageLen = ggplot(dataloan2[dataloan2$bor15==1,], 
-  aes(x=phonlength, y=age_oldest_num))+
-         geom_smooth()+
-  coord_cartesian(ylim=c(250,1000))
-  scale_y_reverse()
-
-g.ageFreq = ggplot(dataloan2[dataloan2$bor15==1,],
-  aes(x=subtlexzipf, y=age_oldest_num))+
-         geom_smooth()+
-  coord_cartesian(ylim=c(250,1000))
-  scale_y_reverse()
-
-grid.arrange(g.ageLen,g.ageFreq,g.ageAoA, nrow=1)
-```
-
-GAM model:
-
-```{r}
-m0.age = bam(age_oldest_num.scaled~
-    s(phonlengthscale) + 
-    s(AoAscale) + 
-    s(subtlexzipfscale) +
-    s(concscale) +
-    s(cat,bs='re')+
-    s(cat,phonlengthscale,bs='re')+
-    s(cat,AoAscale,bs='re')+
-    s(cat,subtlexzipfscale,bs='re')+
-    s(cat,concscale,bs='re'),
-    data = dataloan2[dataloan2$bor15==1,])
-summary(m0.age)
-```
-
-Plot the model estimates.  The code is hidden, but you can view it in the Rmd file.
-
-```{r echo=F}
-rescaleDate = function(X){
-  10^(X * attr(dataloan2$age_oldest_num.scaled,'scaled:scale') +
-  attr(dataloan2$age_oldest_num.scaled,'scaled:center'))
-}
-
-rescaleDateGraph = function(var,lab){
-  px = plot_smooth(m0.age,view=var, rm.ranef = T,
-                   print.summary=F)
-  px$fv$fit = rescaleDate(px$fv$fit) 
-  px$fv$ul = rescaleDate(px$fv$ul) 
-  px$fv$ll = rescaleDate(px$fv$ll) 
-  
-  px$fv[,var] = px$fv[,var] * attr(dataloan2[,var],"scaled:scale") + attr(dataloan2[,var],"scaled:center")
-  
-  gx = ggplot(px$fv, aes_string(x=var,y="fit")) + 
-    geom_ribbon(aes(ymin=ll,ymax=ul), alpha=0.3) +
-    geom_line(size=1) +
-    ylab("Date of borrowing (years before 2000)") +
-    xlab(lab) +
-    coord_cartesian(ylim=c(300,1000))
-    scale_y_reverse() 
- return(gx) 
-}
-
-gAoAA = rescaleDateGraph("AoAscale","Age of acquisition")+
-  ggtitle("")
-gFreqA = rescaleDateGraph("subtlexzipfscale","Frequency")+
-  ggtitle("")
-gLenA = rescaleDateGraph("phonlengthscale","Word Length") +
-  ggtitle("English")
-
-grid.arrange(gLenA, gFreqA, gAoAA, nrow=1)
-pdf("../results/graphs/English_ModelResults_AgeOfBorrowing_NoRF.pdf",
-    height =3,width = 8)
-grid.arrange(gLenA, gFreqA, gAoAA, nrow=1)
-dev.off()
-
-pdf("../results/graphs/English_ModelResults_AgeOfBorrowing_NoRF_LenAndFreq.pdf",
-    height =3,width = 2*(8/3))
-grid.arrange(gLenA, gFreqA, nrow=1)
-dev.off()
-
-```
 
 # Distribution of words
 
