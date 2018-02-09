@@ -28,6 +28,7 @@ library(itsadug)
 library(car)
 library(caret)
 library(scales)
+library(binom)
 
 
 logit2per = function(X){
@@ -60,22 +61,30 @@ load("../data/loanwords_Dutch.Rdat")
 
 # Part of speech
 
+We calculate the means, but the number of observations is very different for each category.  We estimate confidence intervals around the mean with Wilson's binomial confidence interval method.
+
 ```{r}
 catx = data.frame(
   PoS = tapply(dutch$cat, dutch$cat, function(X){as.character(X[1])}),
   mean = tapply(dutch$bor15, dutch$cat, mean),
-  n = tapply(dutch$bor15, dutch$cat, length)
+  n = tapply(dutch$bor15, dutch$cat, length),
+  confint = binom.confint(
+    tapply(dutch$bor15, dutch$cat, sum),
+    tapply(dutch$bor15, dutch$cat, length),
+    methods="wilson"
+  )
 )
-catx = catx[order(catx$mean, decreasing = T),]
-catx$PoS = factor(catx$PoS, levels = catx[order(catx$mean, decreasing = T),]$PoS)
+catx = catx[order(catx$confint.lower, decreasing = T),]
+catx$PoS = factor(catx$PoS, levels = catx[order(catx$confint.lower, decreasing = T),]$PoS)
 
 posg = ggplot(catx, aes(x=mean, y=PoS)) +
   geom_point(size=2) + 
   ylab("Part of speech") +
   xlab("Proportion of words borrowed")+
   scale_x_continuous(labels=percent_format()) +
-  geom_text(aes(label=n), nudge_y=0.4)
-
+  geom_text(aes(label=n), nudge_y=0.4) + 
+  geom_errorbarh(aes(xmin=confint.lower, xmax=confint.upper))
+posg
 pdf("../results/graphs/POS_Borrowing_Dutch.pdf",
     width = 6,
     height = 4)
@@ -83,7 +92,12 @@ posg
 dev.off()
 
 catx$mean= catx$mean*100
-write.csv(catx, "../results/Dutch_POS_BorrowingProportions.csv", row.names = F)
+catx$confint.lower= catx$confint.lower*100
+catx$confint.upper= catx$confint.upper*100
+write.csv(catx[,c("PoS","mean",
+                  'n','confint.lower','confint.upper')], 
+    "../results/Dutch_POS_BorrowingProportions.csv", 
+    row.names = F)
 
 ```
 
