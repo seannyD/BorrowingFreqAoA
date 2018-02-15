@@ -196,6 +196,22 @@ summary(m4)
 
 Age of acquisition significantly improves the model and has an effect size similar to length (also, frequency has a much weaker effect).
 
+Test the non-linear effect of age of acquisition:
+
+```{r}
+m4b = lmer(pagel_rate ~
+           borrowing +
+           phonlength.scale + 
+           subtlexzipf.scale +
+           AoA.scale +
+           I(AoA.scale^2) +
+          (1 |cat),
+         data = d)
+anova(m4,m4b)
+```
+
+No quadratic effect of age of acquisition.
+
 Add concreteness:
 
 ```{r}
