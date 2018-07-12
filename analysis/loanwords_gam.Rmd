@@ -76,7 +76,7 @@ source("GAM_derivaties.R")
 # Load data
 
 ```{r}
-dataloan <- read.csv("../data/loanword8.csv",stringsAsFactors = F)
+dataloan <- read.csv("../data/loanword9.csv",stringsAsFactors = F)
 dataloan$bor15 <- ifelse(dataloan$borrowing==1,1, ifelse(dataloan$borrowing==5,0,NA))
 dataloan$bor15.cat <- factor(dataloan$bor15)
 ```
@@ -129,6 +129,9 @@ dataloan2$AoA_objscaled = scale(dataloan2$AoA_obj)
 
 dataloan2$source.language[dataloan2$bor15==0] = "English"
 dataloan2$source.language = factor(dataloan2$source.language)
+
+dataloan2$SLMWL = scale(log(dataloan2$source.language.mean.word.length))
+dataloan2$SWF = scale(dataloan2$source.language.word.freq)
 ```
 
 
@@ -810,3 +813,49 @@ m0.posFE.catByConc = update(m0.posFE.catByLen,~.+s(concscale,by=cat))
 lrtest(m0.posFE.catByLen,m0.posFE.catByConc)
 ```
 
+\newpage
+
+## Controlling for source language length
+
+Use the source word length frequency measure to control for borrowing from langauges with longer words.
+
+```{r}
+mLenFreqControl = update(m0, ~.+s(SWF,k=3))
+summary(mLenFreqControl)
+```
+
+Compare the original model with a model with control for donor language length.
+
+```{r}
+mx.labels = c("Length","AoA","Frequency","Concreteness")
+par(mfrow=c(2,2),mar=c(2,2,1,2))
+for(i in 1:4){
+plot(m0,select=i,main=mx.labels[i],ylim=c(-4,4))
+par(new=T)
+plot(mLenFreqControl,select=i,ylim=c(-4,4), col=2,ylab="")
+legend(-1,-1.5,legend = c("Original","With length control"),col=1:2,lty=1, bty='n')
+}
+par(mfrow=c(1,1))
+```
+
+\newpage
+
+Compare the original model with a model with control for average donor langauge word length.
+
+```{r}
+mMeanLenControl = update(m0, ~.+s(SLMWL,k=3))
+summary(mMeanLenControl)
+```
+
+
+```{r}
+mx.labels = c("Length","AoA","Frequency","Concreteness")
+par(mfrow=c(2,2),mar=c(2,2,1,2))
+for(i in 1:4){
+plot(m0,select=i,main=mx.labels[i],ylim=c(-4,4))
+par(new=T)
+plot(mMeanLenControl,select=i,ylim=c(-4,4), col=2,ylab="")
+legend(-1,-1.5,legend = c("Original","With length control"),col=1:2,lty=1, bty='n')
+}
+par(mfrow=c(1,1))
+```
