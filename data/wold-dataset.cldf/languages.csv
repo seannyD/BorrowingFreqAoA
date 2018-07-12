@@ -1,0 +1,396 @@
+affiliation,countries,description,family,fm_dl_id,genus,id,jsondata,latitude,longitude,markup_description,name,pk,vocabulary_pk,wals_equivalent
+"Niger-Congo, Bantoid",,,Niger-Congo,,Bantoid,1,{},-6.5,39.0,,Swahili,1,1,http://wals.info/languoid/lect/wals_code_swa
+"Afro-Asiatic, Southern Cushitic",,,Afro-Asiatic,,Southern Cushitic,2,{},-4.0,35.5,,Iraqw,2,2,http://wals.info/languoid/lect/wals_code_irq
+"Afro-Asiatic, Eastern Cushitic",,,http://wals.info/languoid/family/afroasiatic,,http://wals.info/languoid/genus/easterncushitic,3,{},5.5,37.25,,Gawwada,3,3,http://wals.info/languoid/lect/wals_code_dug
+"Afro-Asiatic, West Chadic",,,Afro-Asiatic,,West Chadic,4,{},12.0,7.0,,Hausa,4,4,http://wals.info/languoid/lect/wals_code_hau
+"Nilo-Saharan, Western Saharan",,,Nilo-Saharan,,Western Saharan,5,{},12.0,13.0,,Kanuri,5,5,http://wals.info/languoid/lect/wals_code_knr
+"Afro-Asiatic, Berber",,,http://wals.info/languoid/family/afroasiatic,,http://wals.info/languoid/genus/berber,6,{},34.5,-4.0,,Tarifiyt Berber,6,6,http://wals.info/languoid/lect/wals_code_brf
+"other, Creoles and Pidgins",,,other,,Creoles and Pidgins,7,{},-4.75,55.5,,Seychelles Creole,7,7,http://wals.info/languoid/lect/wals_code_sey
+"Indo-European, Romance",,,Indo-European,,Romance,8,{},46.0,25.0,,Romanian,8,8,http://wals.info/languoid/lect/wals_code_rom
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,,,9,{},48.091,17.9609,,Selice Romani,9,9,
+"Indo-European, Slavic",,,http://wals.info/languoid/family/indoeuropean,,http://wals.info/languoid/genus/slavic,10,{},51.75,14.3333,,Lower Sorbian,10,10,http://wals.info/languoid/lect/wals_code_srl
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,,http://wals.info/languoid/genus/germanic,11,{},50.55,9.68333,,Old High German,11,11,
+"Indo-European, Germanic",,,Indo-European,,Germanic,12,{},52.5,6.0,,Dutch,12,12,http://wals.info/languoid/lect/wals_code_dut
+"Indo-European, Germanic",,,Indo-European,,Germanic,13,{},52.0,0.0,,English,13,13,http://wals.info/languoid/lect/wals_code_eng
+"Uralic, Saami",,,http://wals.info/languoid/family/uralic,,http://wals.info/languoid/genus/saami,14,{},67.0,37.0,,Kildin Saami,14,14,http://wals.info/languoid/lect/wals_code_ski
+"Nakh-Daghestanian, Avar-Andic-Tsezic",,,Nakh-Daghestanian,,Avar-Andic-Tsezic,15,{},42.0833,46.1667,,Bezhta,15,15,http://wals.info/languoid/lect/wals_code_bez
+"Nakh-Daghestanian, Lezgic",,,Nakh-Daghestanian,,Lezgic,16,{},42.0,46.8333,,Archi,16,16,http://wals.info/languoid/lect/wals_code_arc
+Tibeto-Burman,,,http://wals.info/languoid/family/sinotibetan,,,17,{},28.0,84.25,,Manange,17,17,
+"Yeniseian, Yeniseian",,,Yeniseian,,Yeniseian,18,{},64.0,87.0,,Ket,18,18,http://wals.info/languoid/lect/wals_code_ket
+"Altaic, Turkic",,,http://wals.info/languoid/family/altaic,,http://wals.info/languoid/genus/turkic,19,{},62.0,130.0,,Sakha,19,19,
+Tungusic,,,http://wals.info/languoid/family/altaic,,http://wals.info/languoid/genus/tungusic,20,{},51.2829,126.111,,Oroqen,20,20,
+"Japanese, Japanese",,,Japanese,,Japanese,21,{},37.0,140.0,,Japanese,21,21,http://wals.info/languoid/lect/wals_code_jpn
+"Sino-Tibetan, Chinese",,,http://wals.info/languoid/family/sinotibetan,,http://wals.info/languoid/genus/chinese,22,{},34.0,110.0,,Mandarin Chinese,22,22,http://wals.info/languoid/lect/wals_code_mnd
+"Tai-Kadai, Kam-Tai",,,Tai-Kadai,,Kam-Tai,23,{},16.0,101.0,,Thai,23,23,http://wals.info/languoid/lect/wals_code_tha
+"Austro-Asiatic, Viet-Muong",,,Austro-Asiatic,,Viet-Muong,24,{},10.5,106.5,,Vietnamese,24,24,http://wals.info/languoid/lect/wals_code_vie
+"Hmong-Mien, Hmong-Mien",,,http://wals.info/languoid/family/hmongmien,,http://wals.info/languoid/genus/hmongmien,25,{},26.0,105.0,,White Hmong,25,25,http://wals.info/languoid/lect/wals_code_hmd
+"Austro-Asiatic, Aslian",,,http://wals.info/languoid/family/austroasiatic,,http://wals.info/languoid/genus/aslian,26,{},3.8807,102.456,,Ceq Wong,26,26,
+"Austronesian, Malayic",,,Austronesian,,Malayic,27,{},0.0,106.0,,Indonesian,27,27,http://wals.info/languoid/lect/wals_code_ind
+"Austronesian, Barito",,,Austronesian,,Barito,28,{},-20.0,47.0,,Malagasy,28,28,http://wals.info/languoid/lect/wals_code_mal
+"Austronesian, Oceanic",,,Austronesian,,Oceanic,29,{},-4.66667,146.0,,Takia,29,29,http://wals.info/languoid/lect/wals_code_tak
+"Austronesian, Oceanic",,,Austronesian,,Oceanic,30,{},19.5833,-155.5,,Hawaiian,30,30,http://wals.info/languoid/lect/wals_code_haw
+"Australian, Pama-Nyungan",,,Australian,,Pama-Nyungan,31,{},-17.6667,130.667,,Gurindji,31,31,http://wals.info/languoid/lect/wals_code_gji
+"Uto-Aztecan, Cahita",,,Uto-Aztecan,,Cahita,32,{},27.5,-110.25,,Yaqui,32,32,http://wals.info/languoid/lect/wals_code_yaq
+"Mayan, Mayan",,,http://wals.info/languoid/family/mayan,,http://wals.info/languoid/genus/mayan,33,{},16.8333,-92.8333,,Zinacantán Tzotzil,33,33,http://wals.info/languoid/lect/wals_code_tzz
+"Mayan, Mayan",,,http://wals.info/languoid/family/mayan,,http://wals.info/languoid/genus/mayan,34,{},16.0,-89.8333,,Q'eqchi',34,34,http://wals.info/languoid/lect/wals_code_kek
+"Oto-Manguean, Otomian",,,http://wals.info/languoid/family/otomanguean,,http://wals.info/languoid/genus/otomian,35,{},20.1667,-98.8333,,Otomi,35,35,http://wals.info/languoid/lect/wals_code_otm
+"other, Creoles and Pidgins",,,other,,Creoles and Pidgins,36,{},4.5,-55.5,,Saramaccan,36,36,http://wals.info/languoid/lect/wals_code_srm
+"Quechuan, Quechuan",,,http://wals.info/languoid/family/quechuan,,http://wals.info/languoid/genus/quechuan,37,{},0.333333,-78.0,,Imbabura Quechua,37,37,http://wals.info/languoid/lect/wals_code_qim
+Cariban,,,http://wals.info/languoid/family/cariban,,http://wals.info/languoid/genus/cariban,38,{},5.5,-56.0,,Kali'na,38,38,http://wals.info/languoid/lect/wals_code_car
+Nadahup,,,http://wals.info/languoid/family/nadahup,,http://wals.info/languoid/genus/nadahup,39,{},0.166667,-69.25,,Hup,39,39,http://wals.info/languoid/lect/wals_code_hpd
+"Matacoan, Matacoan",,,Matacoan,,Matacoan,40,{},-22.5,-62.5833,,Wichí,40,40,http://wals.info/languoid/lect/wals_code_wch
+"Araucanian, Araucanian",,,Araucanian,,Araucanian,41,{},-38.0,-72.0,,Mapudungun,41,41,http://wals.info/languoid/lect/wals_code_map
+Niger-Congo,,,http://wals.info/languoid/family/nigercongo,873046383578860,,42,{},2.0,14.0,,Bantu,42,,http://wals.info/languoid/genus/bantoid
+,,,,87304613280799,,43,{},24.667,30.5942,,Afro-Asiatic,43,,http://wals.info/languoid/family/afroasiatic
+"Ainu, Ainu",,,Ainu,873046779607803,Ainu,44,{},43.0,143.0,,Ainu,44,,http://wals.info/languoid/lect/wals_code_ain
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,8771614625844292,http://wals.info/languoid/genus/semitic,45,{},33.1,44.1,,Akkadian,45,,
+"Indo-European, Iranian",,,http://wals.info/languoid/family/indoeuropean,873054428690612,http://wals.info/languoid/genus/iranian,46,{},44.6333,41.9336,,Alanian,46,,
+"Indo-European, Albanian",,,Indo-European,873046746460402,Albanian,47,{},41.0,20.0,,Albanian,47,,http://wals.info/languoid/lect/wals_code_alb
+Algic,,,http://wals.info/languoid/family/algic,873054133838687,,48,{},43.2567,-79.8691,,Algonquian (Powhatan),48,,http://wals.info/languoid/genus/algonquian
+,,,,9214223399298885,,49,{},49.0,72.0,,Altaic,49,,http://wals.info/languoid/family/altaic
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,810252249701848367,http://wals.info/languoid/genus/germanic,50,{},2.0,-54.0,,Aluku,50,,http://wals.info/languoid/lect/wals_code_ndy
+"Afro-Asiatic, Semitic",,,Afro-Asiatic,873046569195851,Semitic,51,{},10.0,38.0,,Amharic,51,,http://wals.info/languoid/lect/wals_code_amh
+Afro-Asiatic,,,http://wals.info/languoid/family/afroasiatic,873046643893487,,52,{},29.9792,31.1344,,Egyptian,52,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873046170624878,http://wals.info/languoid/genus/semitic,53,{},25.0,42.0,,Arabic,53,,http://wals.info/languoid/lect/wals_code_ams
+"Afro-Asiatic, Semitic",,,Afro-Asiatic,873046256434734,Semitic,54,{},34.0,-6.0,,Arabic (Moroccan),54,,http://wals.info/languoid/lect/wals_code_amr
+Arawakan,,,http://wals.info/languoid/family/arawakan,873054684025339,,55,{},18.5393,-72.3364,,Arawakan (Haiti),55,,
+,,,,810252249868734216,,56,{},-2.0,-78.0,,Arawakan,56,,http://wals.info/languoid/family/arawakan
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873046833963436,,57,{},40.1586,44.4993,,Armenian,57,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873054163748088,http://wals.info/languoid/genus/romance,58,{},20.7147,70.977,,Indo-Portuguese,58,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873046958042334,http://wals.info/languoid/genus/semitic,59,{},35.0,43.0,,Assyrian,59,,
+,,,,92142232645128228,,60,{},23.0,98.0,,Austro-Asiatic,60,,http://wals.info/languoid/family/austroasiatic
+,,,,87305421339406,,61,{},24.0,121.0,,Austronesian,61,,http://wals.info/languoid/family/austronesian
+"Nakh-Daghestanian, Avar-Andic-Tsezic",,,Nakh-Daghestanian,873046422615821,Avar-Andic-Tsezic,62,{},42.5,46.5,,Avar,62,,http://wals.info/languoid/lect/wals_code_ava
+"Aymaran, Aymaran",,,Aymaran,873046304687327,Aymaran,63,{},-17.0,-69.0,,Aymara,63,,http://wals.info/languoid/lect/wals_code_aym
+"Altaic, Turkic",,,Altaic,929134886323888,Turkic,64,{},40.5,48.5,,Azerbaijani,64,,http://wals.info/languoid/lect/wals_code_aze
+"Austronesian, Bali-Sasak",,,Austronesian,873046109911327,Bali-Sasak,65,{},-8.33333,115.25,,Balinese,65,,http://wals.info/languoid/lect/wals_code_bal
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873046801925325,,66,{},55.9321,23.3142,,Baltic,66,,
+Niger-Congo,,,http://wals.info/languoid/family/nigercongo,9221220875844292,,67,{},6.5,20.75,,Banda,67,,http://wals.info/languoid/lect/wals_code_lnd
+"Austronesian, Malayic",,,http://wals.info/languoid/family/austronesian,873046613737312,http://wals.info/languoid/genus/malayic,68,{},-3.3285,114.589,,Banjarese,68,,
+,,,,873046426405551,,69,{},1.0,-78.0,,Barbacoan,69,,http://wals.info/languoid/family/barbacoan
+"Trans-New Guinea, Madang",,,http://wals.info/languoid/family/transnewguinea,873046659286877,http://wals.info/languoid/genus/madang,70,{},-4.88333,145.75,,Bargam,70,,http://wals.info/languoid/lect/wals_code_mug
+"Niger-Congo, Bantoid",,,Niger-Congo,873046238877373,Bantoid,71,{},-10.0,28.25,,Bemba,71,,http://wals.info/languoid/lect/wals_code_bem
+"Indo-European, Indic",,,Indo-European,810252249111842290,Indic,72,{},24.0,90.0,,Bengali,72,,http://wals.info/languoid/lect/wals_code_ben
+Niger-Congo,,,http://wals.info/languoid/family/nigercongo,873046506621529,,73,{},7.0,8.0,,Benue-Congo,73,,
+Afro-Asiatic,,,http://wals.info/languoid/family/afroasiatic,873046631062670,,74,{},32.0,-1.0,,Berber,74,,http://wals.info/languoid/genus/berber
+"Indo-European, Slavic",,,Indo-European,873046918094304,Slavic,75,{},42.5,25.0,,Bulgarian,75,,http://wals.info/languoid/lect/wals_code_bul
+"Burushaski, Burushaski",,,Burushaski,873046193927540,Burushaski,76,{},36.5,74.5,,Burushaski,76,,http://wals.info/languoid/lect/wals_code_bur
+Mongolic,,,http://wals.info/languoid/family/altaic,87304650524652,http://wals.info/languoid/genus/mongolic,77,{},52.0,108.0,,Buryat,77,,http://wals.info/languoid/lect/wals_code_but
+"Sino-Tibetan, Chinese",,,Sino-Tibetan,873046191917471,Chinese,78,{},23.0,113.0,,Cantonese,78,,http://wals.info/languoid/lect/wals_code_cnt
+"Cariban, Cariban",,,Cariban,873046160049247,Cariban,79,{},5.5,-56.0,,Carib,79,,http://wals.info/languoid/lect/wals_code_car
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,87304652019369,,80,{},50.1186,-5.53715,,Celtic,80,,http://wals.info/languoid/genus/celtic
+Tai-Kadai,,,http://wals.info/languoid/family/taikadai,873054678003353,,81,{},23.0,106.0,,Central Tai,81,,
+"Sino-Tibetan, Chinese",,,http://wals.info/languoid/family/sinotibetan,810252249246400219,http://wals.info/languoid/genus/chinese,82,{},23.67,116.63,,Ch’ao-chou,82,,http://dev.livingreviews.org/wals/languoid/lect/wals_code_chz
+Mayan,,,http://wals.info/languoid/family/mayan,873046801567366,,83,{},18.0,-92.5,,Ch’olan,83,,
+"Mayan, Mayan",,,http://wals.info/languoid/family/mayan,87304684526799,http://wals.info/languoid/genus/mayan,84,{},15.725,-88.5936,,Ch’olti’,84,,
+Mayan,,,http://wals.info/languoid/family/mayan,873046266645789,http://wals.info/languoid/genus/mayan,85,{},14.8333,-89.25,,Ch’orti’,85,,http://wals.info/languoid/lect/wals_code_coi
+Afro-Asiatic,,,http://wals.info/languoid/family/afroasiatic,873046172382033,,86,{},10.0,14.0,,Chadic,86,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,873046592022547,,87,{},12.0,107.5,,Cham,87,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,873046970857248,,88,{},12.0,108.0,,Chamic,88,,
+Sino-Tibetan,,,http://wals.info/languoid/family/sinotibetan,873046829205261,http://wals.info/languoid/genus/chinese,89,{},34.0,110.0,,Chinese,89,,http://wals.info/languoid/lect/wals_code_mnd
+"Sino-Tibetan, Chinese",,,Sino-Tibetan,873046708606661,Chinese,90,{},25.0,118.0,,Hokkien,90,,http://wals.info/languoid/lect/wals_code_hok
+"Sino-Tibetan, Chinese",,,http://wals.info/languoid/family/sinotibetan,91291433185253147,http://wals.info/languoid/genus/chinese,91,{},24.4796,118.089,,Min,91,,
+Sino-Tibetan,,,http://wals.info/languoid/family/sinotibetan,873054478044094,,92,{},37.0,115.0,,Northern Chinese,92,,
+"Mayan, Mayan",,,Mayan,873046948473128,Mayan,93,{},17.75,-92.5,,Chol,93,,http://wals.info/languoid/lect/wals_code_col
+Tequistlatecan,,,http://wals.info/languoid/family/tequistlatecan,873046208313111,,94,{},16.1667,-95.75,,Chontal,94,,
+"Mayan, Mayan",,,Mayan,873046865732526,Mayan,95,{},15.9167,-91.5833,,Chuj,95,,http://wals.info/languoid/lect/wals_code_chj
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046355306887,http://wals.info/languoid/genus/romance,96,{},41.8955,12.4823,,Latin,96,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873046360018227,http://wals.info/languoid/genus/semitic,97,{},21.4167,39.8167,,Classical Arabic,97,,
+"Indo-European, Greek",,,http://wals.info/languoid/family/indoeuropean,873046449057485,http://wals.info/languoid/genus/greek,98,{},37.9792,23.7166,,Classical Greek,98,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873054480981631,,99,{},54.9158,8.33083,,Germanic,99,,http://wals.info/languoid/genus/germanic
+"Niger-Congo, Bantoid",,,Niger-Congo,873046256986680,Bantoid,100,{},-12.0,44.0,,Comorian,100,,http://wals.info/languoid/lect/wals_code_com
+"Afro-Asiatic, Egyptian-Coptic",,,Afro-Asiatic,873046318011164,Egyptian-Coptic,101,{},26.0,32.0,,Coptic,101,,http://wals.info/languoid/lect/wals_code_cop
+Quechuan,,,http://wals.info/languoid/family/quechuan,873046160132300,http://wals.info/languoid/genus/quechuan,102,{},-14.5,-71.0,,Cuzco Quechua,102,,http://wals.info/languoid/lect/wals_code_qcu
+"Indo-European, Slavic",,,Indo-European,873046376832795,Slavic,103,{},50.0,15.0,,Czech,103,,http://wals.info/languoid/lect/wals_code_cze
+"Altaic, Mongolic",,,Altaic,92111732875844292,Mongolic,104,{},48.0,124.0,,Dagur,104,,http://wals.info/languoid/lect/wals_code_dgr
+"Nilo-Saharan, Nilotic",,,Nilo-Saharan,873046843715039,Nilotic,105,{},-4.33333,35.3333,,Datooga,105,,http://wals.info/languoid/lect/wals_code_dat
+"Nilo-Saharan, Songhay",,,http://wals.info/languoid/family/nilosaharan,873046692377180,http://wals.info/languoid/genus/songhay,106,{},12.0,3.5,,Dendi,106,,
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,873054831015932,http://wals.info/languoid/genus/pamanyungan,107,{},-33.8671,151.207,,Dharuk,107,,
+,,,,873046236198733,,108,{},19.0,82.0,,Dravidian,108,,http://wals.info/languoid/family/dravidian
+"Austronesian, Madurese",,,Austronesian,8771713266468095,Madurese,109,{},-7.0,113.5,,Madurese,109,,http://wals.info/languoid/lect/wals_code_mdr
+"Austro-Asiatic, Khmer",,,Austro-Asiatic,810252249532227976,Khmer,110,{},12.5,105.0,,Khmer,110,,http://wals.info/languoid/lect/wals_code_khm
+Altaic,,,http://wals.info/languoid/family/altaic,8129172461191679,,111,{},48.0,70.0,,Turkic,111,,http://wals.info/languoid/genus/turkic
+"Altaic, Turkic",,,http://wals.info/languoid/family/altaic,8771730598078357,http://wals.info/languoid/genus/turkic,112,{},43.0,66.0,,East Turkic,112,,
+"Algic, Algonquian",,,http://wals.info/languoid/family/algic,91291431461191679,http://wals.info/languoid/genus/algonquian,113,{},44.0,-71.0,,Eastern Abenaki,113,,
+"Niger-Congo, Bantoid",,,http://wals.info/languoid/family/nigercongo,92122118645128228,http://wals.info/languoid/genus/bantoid,114,{},1.0,30.0,,Eastern Bantu,114,,
+"Indo-European, Romance",,,Indo-European,873046508145964,Romance,115,{},40.0,-4.0,,Spanish,115,,http://wals.info/languoid/lect/wals_code_spa
+,,,,873046573799617,,116,{},,,,European Colonial Language,116,,
+"Altaic, Tungusic",,,Altaic,873046796625769,Tungusic,117,{},56.0,125.0,,Evenki,117,,http://wals.info/languoid/lect/wals_code_eve
+Uralic,,,http://wals.info/languoid/family/uralic,87304699373095,,118,{},61.0,41.0,,Fennic,118,,http://wals.info/languoid/genus/finnic
+"Austronesian, Oceanic",,,Austronesian,873054686279542,Oceanic,119,{},-17.8333,178.0,,Fijian,119,,http://wals.info/languoid/lect/wals_code_fij
+Uralic,,,http://wals.info/languoid/family/uralic,873046903822355,,120,{},59.0,41.0,,Finno-Ugric,120,,http://wals.info/languoid/family/uralic
+"Niger-Congo, Kwa",,,http://wals.info/languoid/family/nigercongo,92122118189108517,http://wals.info/languoid/genus/kwa,121,{},6.41667,2.16667,,Fon,121,,http://wals.info/languoid/lect/wals_code_fon
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,91291433645128228,http://wals.info/languoid/genus/germanic,122,{},49.0,4.0,,Frankish,122,,
+"Indo-European, Romance",,,Indo-European,873046625844292,Romance,123,{},48.0,2.0,,French,123,,http://wals.info/languoid/lect/wals_code_fre
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046290537681,http://wals.info/languoid/genus/romance,124,{},50.86,0.571944,,French (Anglo-Norman),124,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,87305448517062,http://wals.info/languoid/genus/romance,125,{},49.2566,4.03309,,Old French,125,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873054923872875,http://wals.info/languoid/genus/romance,126,{},49.8939,2.29424,,French (Picard),126,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,9129143186323888,http://wals.info/languoid/genus/romance,127,{},50.4641,4.86043,,French (Walloon),127,,
+"Niger-Congo, Northern Atlantic",,,http://wals.info/languoid/family/nigercongo,8730469394701,http://wals.info/languoid/genus/northernatlantic,128,{},11.0,-12.0,,Ful,128,,
+"Indo-European, Celtic",,,http://wals.info/languoid/family/indoeuropean,873054391546059,http://wals.info/languoid/genus/celtic,129,{},57.0,-4.0,,Gaelic,129,,http://wals.info/languoid/lect/wals_code_gae
+"Australian, Djeragan",,,http://wals.info/languoid/family/australian,873054115109051,http://wals.info/languoid/genus/djeragan,130,{},-15.0833,129.0,,Gajirrabeng,130,,
+"Niger-Congo, Kwa",,,http://wals.info/languoid/family/nigercongo,8730467378401,http://wals.info/languoid/genus/kwa,131,{},6.66667,2.5,,Gbe,131,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873054192611195,http://wals.info/languoid/genus/semitic,132,{},15.25,39.67,,Ge‘ez,132,,
+"Austronesian, Oceanic",,,http://wals.info/languoid/family/austronesian,873046997708874,http://wals.info/languoid/genus/oceanic,133,{},-4.95,145.75,,Gedaged,133,,
+"Kartvelian, Kartvelian",,,Kartvelian,9291347875844292,Kartvelian,134,{},42.0,44.0,,Georgian,134,,http://wals.info/languoid/lect/wals_code_geo
+"Indo-European, Germanic",,,Indo-European,87304625001713,Germanic,135,{},52.0,10.0,,German,135,,http://wals.info/languoid/lect/wals_code_ger
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873054987450504,http://wals.info/languoid/genus/germanic,136,{},48.0,14.0,,German (Austrian),136,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046182233833,http://wals.info/languoid/genus/germanic,137,{},49.7943,9.92749,,Early New High German,137,,
+"Indo-European, Germanic",,,Indo-European,873046810603400,Germanic,138,{},53.0,10.0,,Low German,138,,http://wals.info/languoid/lect/wals_code_lge
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,87304630805724,http://wals.info/languoid/genus/germanic,139,{},48.5,8.0,,Middle High German,139,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046291234016,http://wals.info/languoid/genus/germanic,140,{},51.8,12.0667,,Middle Low German,140,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046145697726,http://wals.info/languoid/genus/germanic,141,{},52.0,10.0,,New High German,141,,http://wals.info/languoid/lect/wals_code_ger
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046996635215,http://wals.info/languoid/genus/germanic,142,{},51.051,13.7337,,German (Upper Saxon),142,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046314379446,http://wals.info/languoid/genus/germanic,143,{},51.3397,12.3713,,East Middle German,143,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046995196245,http://wals.info/languoid/genus/germanic,144,{},52.0,7.0,,West Germanic,144,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046977557676,http://wals.info/languoid/genus/germanic,145,{},43.2172,25.6111,,Gothic,145,,
+Mayan,,,http://wals.info/languoid/family/mayan,873046778567710,,146,{},17.0,-92.5,,Greater Tzeltalan,146,,
+"Indo-European, Greek",,,http://wals.info/languoid/family/indoeuropean,873046145079265,http://wals.info/languoid/genus/greek,147,{},37.0378,27.4239,,Greek,147,,http://wals.info/languoid/lect/wals_code_grk
+"Tupian, Tupi-Guaraní",,,Tupian,873046599275472,Tupi-Guaraní,148,{},-26.0,-56.0,,Guaraní,148,,http://wals.info/languoid/lect/wals_code_gua
+Chon,,,http://wals.info/languoid/family/chon,873046771654254,http://wals.info/languoid/genus/puelche,149,{},-41.0,-67.0,,Gününa Yajüch,149,,http://wals.info/languoid/lect/wals_code_gku
+"Australian, Pama-Nyungan",,,Australian,873054283780873,Pama-Nyungan,150,{},-15.0,144.833,,Guugu Yimidhirr,150,,http://wals.info/languoid/lect/wals_code_guu
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,810252249870320768,http://wals.info/languoid/genus/romance,151,{},5.0,-53.0,,Guyanese French Creole,151,,http://wals.info/languoid/lect/wals_code_gfr
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873046497545123,http://wals.info/languoid/genus/semitic,152,{},31.5,34.8333,,Hebrew,152,,http://wals.info/languoid/lect/wals_code_heb
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046638773387,http://wals.info/languoid/genus/germanic,153,{},52.0,10.0,,High German,153,,http://wals.info/languoid/lect/wals_code_ger
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873046977420831,,154,{},25.0,71.0,,Hindi-Urdu,154,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873054900957240,http://wals.info/languoid/genus/semitic,155,{},37.1765,-3.59793,,Arabic (Hispanic),155,,
+,,,,9214223326116720,,156,{},25.0,106.0,,Hmong-Mien,156,,http://wals.info/languoid/family/hmongmien
+"Mayan, Mayan",,,Mayan,873046678669400,Mayan,157,{},22.0833,-99.3333,,Huastec,157,,http://wals.info/languoid/lect/wals_code_htc
+"Uralic, Ugric",,,Uralic,873046811004398,Ugric,158,{},47.0,20.0,,Hungarian,158,,http://wals.info/languoid/lect/wals_code_hun
+"Niger-Congo, Igboid",,,Niger-Congo,873046567114050,Igboid,159,{},6.0,7.33333,,Igbo,159,,http://wals.info/languoid/lect/wals_code_igb
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873054618839891,,160,{},42.0675,19.5131,,Illyrian,160,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,92122118784987605,http://wals.info/languoid/genus/germanic,161,{},22.5697,88.3697,,English (Indian),161,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046705605770,http://wals.info/languoid/genus/romance,162,{},-21.1144,55.5325,,French (Indian Ocean),162,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,8771729996400219,http://wals.info/languoid/genus/semitic,163,{},-6.16592,39.2026,,Arabic (Indian Ocean),163,,
+,,,,873046281791177,,164,{},43.0,35.0,,Indo-European,164,,http://wals.info/languoid/family/indoeuropean
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873046534946406,,165,{},32.0,70.0,,Indo-Iranian,165,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046120581154,http://wals.info/languoid/genus/romance,166,{},15.493,73.818,,Portuguese (Indian),166,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873046339261748,,167,{},35.0,61.0,,Iranian,167,,http://wals.info/languoid/genus/iranian
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873054138468261,,168,{},29.6167,52.5333,,Middle Persian,168,,
+"Indo-European, Romance",,,Indo-European,873046776116720,Romance,169,{},43.0,12.0,,Italian,169,,http://wals.info/languoid/lect/wals_code_ita
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873054507286456,http://wals.info/languoid/genus/romance,170,{},43.7687,11.2569,,Old Italian,170,,
+"Mayan, Mayan",,,Mayan,873046643820620,Mayan,171,{},17.0,-89.8333,,Itzaj,171,,http://wals.info/languoid/lect/wals_code_itz
+"Austro-Asiatic, Aslian",,,http://wals.info/languoid/family/austroasiatic,873046243477464,http://wals.info/languoid/genus/aslian,172,{},5.75,101.5,,Jah Hut,172,,http://wals.info/languoid/lect/wals_code_jah
+"Australian, Jaminjungan",,,Australian,873046237837831,Jaminjungan,173,{},-15.0833,130.5,,Jaminjung,173,,http://wals.info/languoid/lect/wals_code_jam
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,873046137435318,http://wals.info/languoid/genus/pamanyungan,174,{},-18.75,128.0,,Jaru,174,,http://wals.info/languoid/lect/wals_code_djr
+"Austronesian, Javanese",,,Austronesian,873046341214209,Javanese,175,{},-7.0,111.0,,Javanese,175,,http://wals.info/languoid/lect/wals_code_jav
+West Barkly,,,http://wals.info/languoid/family/australian,873054845917986,http://wals.info/languoid/genus/westbarkly,176,{},-17.75,134.0,,Jingulu,176,,http://wals.info/languoid/lect/wals_code_dji
+"Mayan, Mayan",,,http://wals.info/languoid/family/mayan,8730462835434,http://wals.info/languoid/genus/mayan,177,{},15.1,-90.45,,K’iche’an,177,,
+"Altaic, Mongolic",,,Altaic,873046952210259,Mongolic,178,{},44.0,83.0,,Kalmyk,178,,http://wals.info/languoid/lect/wals_code_kmk
+Tai-Kadai,,,http://wals.info/languoid/family/taikadai,8116736875844292,,179,{},26.5783,106.713,,Kam-Sui,179,,
+"Dravidian, Southern Dravidian",,,Dravidian,873054157728727,Southern Dravidian,180,{},14.0,76.0,,Kannada,180,,http://wals.info/languoid/lect/wals_code_knd
+"Uralic, Finnic",,,Uralic,873046956097541,Finnic,181,{},64.0,32.0,,Karelian,181,,http://wals.info/languoid/lect/wals_code_krl
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,873046451848366,http://wals.info/languoid/genus/pamanyungan,182,{},-17.3333,132.083,,Karranga,182,,http://wals.info/languoid/lect/wals_code_mdb
+"Australian, Pama-Nyungan",,,Australian,873054326966014,Pama-Nyungan,183,{},-34.25,138.5,,Kaurna,183,,http://wals.info/languoid/lect/wals_code_kaq
+"Altaic, Mongolic",,,Altaic,873046343052652,Mongolic,184,{},47.0,105.0,,Khalkha,184,,http://wals.info/languoid/lect/wals_code_kha
+Djeragan,,,http://wals.info/languoid/family/australian,873046366716360,http://wals.info/languoid/genus/djeragan,185,{},-17.5,127.75,,Kija,185,,http://wals.info/languoid/lect/wals_code_kij
+"Uralic, Finnic",,,http://wals.info/languoid/family/uralic,873046650441692,http://wals.info/languoid/genus/finnic,186,{},61.0,55.0,,Komi,186,,
+"Niger-Congo, Bantoid",,,Niger-Congo,873046700966182,Bantoid,187,{},-5.0,15.0,,Kongo,187,,http://wals.info/languoid/lect/wals_code_kon
+"Afro-Asiatic, Eastern Cushitic",,,http://wals.info/languoid/family/afroasiatic,873046729707482,http://wals.info/languoid/genus/easterncushitic,188,{},5.5,37.5,,Konso,188,,
+"Korean, Korean",,,Korean,873046848256910,Korean,189,{},37.5,128.0,,Korean,189,,http://wals.info/languoid/lect/wals_code_kor
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,92142231461191679,http://wals.info/languoid/genus/germanic,190,{},-18.1667,125.583,,Kriol,190,,http://wals.info/languoid/lect/wals_code_kfc
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873046441040712,,191,{},36.0,44.0,,Kurdish,191,,http://wals.info/languoid/lect/wals_code_krd
+"Nakh-Daghestanian, Lak-Dargwa",,,Nakh-Daghestanian,873046957352946,Lak-Dargwa,192,{},42.1667,47.1667,,Lak,192,,http://wals.info/languoid/lect/wals_code_lak
+"Tai-Kadai, Kam-Tai",,,Tai-Kadai,873046474779681,Kam-Tai,193,{},18.0,103.0,,Lao,193,,http://wals.info/languoid/lect/wals_code_lao
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046293964031,http://wals.info/languoid/genus/romance,194,{},44.4167,12.2,,Late Latin,194,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873054324306842,http://wals.info/languoid/genus/romance,195,{},44.5075,11.3514,,Medieval Latin,195,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046314261813,http://wals.info/languoid/genus/romance,196,{},40.8167,14.1167,,Vulgar Latin,196,,
+Tupian,,,http://wals.info/languoid/family/tupian,873054582209821,,197,{},1.5,-67.0,,Nheengatú,197,,
+Bantoid,,,http://wals.info/languoid/family/nigercongo,873046845083671,http://wals.info/languoid/genus/bantoid,198,{},-4.8,11.85,,Loango,198,,
+Sino-Tibetan,,,http://wals.info/languoid/family/sinotibetan,873054610890632,,199,{},24.0,98.0,,Lolo-Burmese,199,,http://wals.info/languoid/genus/burmeselolo
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873046930362807,http://wals.info/languoid/genus/semitic,200,{},34.0,-6.0,,Arabic (Maghrebi),200,,http://wals.info/languoid/lect/wals_code_amr
+"Niger-Congo, Bantoid",,,Niger-Congo,873046453384262,Bantoid,201,{},-15.0,38.6667,,Makua,201,,http://wals.info/languoid/lect/wals_code_mua
+"Austronesian, Malayic",,,Austronesian,873046243014335,Malayic,202,{},3.0,102.0,,Malay,202,,http://wals.info/languoid/lect/wals_code_mly
+"Dravidian, Southern Dravidian",,,Dravidian,92122118627044120,Southern Dravidian,203,{},10.0,76.5,,Malayalam,203,,http://wals.info/languoid/lect/wals_code_mym
+"Afro-Asiatic, Biu-Mandara",,,Afro-Asiatic,873046715610818,Biu-Mandara,204,{},11.5,13.75,,Malgwa,204,,http://wals.info/languoid/lect/wals_code_mlg
+Niger-Congo,,,http://wals.info/languoid/family/nigercongo,873046242315387,,205,{},10.0,-7.0,,Mande,205,,
+"Niger-Congo, Western Mande",,,Niger-Congo,92122117461191679,Western Mande,206,{},13.0,-15.6667,,Mandinka,206,,http://wals.info/languoid/lect/wals_code_mdk
+"Austronesian (Eastern Malayo-Polynesian), Oceanic",,,http://wals.info/languoid/family/austronesian,873046851426818,http://wals.info/languoid/genus/oceanic,207,{},-40.0,176.0,,Māori,207,,http://wals.info/languoid/lect/wals_code_mao
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046260671806,http://wals.info/languoid/genus/romance,208,{},-20.2,57.5,,French (Mauritian),208,,
+"Niger-Congo, Western Mande",,,Niger-Congo,873046211306238,Western Mande,209,{},7.83333,-11.5,,Mende,209,,http://wals.info/languoid/lect/wals_code_mde
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046674233424,http://wals.info/languoid/genus/romance,210,{},19.427,-99.1276,,Spanish (Mexican),210,,
+Sino-Tibetan,,,http://wals.info/languoid/family/sinotibetan,873046846675707,,211,{},34.2667,108.9,,Middle Chinese,211,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046130371437,http://wals.info/languoid/genus/germanic,212,{},51.7,5.31667,,Middle Dutch,212,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046287292564,http://wals.info/languoid/genus/romance,213,{},47.5855,1.33095,,Middle French,213,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,92211211473769206,,214,{},34.0,60.0,,Middle Iranian,214,,
+Austro-Asiatic,,,http://wals.info/languoid/family/austroasiatic,810252249724779681,,215,{},15.8333,100.5,,Middle Mon,215,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046619134147,http://wals.info/languoid/genus/germanic,216,{},60.0,11.0,,Middle North Germanic,216,,
+"Algic, Algonquian",,,http://wals.info/languoid/family/algic,873054133686346,http://wals.info/languoid/genus/algonquian,217,{},45.0,-63.0,,Mikmaq,217,,http://wals.info/languoid/lect/wals_code_mic
+"Austronesian, Malayic",,,Austronesian,873046639352096,Malayic,218,{},-1.0,101.0,,Minangkabau,218,,http://wals.info/languoid/lect/wals_code_min
+"Australian, Djeragan",,,Australian,873046525654720,Djeragan,219,{},-15.6667,129.0,,Miriwung,219,,http://wals.info/languoid/lect/wals_code_mir
+Oto-Manguean,,,http://wals.info/languoid/family/otomanguean,873046109548723,,220,{},16.0,-96.0,,Mixe-Zoquean,220,,http://wals.info/languoid/family/mixezoque
+Mayan,,,http://wals.info/languoid/family/mayan,873046283591339,,221,{},15.3638,-92.2481,,Mocho,221,,
+Austro-Asiatic,,,http://wals.info/languoid/family/austroasiatic,9219164875844292,,222,{},12.5,105.0,,Modern Khmer,222,,http://wals.info/languoid/lect/wals_code_khm
+Austro-Asiatic,,,http://wals.info/languoid/family/austroasiatic,810252249607785882,,223,{},14.8333,100.5,,Modern Mon,223,,http://wals.info/languoid/lect/wals_code_mon
+"Austro-Asiatic, Monic",,,Austro-Asiatic,810252249800105460,Monic,224,{},14.8333,100.5,,Mon,224,,http://wals.info/languoid/lect/wals_code_mon
+Austro-Asiatic,,,http://wals.info/languoid/family/austroasiatic,873054667397354,,225,{},14.5517,102.909,,Mon-Khmer,225,,http://wals.info/languoid/family/austroasiatic
+"Altaic, Mongolic",,,http://wals.info/languoid/family/altaic,873046233944681,http://wals.info/languoid/genus/mongolic,226,{},47.0,105.0,,Mongolian,226,,http://wals.info/languoid/lect/wals_code_kha
+Altaic,,,http://wals.info/languoid/family/altaic,873046635646989,,227,{},45.0,100.0,,Mongolic,227,,http://wals.info/languoid/genus/mongolic
+"Mayan, Mayan",,,Mayan,87304618686474,Mayan,228,{},16.5833,-88.6667,,Mopan,228,,http://wals.info/languoid/lect/wals_code_mop
+"Australian, Pama-Nyungan",,,Australian,873046590936442,Pama-Nyungan,229,{},-17.3333,132.083,,Mudburra,229,,http://wals.info/languoid/lect/wals_code_mdb
+"Uto-Aztecan, Aztecan",,,http://wals.info/languoid/family/utoaztecan,87304614586395,http://wals.info/languoid/genus/aztecan,230,{},19.4333,-99.1333,,Nahuatl,230,,
+"Algic, Algonquian",,,http://wals.info/languoid/family/algic,91291432888773387,http://wals.info/languoid/genus/algonquian,231,{},42.6667,-73.5,,Narragansett,231,,http://wals.info/languoid/lect/wals_code_mhc
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046923082155,http://wals.info/languoid/genus/romance,232,{},59.85,17.6333,,Neo-Latin,232,,
+"Indo-European, Indic",,,Indo-European,873046491209709,Indic,233,{},28.0,85.0,,Nepali,233,,http://wals.info/languoid/lect/wals_code_nep
+"Australian, Jaminjungan",,,http://wals.info/languoid/family/australian,873046902957802,http://wals.info/languoid/genus/jaminjungan,234,{},-15.1667,130.667,,Ngaliwurru,234,,
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,873046108013825,http://wals.info/languoid/genus/pamanyungan,235,{},-21.0,133.0,,Ngardi,235,,
+"Australian, Pama-Nyungan",,,Australian,87304664544101,Pama-Nyungan,236,{},-16.5,130.5,,Ngarinyman,236,,http://wals.info/languoid/lect/wals_code_ngy
+,,,,873046427857170,,237,{},6.0,9.0,,Niger-Congo,237,,http://wals.info/languoid/family/nigercongo
+,,,,873046350174209,,238,{},5.0,30.0,,Nilo-Saharan,238,,http://wals.info/languoid/family/nilosaharan
+"Trans-New Guinea, Madang",,,http://wals.info/languoid/family/transnewguinea,873046257383607,http://wals.info/languoid/genus/madang,239,{},-5.23367,145.789,,Nobonob,239,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046593809565,http://wals.info/languoid/genus/germanic,240,{},57.697,11.9864,,North Germanic,240,,
+"Indo-European, Germanic",,,Indo-European,873046382821820,Germanic,241,{},61.0,8.0,,Norwegian,241,,http://wals.info/languoid/lect/wals_code_nor
+Jaminjungan,,,http://wals.info/languoid/family/australian,92142231875844292,http://wals.info/languoid/genus/jaminjungan,242,{},-13.6767,130.714,,Nungali,242,,
+"Niger-Congo, Nupoid",,,Niger-Congo,873046501840906,Nupoid,243,{},9.16667,5.41667,,Nupe,243,,http://wals.info/languoid/lect/wals_code_nup
+"Niger-Congo, Bantoid",,,Niger-Congo,873046213894080,Bantoid,244,{},-5.0,33.0,,Nyamwezi,244,,http://wals.info/languoid/lect/wals_code_nym
+"Australian, Pama-Nyungan",,,Australian,873054321144860,Pama-Nyungan,245,{},-33.75,122.0,,Nyungar,245,,http://wals.info/languoid/lect/wals_code_nju
+"Indo-European, Romance",,,Indo-European,91291433784987605,Romance,246,{},44.0,2.0,,Occitan,246,,http://wals.info/languoid/lect/wals_code_occ
+"Altaic, Turkic",,,http://wals.info/languoid/family/altaic,8730467346106,http://wals.info/languoid/genus/turkic,247,{},56.1375,47.244,,Oghur,247,,
+Sino-Tibetan,,,http://wals.info/languoid/family/sinotibetan,873046598078357,,248,{},36.1214,114.317,,Old Chinese,248,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046836323888,http://wals.info/languoid/genus/germanic,249,{},53.1439,8.21389,,Old Frisian,249,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873054216930664,,250,{},28.0,76.0,,Indic,250,,http://wals.info/languoid/genus/indic
+"Indo-European, Indic",,,http://wals.info/languoid/family/indoeuropean,873054634766640,http://wals.info/languoid/genus/indic,251,{},25.282,82.9563,,Sanskrit,251,,
+"Indo-European, Celtic",,,http://wals.info/languoid/family/indoeuropean,873046866422228,http://wals.info/languoid/genus/celtic,252,{},54.5211,-6.76757,,Old Irish,252,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,873046416584916,,253,{},-6.9196,106.927,,Old Javanese,253,,
+Austro-Asiatic,,,http://wals.info/languoid/family/austroasiatic,810252249965610818,,254,{},13.4333,103.833,,Old Khmer,254,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873054588017310,,255,{},55.7333,24.35,,Old Lithuaninian,255,,
+"Austro-Asiatic, Monic",,,http://wals.info/languoid/family/austroasiatic,810252249823799617,http://wals.info/languoid/genus/monic,256,{},13.8194,100.058,,Old Mon,256,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873046395128228,http://wals.info/languoid/genus/germanic,257,{},47.0,13.0,,Old Norse,257,,http://wals.info/languoid/lect/wals_code_non
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873054961199770,,258,{},34.3883,47.4367,,Old Persian,258,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873054360535314,http://wals.info/languoid/genus/romance,259,{},46.5819,0.336111,,Old Provençal,259,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,810252250885646989,,260,{},58.545,31.2691,,Old Russian,260,,
+"Indo-European, Slavic",,,http://wals.info/languoid/family/indoeuropean,873046813362426,http://wals.info/languoid/genus/slavic,261,{},40.6472,22.9639,,Old Slavic,261,,
+"Tai-Kadai, Kam-Tai",,,http://wals.info/languoid/family/taikadai,873054156620773,http://wals.info/languoid/genus/kamtai,262,{},14.35,100.583,,Old Thai,262,,
+Afro-Asiatic,,,http://wals.info/languoid/family/afroasiatic,873046208736317,,263,{},6.0,40.0,,Oromo,263,,
+"Indo-European, Iranian",,,http://wals.info/languoid/family/indoeuropean,9291348461191679,http://wals.info/languoid/genus/iranian,264,{},43.0,44.0,,Ossetian,264,,http://wals.info/languoid/lect/wals_code_oss
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873054243481159,http://wals.info/languoid/genus/germanic,265,{},-9.5,147.167,,Pacific Pidgin English,265,,http://wals.info/languoid/lect/wals_code_tpi
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,8730543035320,,266,{},27.4833,83.2833,,Pali,266,,
+Australian,,,http://wals.info/languoid/family/australian,9214223186323888,,267,{},-23.0,134.0,,Pama-Nyungan,267,,http://wals.info/languoid/genus/pamanyungan
+Austro-Asiatic,,,http://wals.info/languoid/family/austroasiatic,873046921256871,,268,{},23.0,85.0,,Munda,268,,http://wals.info/languoid/genus/munda
+"Indo-European, Iranian",,,Indo-European,873046949909344,Iranian,269,{},32.0,54.0,,Persian,269,,http://wals.info/languoid/lect/wals_code_prs
+isolate,,,,92142232189108517,,270,{},32.2,48.25,,Elamite,270,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873054977880251,http://wals.info/languoid/genus/semitic,271,{},34.1236,35.6511,,Phoenician,271,,
+"Guaicuruan, Guaicuruan",,,Guaicuruan,873046907122147,Guaicuruan,272,{},-25.0,-60.0,,Pilagá,272,,http://wals.info/languoid/lect/wals_code_pga
+"Indo-European, Slavic",,,Indo-European,873046889817557,Slavic,273,{},52.0,20.0,,Polish,273,,http://wals.info/languoid/lect/wals_code_pol
+"Indo-European, Romance",,,Indo-European,873046873968695,Romance,274,{},39.0,-8.0,,Portuguese,274,,http://wals.info/languoid/lect/wals_code_por
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,87304627091627,http://wals.info/languoid/genus/romance,275,{},-6.21154,106.845,,Batavian Portuguese Creole,275,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,8771731355306887,,276,{},-21.0,46.0,,Pre-Malagasy,276,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,873046297571500,,277,{},-1.16667,101.167,,Pre-Minangkabau,277,,
+Afro-Asiatic,,,http://wals.info/languoid/family/afroasiatic,873046612628569,,278,{},9.0,40.0,,Pre-Oromo,278,,
+"Niger-Congo, Bantoid",,,http://wals.info/languoid/family/nigercongo,873046375817797,http://wals.info/languoid/genus/bantoid,279,{},-4.5,36.0,,Pre-Rangi,279,,
+isolate,,,,873046752535620,,280,{},-5.0,35.0,,Pre-Sandawe,280,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,81025225028567709,,281,{},23.0,120.833,,Proto-Austronesian,281,,
+Austro-Asiatic,,,http://wals.info/languoid/family/austroasiatic,92142234869134148,,282,{},24.0,97.0,,Proto-Austroasiatic,282,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,873054204894217,,283,{},-3.83333,121.333,,Proto Central-Eastern Malayo-Polynesian,283,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,873054981625977,,284,{},-1.10612,114.144,,Proto-Malayo-Polynesian,284,,
+Austro-Asiatic,,,http://wals.info/languoid/family/austroasiatic,810252250720723903,,285,{},19.0,102.0,,Proto-Mon-Khmer,285,,
+"Austronesian, Oceanic",,,http://wals.info/languoid/family/austronesian,873054276131155,http://wals.info/languoid/genus/oceanic,286,{},-5.0,150.0,,Proto-Oceanic,286,,
+Altaic,,,http://wals.info/languoid/family/altaic,92142231784987605,,287,{},48.0,73.0,,Proto-Altaic,287,,
+Afro-Asiatic,,,http://wals.info/languoid/family/afroasiatic,922122086323888,,288,{},11.0,15.0,,Proto-Chadic,288,,
+"Uralic, Finnic",,,http://wals.info/languoid/family/uralic,873054527137720,http://wals.info/languoid/genus/finnic,289,{},60.0,40.0,,Proto-Finnic,289,,
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,873054965743450,http://wals.info/languoid/genus/germanic,290,{},55.5,9.0,,Proto-Germanic,290,,
+Mayan,,,http://wals.info/languoid/family/mayan,873046947505712,,291,{},16.0,-92.0,,Proto-Greater Kanjobalan,291,,
+Hmong-Mien,,,http://wals.info/languoid/family/hmongmien,92142232302019369,,292,{},25.0,106.0,,Proto-Hmong-Mien,292,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,877172852071881,,293,{},42.0,36.0,,Proto-Indo-European,293,,
+Mixe-Zoque,,,http://wals.info/languoid/family/mixezoque,873046438371866,,294,{},17.0,-95.0,,Proto-Mixe-Zoquean,294,,
+Mixe-Zoque,,,http://wals.info/languoid/family/mixezoque,810252249509986281,,295,{},17.0833,-96.0,,Proto-Mixean,295,,
+"Altaic, Mongolic",,,http://wals.info/languoid/family/altaic,9211173286323888,http://wals.info/languoid/genus/mongolic,296,{},44.0,99.0,,Proto-Mongolic,296,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873054168087495,http://wals.info/languoid/genus/semitic,297,{},33.0,40.0,,Proto-Semitic,297,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873054322586746,,298,{},49.0,23.0,,Proto-Slavic,298,,
+"Tai-Kadai, Kam-Tai",,,http://wals.info/languoid/family/taikadai,873046243418386,http://wals.info/languoid/genus/kamtai,299,{},17.0,101.0,,Proto-Tai,299,,
+"Afro-Asiatic, West Chadic",,,http://wals.info/languoid/family/afroasiatic,9221221888773387,http://wals.info/languoid/genus/westchadic,300,{},12.0,9.25,,Proto-West Chadic,300,,
+Mayan,,,http://wals.info/languoid/family/mayan,87304675458163,,301,{},18.0,-90.0,,Proto-Yucatecan,301,,
+Mayan,,,http://wals.info/languoid/family/mayan,873046490214463,,302,{},16.0,-93.0,,Q’anjob’alan,302,,
+Tibeto-Burman,,,http://wals.info/languoid/family/sinotibetan,92142233395079265,,303,{},30.0,102.667,,Qiangic,303,,http://wals.info/languoid/genus/qiangic
+"Quechuan, Quechuan",,,http://wals.info/languoid/family/quechuan,873046734432035,http://wals.info/languoid/genus/quechuan,304,{},-14.25,-73.0,,Quechua,304,,http://wals.info/languoid/family/quechuan
+Mayan,,,http://wals.info/languoid/family/mayan,873046662629207,http://wals.info/languoid/genus/mayan,305,{},15.0,-91.4167,,Quiche,305,,http://wals.info/languoid/lect/wals_code_qch
+"Austronesian, Oceanic",,,http://wals.info/languoid/family/austronesian,873054424530819,http://wals.info/languoid/genus/oceanic,306,{},-4.13333,152.467,,Ramoaaina,306,,
+"Austronesian, Oceanic",,,http://wals.info/languoid/family/austronesian,873046364362826,http://wals.info/languoid/genus/oceanic,307,{},-21.2,-159.767,,Rarotongan,307,,
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046974716751,http://wals.info/languoid/genus/romance,308,{},45.7333,7.31667,,Romance,308,,
+"Indo-European, Slavic",,,Indo-European,87304629316396,Slavic,309,{},56.0,38.0,,Russian,309,,http://wals.info/languoid/lect/wals_code_rus
+Japanese,,,http://wals.info/languoid/family/japanese,873046440023417,,310,{},26.3328,127.749,,Ryukyuan,310,,
+Nilo-Saharan,,,http://wals.info/languoid/family/nilosaharan,873046128809798,,311,{},14.0,9.0,,Saharan,311,,
+"Niger-Congo, Bantoid",,,http://wals.info/languoid/family/nigercongo,873046510256037,http://wals.info/languoid/genus/bantoid,312,{},-4.25,38.25,,Sambaa,312,,http://wals.info/languoid/lect/wals_code_shm
+"Khoisan, Sandawe",,,Khoisan,873046204848632,Sandawe,313,{},-5.0,35.0,,Sandawe,313,,http://wals.info/languoid/lect/wals_code_sdw
+"Indo-European, Celtic",,,http://wals.info/languoid/family/indoeuropean,873046552772376,http://wals.info/languoid/genus/celtic,314,{},57.0,-4.0,,Gaelic (Scottish),314,,http://wals.info/languoid/lect/wals_code_gae
+"Uralic, Samoyedic",,,Uralic,873046107158498,Samoyedic,315,{},65.0,82.0,,Selkup,315,,http://wals.info/languoid/lect/wals_code_skp
+Afro-Asiatic,,,http://wals.info/languoid/family/afroasiatic,873046583338623,,316,{},34.0,41.0,,Semitic,316,,http://wals.info/languoid/genus/semitic
+"Niger-Congo, Bantoid",,,Niger-Congo,92122118211233765,Bantoid,317,{},-18.0,35.25,,Sena,317,,http://wals.info/languoid/lect/wals_code_sen
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873046663678398,,318,{},44.8206,20.4622,,Serbian,318,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,873046167243822,,319,{},50.0,24.0,,Slavic,319,,http://wals.info/languoid/genus/slavic
+"Indo-European, Slavic",,,http://wals.info/languoid/family/indoeuropean,873054198471701,http://wals.info/languoid/genus/slavic,320,{},55.0,33.0,,East Slavic,320,,
+"Indo-European, Slavic",,,Indo-European,873046670949454,Slavic,321,{},49.0,20.0,,Slovak,321,,http://wals.info/languoid/lect/wals_code_svk
+Nilo-Saharan,,,http://wals.info/languoid/family/nilosaharan,873046817960723,,322,{},17.0,0.0,,Songhay,322,,http://wals.info/languoid/genus/songhay
+"Austro-Asiatic, Aslian",,,http://wals.info/languoid/family/austroasiatic,873046449081852,http://wals.info/languoid/genus/aslian,323,{},3.0,102.0,,South Aslian,323,,
+"Indo-European, Slavic",,,http://wals.info/languoid/family/indoeuropean,873054783719456,http://wals.info/languoid/genus/slavic,324,{},43.0,21.0,,South Slavic,324,,
+"Indo-European, Slavic",,,Indo-European,92211148888773387,Slavic,325,{},41.6667,21.75,,Macedonian,325,,http://wals.info/languoid/lect/wals_code_mcd
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,92211147461191679,,326,{},46.0,15.0,,Slovenian,326,,http://wals.info/languoid/lect/wals_code_slo
+"Austronesian, Sulawesi",,,http://wals.info/languoid/family/austronesian,873046528020558,http://wals.info/languoid/genus/sulawesi,327,{},-5.5,120.0,,South Sulawesi,327,,
+Afro-Asiatic,,,http://wals.info/languoid/family/afroasiatic,8771729148973666,,328,{},-4.0,37.0,,South Cushitic,328,,http://wals.info/languoid/genus/southerncushitic
+Sino-Tibetan,,,http://wals.info/languoid/family/sinotibetan,92142233687385478,,329,{},30.0,120.0,,Southern Chinese,329,,
+"Australian, Yangmanic",,,Australian,873054282020976,Yangmanic,330,{},-15.5,131.0,,Wardaman,330,,http://wals.info/languoid/lect/wals_code_wrd
+"other, Creoles and Pidgins",,,other,873046394812829,Creoles and Pidgins,331,{},5.83333,-55.3333,,Sranan,331,,http://wals.info/languoid/lect/wals_code_sra
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,873046117982189,http://wals.info/languoid/genus/semitic,332,{},25.0,42.0,,Standard Arabic,332,,http://wals.info/languoid/lect/wals_code_ams
+"Austronesian, Sundanese",,,Austronesian,873046141022053,Sundanese,333,{},-7.0,107.0,,Sundanese,333,,http://wals.info/languoid/lect/wals_code_sun
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,873046561859376,http://wals.info/languoid/genus/romance,334,{},5.8232,-55.1679,,Suriname Portuguese,334,,
+"Austronesian, Oceanic",,,Austronesian,873046716619766,Oceanic,335,{},-17.6667,-149.583,,Tahitian,335,,http://wals.info/languoid/lect/wals_code_tah
+"Tai-Kadai, Kam-Tai",,,http://wals.info/languoid/family/taikadai,873054973989429,http://wals.info/languoid/genus/kamtai,336,{},18.0,101.0,,Tai,336,,
+Arawakan,,,http://wals.info/languoid/family/arawakan,873054497136158,,337,{},25.0343,-77.3963,,Taino,337,,
+"Afro-Asiatic, Berber",,,http://wals.info/languoid/family/afroasiatic,873046357854664,http://wals.info/languoid/genus/berber,338,{},23.0,6.0,,Tamasheq,338,,
+"Dravidian, Southern Dravidian",,,Dravidian,873046861842290,Southern Dravidian,339,{},11.0,78.5,,Tamil,339,,http://wals.info/languoid/lect/wals_code_tml
+"Altaic, Turkic",,,Altaic,873046430412322,Turkic,340,{},56.0,49.5,,Tatar,340,,http://wals.info/languoid/lect/wals_code_tvo
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,92142234839118509,http://wals.info/languoid/genus/pamanyungan,341,{},-23.75,114.917,,Tharrgari,341,,http://wals.info/languoid/lect/wals_code_dhr
+Sino-Tibetan,,,http://wals.info/languoid/family/sinotibetan,873046470723903,,342,{},30.0,90.0,,Tibetan,342,,
+Sino-Tibetan,,,http://wals.info/languoid/family/sinotibetan,873046295631462,,343,{},29.0,94.0,,Tibeto-Burman,343,,http://wals.info/languoid/family/sinotibetan
+"Sino-Tibetan, Burmese-Lolo",,,http://wals.info/languoid/family/sinotibetan,92142233512116891,http://wals.info/languoid/genus/burmeselolo,344,{},23.0,101.0,,Loloish,344,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,873046211997741,,345,{},2.5,99.0,,Toba Batak,345,,http://wals.info/languoid/lect/wals_code_bto
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,92201640211233765,,346,{},42.9667,89.1833,,Tocharian A,346,,
+Indo-European,,,http://wals.info/languoid/family/indoeuropean,92201639888773387,,347,{},41.7167,82.9333,,Tocharian B,347,,
+"Mayan, Mayan",,,Mayan,87304688589748,Mayan,348,{},16.3333,-91.5,,Tojolabal,348,,http://wals.info/languoid/lect/wals_code_toj
+"other, Creoles and Pidgins",,,other,873046148973666,Creoles and Pidgins,349,{},-9.5,147.167,,Tok Pisin,349,,http://wals.info/languoid/lect/wals_code_tpi
+"Austronesian, Oceanic",,,Austronesian,873054720643530,Oceanic,350,{},-4.25,152.083,,Tolai,350,,http://wals.info/languoid/lect/wals_code_tla
+"Nilo-Saharan, Western Saharan",,,Nilo-Saharan,87304619993621,Western Saharan,351,{},16.0,15.0,,Tubu,351,,http://wals.info/languoid/lect/wals_code_tbu
+Tucanoan,,,http://wals.info/languoid/family/tucanoan,873046223769206,http://wals.info/languoid/genus/tucanoan,352,{},0.5,-69.1667,,Tukano,352,,http://wals.info/languoid/lect/wals_code_tuc
+Tupian,,,http://wals.info/languoid/family/tupian,873046436721753,,353,{},-6.0,-36.0,,Tupí,353,,http://wals.info/languoid/lect/wals_code_tup
+Tupian,,,http://wals.info/languoid/family/tupian,873054809766866,,354,{},-6.0,-60.0,,Tupi-Guaraní,354,,http://wals.info/languoid/genus/tupiguarani
+"Altaic, Turkic",,,http://wals.info/languoid/family/altaic,873054780369246,http://wals.info/languoid/genus/turkic,355,{},56.1375,47.244,,Oghuric,355,,
+"Altaic, Turkic",,,Altaic,873046849298885,Turkic,356,{},39.0,35.0,,Turkish,356,,http://wals.info/languoid/lect/wals_code_tur
+"Mayan, Mayan",,,Mayan,873046769335691,Mayan,357,{},16.8333,-92.25,,Tzeltal,357,,http://wals.info/languoid/lect/wals_code_tze
+Mayan,,,http://wals.info/languoid/family/mayan,87304640613058,http://wals.info/languoid/genus/mayan,358,{},16.5,-92.6667,,Chamula Tzotzil,358,,http://wals.info/languoid/lect/wals_code_tzo
+"Indo-European, Slavic",,,Indo-European,873046570428998,Slavic,359,{},49.0,33.0,,Ukrainian,359,,http://wals.info/languoid/lect/wals_code_ukr
+,,,,8731249878650777,,360,{},,,,Unidentified,360,,
+"Indo-European, Slavic",,,http://wals.info/languoid/family/indoeuropean,873046255705234,http://wals.info/languoid/genus/slavic,361,{},51.8333,14.5,,Upper Sorbian,361,,http://wals.info/languoid/lect/wals_code_sou
+"Uto-Aztecan, Numic",,,Uto-Aztecan,873046833881352,Numic,362,{},39.0,-109.0,,Ute,362,,http://wals.info/languoid/lect/wals_code_ute
+"Indo-European, Indic",,,http://wals.info/languoid/family/indoeuropean,873046776003049,http://wals.info/languoid/genus/indic,363,{},46.0,21.0,,Vlax Romani,363,,
+Niger-Congo,,,http://wals.info/languoid/family/nigercongo,873046610385373,,364,{},11.0,-2.0,,Voltaic,364,,http://wals.info/languoid/genus/gur
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,873046195401390,http://wals.info/languoid/genus/pamanyungan,365,{},-19.5,125.75,,Walmajarri,365,,http://wals.info/languoid/lect/wals_code_wlm
+"Australian, West Barkly",,,Australian,92142231888773387,West Barkly,366,{},-18.6667,135.75,,Wambaya,366,,http://wals.info/languoid/lect/wals_code_wam
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,92142234537292565,http://wals.info/languoid/genus/pamanyungan,367,{},-21.82,132.58,,Warlmanpa,367,,
+"Australian, Pama-Nyungan",,,Australian,873046875498235,Pama-Nyungan,368,{},-20.0,132.333,,Warlpiri,368,,http://wals.info/languoid/lect/wals_code_wrl
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,92142234304293781,http://wals.info/languoid/genus/pamanyungan,369,{},-22.0,138.5,,Warluwarra,369,,http://wals.info/languoid/lect/wals_code_wlw
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,873046790619588,http://wals.info/languoid/genus/pamanyungan,370,{},-23.0,139.0,,Warluwarric,370,,
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,873046822002126,http://wals.info/languoid/genus/pamanyungan,371,{},-19.6333,134.167,,Warumungu,371,,
+"Trans-New Guinea, Madang",,,Trans-New Guinea,873046790991281,Madang,372,{},-4.5,146.0,,Waskia,372,,http://wals.info/languoid/lect/wals_code_wsk
+"Indo-European, Celtic",,,Indo-European,873046589118509,Celtic,373,{},52.0,-3.0,,Welsh,373,,http://wals.info/languoid/lect/wals_code_wel
+"Indo-European, Germanic",,,http://wals.info/languoid/family/indoeuropean,91291432211233765,http://wals.info/languoid/genus/germanic,374,{},5.55,-0.216667,,English (West African Coastal),374,,http://wals.info/languoid/lect/wals_code_npi
+"Indo-European, Romance",,,http://wals.info/languoid/family/indoeuropean,87304654052233,http://wals.info/languoid/genus/romance,375,{},5.33333,-4.03333,,French (West African),375,,
+Austronesian,,,http://wals.info/languoid/family/austronesian,873046682311611,,376,{},-1.0,114.0,,Malayo-Polynesian,376,,
+Mayan,,,http://wals.info/languoid/family/mayan,87304670526575,,377,{},18.0,-93.0,,Western Mayan,377,,
+"Australian, Pama-Nyungan",,,http://wals.info/languoid/family/australian,92142234507042983,http://wals.info/languoid/genus/pamanyungan,378,{},-36.0,146.0,,Wiradjuri,378,,
+"Niger-Congo, Northern Atlantic",,,Niger-Congo,873046786884580,Northern Atlantic,379,{},15.25,-16.0,,Wolof,379,,http://wals.info/languoid/lect/wals_code_wlf
+"Altaic, Mongolic",,,http://wals.info/languoid/family/altaic,92142231211233765,http://wals.info/languoid/genus/mongolic,380,{},40.82,111.65,,Tabgač,380,,
+unclear,,,,92142232123968694,,381,{},46.0,106.0,,Xiongnu,381,,
+"Australian, Pama-Nyungan",,,Australian,873046635452702,Pama-Nyungan,382,{},-16.4167,137.167,,Yanyuwa,382,,http://wals.info/languoid/lect/wals_code_yny
+"Niger-Congo, Bantoid",,,http://wals.info/languoid/family/nigercongo,873046239055002,http://wals.info/languoid/genus/bantoid,383,{},-14.5,35.5,,Yao,383,,http://wals.info/languoid/lect/wals_code_yao
+"Niger-Congo, Defoid",,,Niger-Congo,873046533048534,Defoid,384,{},8.0,4.33333,,Yoruba,384,,http://wals.info/languoid/lect/wals_code_yor
+Mayan,,,http://wals.info/languoid/family/mayan,873046743413112,,385,{},19.0,-91.0,,Yucatecan,385,,
+"Niger-Congo, Bantoid",,,http://wals.info/languoid/family/nigercongo,873046971757467,http://wals.info/languoid/genus/bantoid,386,{},-6.75,39.0,,Zaramo,386,,
+"Niger-Congo, Bantoid",,,http://wals.info/languoid/family/nigercongo,873046253822916,http://wals.info/languoid/genus/bantoid,387,{},-6.0,38.6667,,Zigua,387,,
+"Altaic, Turkic",,,Altaic,9341221849275472,Turkic,388,{},43.0,47.3333,,Kumyk,388,,http://wals.info/languoid/lect/wals_code_kuq
+"Altaic, Turkic",,,http://wals.info/languoid/family/altaic,9341221554687327,http://wals.info/languoid/genus/turkic,389,{},38.0,48.0,,Azeri,389,,
+"Afro-Asiatic, Semitic",,,http://wals.info/languoid/family/afroasiatic,936942875844292,http://wals.info/languoid/genus/semitic,390,{},36.8531,10.3231,,Punic,390,,
+"Austronesian, Oceanic",,,Austronesian,936177784987605,Oceanic,391,{},-21.1667,-175.167,,Tongan,391,,http://wals.info/languoid/lect/wals_code_tng
+"Austronesian, Oceanic",,,Austronesian,936178645128228,Oceanic,392,{},-13.9167,-171.833,,Samoan,392,,http://wals.info/languoid/lect/wals_code_sam
+"Austronesian, Oceanic",,,Austronesian,936178185253147,Oceanic,393,{},-8.91667,-140.083,,Marquesan,393,,http://wals.info/languoid/lect/wals_code_mrq
+"Indo-European, Slavic",,,http://wals.info/languoid/family/indoeuropean,93271819875844292,http://wals.info/languoid/genus/slavic,394,{},45.8103,15.9781,,Croatian,394,,
+"Niger-Congo, Kwa",,,http://wals.info/languoid/family/nigercongo,96172323279751670,http://wals.info/languoid/genus/kwa,395,{},6.33333,-1.25,,Twi,395,,

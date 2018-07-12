@@ -1,0 +1,254 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "dc:bibliographicCitation ": "Wichmann, S\u00f8ren & Brown, Cecil H. & Holman, Eric W. 2018.\nThe The ASJP Database Database.\nJena: Max Planck Institute for the Science of Human History.\n(Available online at http://asjp.clld.org, Accessed on 2018-04-19.)\n",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist",
+    "dc:creator": "Wichmann, S\u00f8ren & Brown, Cecil H. & Holman, Eric W.",
+    "dc:identifier": "http://asjp.clld.org/",
+    "dc:issued": "2018-03-06",
+    "dc:license": "http://creativecommons.org/licenses/by/4.0/",
+    "dc:publisher": "Max Planck Institute for the Science of Human History, Jena",
+    "dc:source": "sources.bib",
+    "dc:title": "The ASJP Database",
+    "dcat:accessURL": "http://asjp.clld.org/download",
+    "dialect": {
+        "commentPrefix": null
+    },
+    "tables": [
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
+            "aboutUrl": "http://asjp.clld.org/values/{ID}",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                        "required": true,
+                        "name": "Language_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
+                        "required": true,
+                        "name": "Parameter_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#form",
+                        "required": true,
+                        "name": "Form"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segments",
+                        "required": false,
+                        "separator": " ",
+                        "name": "Segments"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "required": false,
+                        "name": "Comment"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "required": false,
+                        "separator": ";",
+                        "name": "Source"
+                    },
+                    {
+                        "datatype": "string",
+                        "valueUrl": "http://asjp.clld.org/contributions/{contribution}",
+                        "name": "Contribution_ID"
+                    },
+                    {
+                        "datatype": "boolean",
+                        "name": "Loan"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Parameter_ID"
+                        ],
+                        "reference": {
+                            "resource": "parameters.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Contribution_ID"
+                        ],
+                        "reference": {
+                            "resource": "contributions.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "forms.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable",
+            "aboutUrl": "http://asjp.clld.org/parameters/{ID}",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+                        "required": false,
+                        "name": "Description"
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "parameters.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
+            "aboutUrl": "http://asjp.clld.org/languages/{ID}",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#macroarea",
+                        "required": false,
+                        "name": "Macroarea"
+                    },
+                    {
+                        "datatype": {
+                            "base": "decimal",
+                            "minimum": -90,
+                            "maximum": 90
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
+                        "required": false,
+                        "name": "Latitude"
+                    },
+                    {
+                        "datatype": {
+                            "base": "decimal",
+                            "minimum": -180,
+                            "maximum": 180
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
+                        "required": false,
+                        "name": "Longitude"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-z0-9]{4}[1-9][0-9]{3}"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
+                        "required": false,
+                        "valueUrl": "http://glottolog.org/resource/languoid/id/{glottocode}",
+                        "name": "Glottocode"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-z]{3}"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code",
+                        "required": false,
+                        "name": "ISO639P3code"
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "languages.csv"
+        },
+        {
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Description"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Contributors"
+                    }
+                ]
+            },
+            "url": "contributions.csv"
+        }
+    ]
+}

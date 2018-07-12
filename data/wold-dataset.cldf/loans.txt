@@ -1,0 +1,1420 @@
+name|name|relation|certain|name|name
+adorare|Latin|immediate|t|aanbidden|Dutch
+Adler|High German|immediate|t|adelaar|Dutch
+adresse|French|immediate|t|adres|Dutch
+alligator|English|immediate|t|alligator|Dutch
+altāre|Latin|immediate|t|altaar|Dutch
+ancora|Latin|immediate|t|anker|Dutch
+Artz|High German|immediate|t|arts|Dutch
+auto(mobile)|English|immediate|t|auto|Dutch
+baie|French|immediate|t|baai|Dutch
+Latijn matrix|Latin|immediate|t|baarmoeder|Dutch
+baby|English|immediate|t|baby|Dutch
+bambu|Indonesian|immediate|t|bamboe|Dutch
+banana|Portuguese|immediate|t|banaan|Dutch
+banco|Italian|immediate|t|bank|Dutch
+banyan|English|immediate|t|banyan|Dutch
+batata|Portuguese|immediate|f|bataat|Dutch
+batata|Spanish|immediate|f|bataat|Dutch
+batterie|French|immediate|t|batterij|Dutch
+Bediente(r)|High German|immediate|t|bediende|Dutch
+beste|French|immediate|t|beest|Dutch
+begreifen|High German|immediate|t|begrijpen|Dutch
+bec|French|immediate|t|bek|Dutch
+biber|Latin|immediate|t|bier|Dutch
+boomerang|English|immediate|t|boemerang|Dutch
+bocer|French (Picard)|immediate|t|boetseren|Dutch
+*bukko-|Celtic|immediate|t|bok|Dutch
+bombe|French|immediate|t|bom|Dutch
+punctus|Latin|immediate|t|bont|Dutch
+boat|English|immediate|t|boot|Dutch
+butyrum|Latin|immediate|t|boter|Dutch
+brevis|Latin|immediate|t|brief|Dutch
+beryllus|Latin|immediate|t|bril|Dutch
+Brunne|High German|immediate|t|bron|Dutch
+buffle|French|immediate|t|buffel|Dutch
+Bürger|High German|immediate|t|burger|Dutch
+bus|English|immediate|t|bus|Dutch
+cassave|French|immediate|t|cassave|Dutch
+ceinture|French|immediate|t|ceintuur|Dutch
+circulus|Latin|immediate|t|cirkel|Dutch
+coyote|Spanish|immediate|t|coyote|Dutch
+danser|French|immediate|t|dansen|Dutch
+daemōn|Latin|immediate|t|demon|Dutch
+dictator|Latin|immediate|t|dichter|Dutch
+dîner|French|immediate|t|diner|Dutch
+diês Martis|Latin|immediate|t|dinsdag|Dutch
+direct|French|immediate|t|direct|Dutch
+doctor|Latin|immediate|t|dokter|Dutch
+dalfin, dauphin|French|immediate|t|dolfijn|Dutch
+dies Iovis|Latin|immediate|t|donderdag|Dutch
+milipeda|Latin|immediate|t|duizendpoot|Dutch
+durer|French|immediate|t|duren|Dutch
+*oit|Celtic|immediate|t|eed|Dutch
+eiland|Old Frisian|immediate|t|eiland|Dutch
+elen|High German|immediate|t|eland|Dutch
+electricity|French|immediate|t|elektriciteit|Dutch
+Elf(e)|High German|immediate|t|elf (2)|Dutch
+asinus|Latin|immediate|t|ezel|Dutch
+famille|French|immediate|t|familie|Dutch
+fée|French|immediate|t|fee|Dutch
+film|English|immediate|t|film|Dutch
+flûte|French|immediate|t|fluit|Dutch
+faute|French|immediate|t|fout|Dutch
+fruit|French|immediate|t|fruit|Dutch
+geheim|High German|immediate|t|geheim|Dutch
+Gefahr|High German|immediate|t|gevaar|Dutch
+Gift|High German|immediate|t|gif|Dutch
+grānum|Latin|immediate|t|graan|Dutch
+grenize|Low German|immediate|t|grens|Dutch
+grand-mère|French|immediate|t|grootmoeder|Dutch
+grand-parents|French|immediate|t|grootouders|Dutch
+grand-père|French|immediate|t|grootvader|Dutch
+grotte|French|immediate|t|grot|Dutch
+golos|French|immediate|t|gulzig|Dutch
+hár|Old Norse|immediate|t|haai|Dutch
+hamaca|Spanish|immediate|t|hangmat|Dutch
+harnasc|French|immediate|t|harnas|Dutch
+herrschen|High German|immediate|t|heersen|Dutch
+Hexe|High German|immediate|t|heks|Dutch
+Hinterhalt|High German|immediate|t|hinderlaag|Dutch
+Hütte|High German|immediate|t|hut|Dutch
+idée|French|immediate|t|idee|Dutch
+*īsarno-|Celtic|immediate|t|ijzer|Dutch
+imiter|French|immediate|t|imiteren|Dutch
+injection|French|immediate|t|injectie|Dutch
+insecte|French|immediate|t|insect|Dutch
+jaguar|English|immediate|t|jaguar|Dutch
+jalousie|French|immediate|t|jaloezie|Dutch
+jas|Low German|immediate|t|jas|Dutch
+juste|French|immediate|t|juist|Dutch
+journée|French|immediate|t|jurk|Dutch
+joël|French|immediate|t|juweel|Dutch
+cap|French|immediate|t|kaap|Dutch
+kerza|High German|immediate|t|kaars|Dutch
+cāseus|Latin|immediate|t|kaas|Dutch
+Kachelofen|High German|immediate|t|kachel|Dutch
+cadavre|French|immediate|t|kadaver|Dutch
+cacalacca|Portuguese|immediate|t|kakkerlak|Dutch
+calebasse|French|immediate|t|kalebas|Dutch
+Kalender|High German|immediate|t|kalender|Dutch
+calme|French|immediate|t|kalm|Dutch
+camēlus|Latin|immediate|t|kameel|Dutch
+caméléon|French|immediate|t|kameleon|Dutch
+camera|Latin|immediate|t|kamer|Dutch
+camp|French (Picard)|immediate|t|kamp|Dutch
+kangaroo|English|immediate|t|kangoeroe|Dutch
+canoa|Spanish|immediate|t|kano|Dutch
+cantus|Latin|immediate|t|kant|Dutch
+kaputt|High German|immediate|t|kapot|Dutch
+carrus|Latin|immediate|t|kar|Dutch
+caribou|French|immediate|t|kariboe|Dutch
+catta|Latin|immediate|t|kat|Dutch
+catapulte|French|immediate|t|katapult|Dutch
+coton|French|immediate|t|katoen|Dutch
+kuri(a)kon|Greek|immediate|t|kerk|Dutch
+catillus|Latin|immediate|t|ketel|Dutch
+catēna|Latin|immediate|t|keten|Dutch
+cocina|Latin|immediate|t|keuken|Dutch
+clārus|Latin|immediate|t|klaar|Dutch
+petite-fille|French|immediate|t|kleindochter|Dutch
+petit-enfant|French|immediate|t|kleinkind|Dutch
+petit-fils|French|immediate|t|kleinzoon|Dutch
+couleur|French|immediate|t|kleur|Dutch
+cloc|Old Irish|immediate|t|klok|Dutch
+kahve|Turkish|immediate|t|koffie|Dutch
+cocere|Latin|immediate|t|koken|Dutch
+conin|French|immediate|t|konijn|Dutch
+cuppa|Latin|immediate|t|kop|Dutch
+caupō|Latin|immediate|t|kopen|Dutch
+cyprum|Latin|immediate|t|koper|Dutch
+curtus|Latin|immediate|t|kort|Dutch
+cauce|French (Picard)|immediate|t|kous|Dutch
+coral|French|immediate|t|kraal|Dutch
+courant|French|immediate|t|krant|Dutch
+crocodile|French|immediate|t|krokodil|Dutch
+cruce|Latin|immediate|t|kruis|Dutch
+cussin|French|immediate|t|kussen (1)|Dutch
+lagune|French|immediate|t|lagune|Dutch
+lampe|French|immediate|t|lamp|Dutch
+langsam|High German|immediate|t|langzaam|Dutch
+larix|Latin|immediate|t|lariks|Dutch
+lasso|English|immediate|t|lasso|Dutch
+leō|Latin|immediate|t|leeuw|Dutch
+*loudiom|Celtic|immediate|t|lood|Dutch
+lucifer|English|immediate|t|lucifer|Dutch
+lunch|English|immediate|t|lunch|Dutch
+diês Lûnae|Latin|immediate|t|maandag|Dutch
+machine|French|immediate|t|machine|Dutch
+maiz|Spanish|immediate|t|maïs|Dutch
+manière|French|immediate|t|manier|Dutch
+manioc|French|immediate|t|maniok|Dutch
+mantellum|Latin|immediate|t|mantel|Dutch
+mercātus|Latin|immediate|t|markt|Dutch
+matta|Latin|immediate|t|mat|Dutch
+materas|French|immediate|t|matras|Dutch
+Mitleid|High German|immediate|t|medelijden|Dutch
+medicīna|Latin|immediate|t|medicijn|Dutch
+maistre|French|immediate|t|meester|Dutch
+macio|Latin|immediate|t|metselaar|Dutch
+ministre|French|immediate|t|minister|Dutch
+marasc|French (Picard)|immediate|t|moeras|Dutch
+molina|Latin|immediate|t|molen|Dutch
+mortarium|Latin|immediate|t|mortel|Dutch
+mosquée|French|immediate|t|moskee|Dutch
+motor|Latin|immediate|t|motor|Dutch
+monēta|Latin|immediate|t|munt|Dutch
+mosquito|Spanish|immediate|t|muskiet|Dutch
+almucia|Latin|immediate|t|muts|Dutch
+murus|Latin|immediate|t|muur|Dutch
+musique|French|immediate|t|muziek|Dutch
+Niederlage|High German|immediate|t|nederlaag|Dutch
+aurora borealis|Latin|immediate|t|noorderlicht|Dutch
+nulla|Italian|immediate|t|nul|Dutch
+océan|French|immediate|t|oceaan|Dutch
+offerre|Latin|immediate|t|offer|Dutch
+olium|Latin|immediate|t|olie|Dutch
+olifant|French|immediate|t|olifant|Dutch
+olīva|Latin|immediate|t|olijf|Dutch
+augustus|Latin|immediate|t|oogst|Dutch
+Ursache|High German|immediate|t|oorzaak|Dutch
+opossum|English|immediate|t|opossum|Dutch
+outrigger|English|immediate|t|outrigger|Dutch
+pālus|Latin|immediate|t|paal|Dutch
+par|Latin|immediate|t|paar|Dutch
+paraveredus|Latin|immediate|t|paard|Dutch
+palme, palma|French|immediate|t|palm (1)|Dutch
+palma|Latin|immediate|t|palm (2)|Dutch
+panna|Latin|immediate|t|pan|Dutch
+papegai|French|immediate|t|papegaai|Dutch
+papier|French|immediate|t|papier|Dutch
+Pech|High German|immediate|t|pech|Dutch
+paddle|English|immediate|t|peddel|Dutch
+pellis|Latin|immediate|t|pellen|Dutch
+penna|Latin|immediate|t|pen|Dutch
+pēnis|Latin|immediate|t|penis|Dutch
+piper|Latin|immediate|t|peper|Dutch
+persona|Latin|immediate|t|persoon|Dutch
+pilum|Latin|immediate|t|pijl|Dutch
+pena, poena|Latin|immediate|t|pijn|Dutch
+*pipa|Romance|immediate|t|pijp|Dutch
+pillula|Latin|immediate|t|pil|Dutch
+pinna|Latin|immediate|t|pin|Dutch
+pissier|French|immediate|t|pissen|Dutch
+place|French|immediate|t|plaats|Dutch
+planke|French (Picard)|immediate|t|plank|Dutch
+planta|Latin|immediate|t|plant|Dutch
+plantare|Latin|immediate|t|planten|Dutch
+plastic|English|immediate|t|plastic|Dutch
+plat|French|immediate|t|plat|Dutch
+police|French|immediate|t|politie|Dutch
+pulsus|Latin|immediate|t|pols|Dutch
+pompon|French|immediate|t|pompoen|Dutch
+poncho|Spanish|immediate|t|poncho|Dutch
+porta|Latin|immediate|t|poort|Dutch
+postis|Latin|immediate|t|post (1)|Dutch
+poste|French|immediate|t|post (2)|Dutch
+*pottus|Romance|immediate|t|pot|Dutch
+praedicâre|Latin|immediate|t|preken|Dutch
+président|French|immediate|t|president|Dutch
+*prestre|Latin|immediate|t|priester|Dutch
+pris|French|immediate|t|prijs|Dutch
+probare|Latin|immediate|t|proberen|Dutch
+prover|French|immediate|t|proeven|Dutch
+prostituée|French|immediate|t|prostituee|Dutch
+pūs|Latin|immediate|t|pus|Dutch
+radio|English|immediate|t|radio|Dutch
+regere|Latin|immediate|t|regeren|Dutch
+Rentier|High German|immediate|t|rendier|Dutch
+reste|French|immediate|t|resten|Dutch
+remus|Latin|immediate|t|riem|Dutch
+rif|Old Norse|immediate|t|rif|Dutch
+*riks|Celtic|immediate|t|rijk|Dutch
+ris|French|immediate|t|rijst|Dutch
+riviere|French|immediate|t|rivier|Dutch
+rŭžĭ|Old Slavic|immediate|t|rogge|Dutch
+rouler|French|immediate|t|rollen|Dutch
+rond|French|immediate|t|rond|Dutch
+rose|French|immediate|t|roos|Dutch
+roch|French (Picard)|immediate|t|rots|Dutch
+spina dorsi|Latin|immediate|t|ruggengraat|Dutch
+salarium|Latin|immediate|t|salaris|Dutch
+savanne|French|immediate|t|savanne|Dutch
+schola|Latin|immediate|t|school|Dutch
+beau-frère|French|immediate|t|schoonbroer|Dutch
+belle-fille|French|immediate|t|schoondochter|Dutch
+beau-enfant|French|immediate|t|schoonkind|Dutch
+belle-mère|French|immediate|t|schoonmoeder|Dutch
+beaux-parents|French|immediate|t|schoonouders|Dutch
+beau-père|French|immediate|t|schoonvader|Dutch
+beau-fils|French|immediate|t|schoonzoon|Dutch
+belle-sœur|French|immediate|t|schoonzuster|Dutch
+scorpion|French|immediate|t|schorpioen|Dutch
+scutella|Latin|immediate|t|schotel|Dutch
+scribere|Latin|immediate|t|schrijven|Dutch
+escroue|French|immediate|t|schroef|Dutch
+saison|French|immediate|t|seizoen|Dutch
+have sex|English|immediate|t|seks hebben|Dutch
+Zierat|High German|immediate|t|sieraad|Dutch
+cigarette|French|immediate|t|sigaret|Dutch
+sintel|High German|immediate|t|sintel|Dutch
+sclavus|Latin|immediate|t|slaaf|Dutch
+clavicula|Latin|immediate|t|sleutelbeen|Dutch
+Schleier|High German|immediate|t|sluier|Dutch
+soupe|French|immediate|t|soep|Dutch
+Socke|High German|immediate|t|sok|Dutch
+soldat|French|immediate|t|soldaat|Dutch
+sorghum|Latin|immediate|t|sorghum|Dutch
+species|Latin|immediate|t|specie|Dutch
+spinula|Latin|immediate|t|speld|Dutch
+speglum|Latin|immediate|t|spiegel|Dutch
+Spindel|High German|immediate|t|spindel|Dutch
+Spitze|High German|immediate|t|spits|Dutch
+estophe|French|immediate|t|stof (2)|Dutch
+stottern|High German|immediate|t|stotteren|Dutch
+(via) strāta|Latin|immediate|t|straat|Dutch
+Strafe|High German|immediate|t|straf|Dutch
+studēre|Latin|immediate|t|studeren|Dutch
+sucre|French|immediate|t|suiker|Dutch
+tabaco|Spanish|immediate|t|tabak|Dutch
+tabula|Latin|immediate|t|tafel|Dutch
+tante|French|immediate|t|tante|Dutch
+tapit|French|immediate|t|tapijt|Dutch
+tapir|Spanish|immediate|f|tapir|Dutch
+tapir|Portuguese|immediate|f|tapir|Dutch
+téléphone|French|immediate|t|telefoon|Dutch
+television|English|immediate|t|televisie|Dutch
+templum|Latin|immediate|t|tempel|Dutch
+tente|French|immediate|t|tent|Dutch
+termite|French|immediate|t|termiet|Dutch
+testiculus|Latin|immediate|t|testikels|Dutch
+tê|Hokkien|immediate|t|thee|Dutch
+tucán|Spanish|immediate|t|toekan|Dutch
+toilette|French|immediate|t|toilet|Dutch
+turrem|Latin|immediate|t|toren|Dutch
+tractare|Latin|immediate|t|trachten|Dutch
+train|English|immediate|t|trein|Dutch
+trum(m)e|High German|immediate|t|trom|Dutch
+Trommel|High German|immediate|t|trommel|Dutch
+trompette|French|immediate|t|trompet|Dutch
+trotz|High German|immediate|t|trots|Dutch
+(h)ore|French|immediate|t|uur|Dutch
+patria|Latin|immediate|t|vaderland|Dutch
+vagina|Latin|immediate|t|vagina|Dutch
+vallée|French|immediate|t|vallei|Dutch
+terraferma/Festland|Italian|immediate|f|vasteland|Dutch
+terraferma/Festland|High German|immediate|f|vasteland|Dutch
+fenestra|Latin|immediate|t|venster|Dutch
+verwant|High German|immediate|t|verwanten|Dutch
+versammeln|High German|immediate|t|verzamelen|Dutch
+figes|French|immediate|t|vijg|Dutch
+flamme|French|immediate|t|vlam|Dutch
+furca|Latin|immediate|t|vork|Dutch
+Fremdling|High German|immediate|t|vreemdeling|Dutch
+dies Veneris|Latin|immediate|t|vrijdag|Dutch
+vulva|Latin|immediate|t|vulva|Dutch
+WC|English|immediate|t|wc|Dutch
+vīnum|Latin|immediate|t|wijn|Dutch
+wickeln|High German|immediate|t|wikkelen|Dutch
+dies Mercurii|Latin|immediate|t|woensdag|Dutch
+yam|English|immediate|t|yam|Dutch
+saccus|Latin|immediate|t|zak|Dutch
+dies Saturni|Latin|immediate|t|zaterdag|Dutch
+signare|Latin|immediate|t|zegenen|Dutch
+secūrus|Latin|immediate|t|zeker|Dutch
+se haster|French|immediate|t|zich haasten|Dutch
+sich erinnern|High German|immediate|t|zich herinneren|Dutch
+*seda|Romance|immediate|t|zijde|Dutch
+arpu|Akkadian|immediate|t|zilver|Dutch
+diês sôlis|Latin|immediate|t|zondag|Dutch
+accusare|Latin|earlier|t|accuse|English
+accuser|French|immediate|t|accuse|English
+aquiter|Old French|immediate|t|acquit|English
+*acquitāre|Latin|earlier|t|acquit|English
+*ad + dīrectus|Latin|earlier|t|address|English
+adresse|French|immediate|t|address|English
+adiudicāre|Latin|immediate|t|adjudicate|English
+admittere|Latin|earlier|t|admit|English
+admettre|French|immediate|t|admit|English
+ţob|Coptic|earlier|t|adobe|English
+adobar|Spanish|immediate|t|adobe|English
+avouterie|Old French|immediate|t|adultery|English
+adulter|Latin|earlier|t|adultery|English
+aēr + plānus|Latin|immediate|t|aeroplane|English
+aevum|Latin|earlier|t|age|English
+âge|French|immediate|t|age|English
+air|French|immediate|t|air|English
+aēr|Greek|earlier|t|air|English
+al-koħl|Arabic|earlier|t|alcohol|English
+alcool|French|immediate|t|alcohol|English
+el lagarto|Spanish|immediate|t|alligator|English
+alouer|Old French|immediate|t|allow|English
+allocāre, allaudāre|Latin|earlier|t|allow|English
+altāre|Latin|immediate|t|altar|English
+embusche|Old French|immediate|t|ambush|English
+*imboscāre|Late Latin|earlier|t|ambush|English
+antecēssor, -em|Latin|earlier|t|ancestor|English
+ancestre|French (Anglo-Norman)|immediate|t|ancestor|English
+anchora|Latin|immediate|t|anchor|English
+ánkūra|Greek|earlier|t|anchor|English
+angr|Old Norse|immediate|t|anger|English
+animālis|Latin|immediate|t|animal|English
+annunciāre|Latin|earlier|t|announce|English
+anoncer|French (Anglo-Norman)|immediate|t|announce|English
+anxietā-s, -tem|Latin|immediate|t|anxiety|English
+aprochier|French (Anglo-Norman)|immediate|t|approach|English
+appropiāre|Vulgar Latin|earlier|t|approach|English
+arcum|Latin|earlier|t|arch|English
+arche|French|immediate|t|arch|English
+armātūra|Late Latin|earlier|t|armour|English
+armure|French (Anglo-Norman)|immediate|t|armour|English
+put(t)eus|Latin|immediate|t|armpit|English
+armāta|Latin|earlier|t|army|English
+armée|French|immediate|t|army|English
+*adrīpāre|Latin|earlier|t|arrive|English
+arriver|French|immediate|t|arrive|English
+arson|French|immediate|t|arson|English
+arsiō, -nem|Latin|earlier|t|arson|English
+artēria|Latin|immediate|t|artery|English
+artēria|Greek|earlier|t|artery|English
+estoner|French (Anglo-Norman)|immediate|t|astonished|English
+*ex-tonāre|Late Latin|earlier|t|astonished|English
+attaccare|Italian|earlier|t|attack|English
+attaquer|French|immediate|t|attack|English
+aunte|Old French|immediate|t|aunt|English
+amita|Latin|earlier|t|aunt|English
+automne|French|immediate|t|autumn|English
+autumnus|Latin|earlier|t|autumn|English
+baban|Welsh|immediate|t|baby|English
+baggi|Old Norse|immediate|t|bag|English
+beita|Old Norse|immediate|t|bait|English
+böllr|Old Norse|immediate|t|ball|English
+banvu|Kannada|earlier|t|bamboo|English
+bamboes|Dutch|immediate|t|bamboo|English
+banana|Wolof|earlier|t|banana|English
+banana|Portuguese|immediate|t|banana|English
+banque|French|immediate|t|bank|English
+*bank-|Germanic|earlier|t|bank|English
+banian|Portuguese|immediate|t|banyan|English
+vaņij|Sanskrit|earlier|t|banyan|English
+börkr|Old Norse|immediate|t|bark|English
+barater|French|immediate|t|barter|English
+bakka|Middle North Germanic|immediate|t|bat|English
+batre|French (Anglo-Norman)|immediate|t|battery|English
+battuere|Latin|earlier|t|battery|English
+bataille|French|immediate|t|battle|English
+battuālia|Late Latin|earlier|t|battle|English
+battuālia|Late Latin|immediate|t|battle-axe|English
+baie|French|immediate|t|bay|English
+baia|Latin|earlier|t|bay|English
+beccus|Latin|earlier|t|beak|English
+bec|French|immediate|t|beak|English
+*bellitā-s, -tis|Late Latin|earlier|t|beautiful|English
+biaute|French (Anglo-Norman)|immediate|t|beautiful|English
+causa, earlier caussa|Latin|immediate|t|because|English
+Beguinard|French|immediate|t|beggar|English
+balteus|Latin|immediate|t|belt|English
+silen-s, -tem|Latin|immediate|t|(be) silent|English
+trair|French (Anglo-Norman)|immediate|t|betray|English
+tradere|Latin|earlier|t|betray|English
+kúklos|Greek|immediate|t|bicycle, bike|English
+bille|French (Anglo-Norman)|immediate|t|bill|English
+bulla|Latin|earlier|t|bill|English
+certificātum|Latin|earlier|t|birth certificate|English
+certificat|French|immediate|t|birth certificate|English
+blasphēmein|Greek|earlier|t|blame|English
+blâme|French|immediate|t|blame|English
+blank|Germanic|earlier|t|blanket|English
+blankete|French (Anglo-Norman)|immediate|t|blanket|English
+blenken|Dutch|immediate|t|blink|English
+blestre|French (Anglo-Norman)|immediate|t|blister|English
+blue|Old French|immediate|t|blue|English
+*blǽwaz|Germanic|earlier|t|blue|English
+bullire|Latin|earlier|t|boil|English
+boillir|French (Anglo-Norman)|immediate|t|boil|English
+bombe|French|immediate|t|bomb|English
+bómbos|Greek|earlier|t|bomb|English
+womurrang|Dharuk|immediate|t|boomerang|English
+bote|Old French|immediate|t|boot|English
+butin|French|immediate|t|booty|English
+Beute|German|earlier|t|booty|English
+botaille|Old French|immediate|t|bottle|English
+buttis|Latin|earlier|t|bottle|English
+bodne, borne|French (Anglo-Norman)|immediate|t|boundary|English
+bracelet|French (Anglo-Norman)|immediate|t|bracelet|English
+bracchiāle|Latin|earlier|t|bracelet|English
+brak|Middle Low German|immediate|f|brackish|English
+brak|Dutch|immediate|f|brackish|English
+bracke|Middle Dutch|earlier|t|brake|English
+braquer|French|immediate|t|brake|English
+branca|Latin|earlier|t|branch|English
+branche|French|immediate|t|branch|English
+brave|French|immediate|t|brave|English
+bravo|Italian|earlier|t|brave|English
+bricke|Middle Low German|earlier|f|brick|English
+bricke|Dutch|earlier|f|brick|English
+brique|French|immediate|t|brick|English
+brosse|French|immediate|t|brush|English
+bruscum|Latin|earlier|t|brush|English
+*būfalus|Latin|earlier|t|buffalo|English
+búfalo|Portuguese|immediate|t|buffalo|English
+omnibus|Latin|immediate|t|bus|English
+butyrum|Latin|immediate|t|butter|English
+boútūron|Greek|earlier|t|butter|English
+boton|French|immediate|t|button|English
+*bottāre|Late Latin|earlier|t|button|English
+calendier|French|immediate|t|calendar|English
+calendae|Latin|earlier|t|calendar|English
+kálfi|Old Norse|immediate|t|calf|English
+kalla|Old Norse|immediate|t|call (1)|English
+kalla|Old Norse|earlier|t|call (2)|English
+calme|French|immediate|t|calm|English
+kaúma|Greek|earlier|t|calm|English
+gāmal|Proto-Semitic|earlier|t|camel|English
+camēlus|Latin|immediate|t|camel|English
+campus|Latin|immediate|t|camp|English
+candella|Latin|immediate|t|candle|English
+kanawa|Taino|earlier|t|canoe|English
+canoa|Spanish|immediate|t|canoe|English
+cappa|Latin|immediate|t|cap|English
+caput|Latin|earlier|t|cape|English
+cap|French|immediate|t|cape|English
+captīvus|Latin|earlier|t|captive|English
+captif|French|immediate|t|captive|English
+carre|French (Anglo-Norman)|immediate|t|car|English
+*karros|Celtic|earlier|t|car|English
+carcassa|Italian|earlier|t|carcass|English
+carcois|French (Anglo-Norman)|immediate|t|carcass|English
+qalipu|Mikmaq|earlier|t|caribou|English
+caribou|French|immediate|t|caribou|English
+*carpentārius|Late Latin|earlier|t|carpenter|English
+carpentier|French (Anglo-Norman)|immediate|t|carpenter|English
+carpite|Middle French|immediate|t|carpet|English
+carpita|Latin|earlier|t|carpet|English
+carier|French (Anglo-Norman)|immediate|t|carry|English
+*karros|Celtic|earlier|t|carry|English
+kartr|Old Norse|immediate|t|cart|English
+cassave|French|immediate|t|cassava|English
+casavi|Taino|earlier|t|cassava|English
+kasta|Old Norse|immediate|t|cast|English
+castellum|Latin|earlier|t|castle|English
+castel|French (Anglo-Norman)|immediate|t|castle|English
+cachier|French (Anglo-Norman)|immediate|t|catch|English
+*captiāre|Latin|earlier|t|catch|English
+catel|French (Anglo-Norman)|immediate|t|cattle|English
+capitāle|Latin|earlier|t|cattle|English
+cause|French|immediate|t|cause|English
+causa|Latin|earlier|t|cause|English
+cāva|Latin|earlier|t|cave|English
+cave|French|immediate|t|cave|English
+cesser|French|immediate|t|cease|English
+cessāre|Latin|earlier|t|cease|English
+centipeda|Latin|immediate|t|centipede|English
+*certānus|Latin|earlier|t|certain|English
+certain|French|immediate|t|certain|English
+chaîne|French|immediate|t|chain|English
+catēna|Latin|earlier|t|chain|English
+kathédra|Greek|earlier|t|chair|English
+chaire|Old French|immediate|t|chair|English
+chamaeleon|Latin|immediate|t|chameleon|English
+khamailéōn|Greek|earlier|t|chameleon|English
+changer|French|immediate|t|change|English
+cambiāre|Latin|earlier|t|change|English
+chacier|French (Anglo-Norman)|immediate|t|chase|English
+*captiāre|Late Latin|earlier|t|chase|English
+caupō|Latin|immediate|t|cheap|English
+cāseus|Latin|immediate|t|cheese|English
+cista|Latin|immediate|t|chest|English
+kistē|Greek|earlier|t|chest|English
+chevetain|French (Anglo-Norman)|immediate|t|chieftain|English
+capitānus|Latin|earlier|t|chieftain|English
+chilli|Nahuatl|earlier|t|chili (pepper)|English
+chile|Spanish|immediate|t|chili (pepper)|English
+caminata|Late Latin|earlier|t|chimney|English
+cheminée|French|immediate|t|chimney|English
+*cisellium|Late Latin|earlier|t|chisel|English
+chisel|French (Anglo-Norman)|immediate|t|chisel|English
+kuriakon|Greek|immediate|t|church|English
+cigarro|Spanish|earlier|t|cigarette|English
+cigarette|French|immediate|t|cigarette|English
+circulus|Latin|immediate|t|circle|English
+circumcīdere|Latin|immediate|t|circumcision|English
+citezein|French (Anglo-Norman)|immediate|t|citizen|English
+*cīvitātānus|Late Latin|earlier|t|citizen|English
+kítron|Greek|earlier|t|citrus|English
+citrus|Latin|immediate|t|citrus|English
+cīvi-tās, -tātem|Latin|earlier|t|city|English
+cite|French (Anglo-Norman)|immediate|t|city|English
+clann|Gaelic (Scottish)|immediate|t|clan|English
+planta|Latin|earlier|t|clan|English
+cler|French (Anglo-Norman)|immediate|t|clear|English
+clārus|Latin|earlier|t|clear|English
+clocca|Late Latin|earlier|t|cloak|English
+cloque|French|immediate|t|cloak|English
+klokke|Dutch|immediate|t|clock|English
+clocca|Late Latin|earlier|t|clock|English
+clore|French|immediate|t|close|English
+claudere|Latin|earlier|t|close|English
+klubba, klumba|Old Norse|immediate|t|club|English
+cote|French|immediate|t|coat|English
+coccus|Latin|earlier|t|cock|English
+coq|French|immediate|t|cock|English
+cucaracha|Spanish|immediate|t|cockroach|English
+coco|Spanish|immediate|t|coconut|English
+qahwa|Arabic|earlier|t|coffee|English
+koffie|Dutch|immediate|t|coffee|English
+coin|French (Anglo-Norman)|immediate|t|coin|English
+cuneus|Latin|earlier|t|coin|English
+coler|French|immediate|t|collar|English
+collāre|Latin|earlier|t|collar|English
+colligere|Latin|earlier|t|collect|English
+collecter|Middle French|immediate|t|collect|English
+colour|Old French|immediate|t|colour|English
+color|Latin|earlier|t|colour|English
+commandāre|Latin|earlier|t|command|English
+cumander|French (Anglo-Norman)|immediate|t|command|English
+concevoir|French|immediate|t|conceive|English
+concipere|Latin|earlier|t|conceive|English
+condemner|French (Anglo-Norman)|immediate|t|condemn|English
+condemnāre|Latin|earlier|t|condemn|English
+kōnos|Greek|earlier|t|cone|English
+conus|Latin|immediate|t|cone|English
+convaincre|French|immediate|t|convict|English
+convincere|Latin|earlier|t|convict|English
+coquere|Latin|immediate|t|cook|English
+coquere|Latin|immediate|t|cooked|English
+cuprum|Latin|immediate|t|copper|English
+kyprion|Greek|earlier|t|copper|English
+copulāre|Latin|immediate|t|copulate|English
+corvus marīnus|Latin|earlier|t|cormorant|English
+cormoran|Old French|immediate|t|cormorant|English
+cornerium|Late Latin|earlier|t|corner|English
+corner|French (Anglo-Norman)|immediate|t|corner|English
+corpus|Latin|earlier|t|corpse|English
+cors|Middle French|immediate|t|corpse|English
+qutn|Arabic|earlier|t|cotton|English
+coton|French|immediate|t|cotton|English
+compter|French|immediate|t|count|English
+computāre|Latin|earlier|t|count|English
+contrée|French|immediate|t|country|English
+contrāta (terra)|Latin|earlier|t|country|English
+court|Old French|immediate|t|court|English
+cohor-s, -tem|Latin|earlier|t|court|English
+cousin|French|immediate|t|cousin|English
+consobrīnus|Latin|earlier|t|cousin|English
+couvrir|French|immediate|t|cover|English
+cooperīre|Latin|earlier|t|cover|English
+coyote|Spanish|immediate|t|coyote|English
+coyotl|Nahuatl|earlier|t|coyote|English
+krafla|Old Norse|immediate|t|crawl|English
+crime|French|immediate|t|crime|English
+crīmen|Latin|earlier|t|crime|English
+cocodrille|French (Anglo-Norman)|immediate|t|crocodile|English
+krokódeilos|Greek|earlier|t|crocodile|English
+krókr|Old Norse|immediate|t|crooked|English
+crux|Latin|immediate|t|cross|English
+crochir|French (Anglo-Norman)|immediate|t|crouch|English
+croisir|French (Anglo-Norman)|immediate|t|crush|English
+cruscīre|Latin|earlier|t|crush|English
+crier|French (Anglo-Norman)|immediate|t|cry|English
+quirītāre|Latin|earlier|t|cry|English
+cultivāre|Latin|immediate|t|cultivate|English
+cuppa (Vulgar), cūpa (Classical)|Latin|immediate|t|cup|English
+curer|Middle French|immediate|t|cure|English
+cūráre|Latin|earlier|t|cure|English
+custome|Old French|immediate|t|custom|English
+consuetũdō|Latin|earlier|t|custom|English
+kuta|Old Norse|immediate|t|cut|English
+damage|Old French|immediate|t|damage|English
+damnum|Latin|earlier|t|damage|English
+dansōn|Germanic|earlier|t|dance|English
+danser|French|immediate|t|dance|English
+*domniārium|Latin|earlier|t|danger|English
+danger|French (Anglo-Norman)|immediate|t|danger|English
+dette|French|immediate|t|debt|English
+debitum; dēbēre|Latin|earlier|t|debt|English
+deceite|Old French|immediate|t|deceit|English
+dēcipere|Latin|earlier|t|deceit|English
+defeit|Old French|immediate|t|defeat|English
+disfacere|Latin|earlier|t|defeat|English
+dēfaecāre|Latin|immediate|t|defecate|English
+défendre|French|immediate|t|defend|English
+dēfendere|Latin|earlier|t|defend|English
+dēfendere|Latin|earlier|t|defendant|English
+deffendant|Old French|immediate|t|defendant|English
+daímōn|Greek|earlier|t|demon|English
+daemōn|Latin|immediate|t|demon|English
+negāre|Latin|earlier|t|deny|English
+denier (now nier)|French|immediate|t|deny|English
+descēnden-s, -tem|Latin|earlier|t|descendant|English
+descendant|French|immediate|t|descendant|English
+destruire|French (Anglo-Norman)|immediate|t|destroy|English
+dēstrūgere|Late Latin|earlier|t|destroy|English
+diábolos|Greek|earlier|t|devil|English
+diabolus|Latin|immediate|t|devil|English
+deyja|Old Norse|immediate|t|die|English
+difficilis|Latin|immediate|t|difficult|English
+dijk|Dutch|earlier|t|dig|English
+diguer|French|immediate|t|dig|English
+disner|Old French|immediate|t|dinner|English
+disjūnāre|Late Latin|earlier|t|dinner|English
+drit|Old Norse|immediate|t|dirty|English
+désapparaître|French|immediate|t|disappear|English
+disease|Old French|immediate|t|disease|English
+*dis-asia|Late Latin|earlier|t|disease|English
+dískos|Greek|earlier|t|dish|English
+discus|Latin|immediate|t|dish|English
+dīvidere|Latin|immediate|t|divide|English
+divortiāre|Latin|earlier|t|divorce|English
+divorce|French|immediate|t|divorce|English
+docto(u)r|Middle French|immediate|t|doctor|English
+doctor|Latin|earlier|t|doctor|English
+delphīnus|Latin|earlier|t|dolphin|English
+delfin|Old French|immediate|t|dolphin|English
+poste|French|immediate|t|doorpost|English
+posita|Latin|earlier|t|doorpost|English
+doute|French|immediate|t|doubt|English
+dubium|Latin|earlier|t|doubt|English
+*dounon|Celtic|immediate|t|down|English
+dresser|French|immediate|t|dress|English
+*dīrectiāre|Late Latin|earlier|t|dress|English
+licentia|Latin|earlier|t|driving licence|English
+licence|French|immediate|t|driving licence|English
+aigle|French|immediate|t|eagle|English
+aquila|Latin|earlier|t|eagle|English
+lobus|Latin|immediate|t|earlobe|English
+lobos|Greek|earlier|t|earlobe|English
+*ad-asium|Late Latin|earlier|t|easy|English
+aisié|French (Anglo-Norman)|immediate|t|easy|English
+egg|Old Norse|immediate|t|egg|English
+election|French|immediate|t|election|English
+eligere|Latin|earlier|t|election|English
+ēlectricus|Late Latin|immediate|t|electricity|English
+ēlektron|Greek|earlier|t|electricity|English
+olifant|French|immediate|t|elephant|English
+elépha-s, -ntos|Greek|earlier|t|elephant|English
+embrasser|French|immediate|t|embrace|English
+*imbracchiāre|Late Latin|earlier|t|embrace|English
+ennemi|French|immediate|t|enemy|English
+inimicus|Latin|earlier|t|enemy|English
+entrer|French|immediate|t|enter|English
+intrāre|Latin|earlier|t|enter|English
+envie|French|immediate|t|envy|English
+invidia|Latin|earlier|t|envy|English
+*expensīvus|Late Latin|immediate|t|expensive|English
+explānāre|Latin|immediate|t|explain|English
+extinguere|Latin|immediate|t|extinguish|English
+face|French (Anglo-Norman)|immediate|t|face|English
+faciēs|Latin|earlier|t|face|English
+faierie|French (Anglo-Norman)|immediate|t|fairy|English
+fāta|Latin|earlier|t|fairy|English
+fidēs|Latin|earlier|t|faithful|English
+fed|French (Anglo-Norman)|immediate|t|faithful|English
+falsus|Latin|earlier|t|falsity|English
+falsete|French|immediate|t|falsity|English
+familia|Latin|immediate|t|family|English
+fāmēs|Latin|earlier|t|famine|English
+faim|French|immediate|t|famine|English
+vannus|Latin|immediate|t|fan|English
+vannus|Latin|immediate|t|fan|English
+firmārius|Latin|earlier|t|farmer|English
+fermier|French|immediate|t|farmer|English
+faute|French|immediate|t|fault|English
+*fallita|Late Latin|earlier|t|fault|English
+fēmella|Latin|earlier|t|female|English
+fēmella|Latin|earlier|t|female|English
+femelle|French|immediate|t|female|English
+femelle|French (Anglo-Norman)|immediate|t|female|English
+dēfendere|Latin|earlier|t|fence|English
+défense|French|immediate|t|fence|English
+fievre|French (Anglo-Norman)|immediate|t|fever|English
+febris|Latin|earlier|t|fever|English
+ficus|Latin|earlier|t|fig|English
+figue|French|immediate|t|fig|English
+finis|Latin|earlier|t|fine|English
+fin|French (Anglo-Norman)|immediate|t|fine|English
+finīre|Latin|earlier|t|finish|English
+finir|French|immediate|t|finish|English
+flamma|Latin|earlier|t|flame|English
+flamme|French|immediate|t|flame|English
+flatr|Old Norse|immediate|t|flat|English
+flō-s, -rem|Latin|earlier|t|flour|English
+fleur (de farine)|French|immediate|t|flour|English
+flō-s, -rem|Latin|earlier|t|flower|English
+flour|Old French|immediate|t|flower|English
+flaüt|Occitan|earlier|t|flute|English
+flahute|French|immediate|t|flute|English
+prente|Middle French|immediate|t|footprint|English
+premere|Latin|earlier|t|footprint|English
+forestis|Latin|earlier|t|forest|English
+forêt|French|immediate|t|forest|English
+forge|French|immediate|t|forge|English
+fabrica|Latin|earlier|t|forge|English
+furca|Latin|immediate|t|fork|English
+forteresse|French|immediate|t|fortress|English
+*fortaritia|Latin|earlier|t|fortress|English
+fragran-s, -tem|Latin|immediate|t|fragrant|English
+fruit|French|immediate|t|fruit|English
+fructus|Latin|earlier|t|fruit|English
+frigere|Latin|earlier|t|fry|English
+frire|French|immediate|t|fry|English
+forrer|French|immediate|t|fur|English
+*gardan-|Proto-Germanic|earlier|t|garden|English
+gardin|French (Anglo-Norman)|immediate|t|garden|English
+geta|Old Norse|immediate|t|get|English
+gil|Old Norse|immediate|t|gill|English
+giva|Old Norse|immediate|t|give|English
+glu|French|immediate|t|glue|English
+glūten|Latin|earlier|t|glue|English
+guttur|Latin|earlier|t|goitre|English
+goître|French|immediate|t|goitre|English
+Unidentifiable|Unidentified|immediate|t|gold|English
+(ge)luk|Dutch|immediate|t|(good) luck|English
+gourde|French|immediate|t|gourd|English
+cucurbita|Latin|earlier|t|gourd|English
+gouverner|French|immediate|t|govern|English
+kubernān|Greek|earlier|t|govern|English
+gouvernement|French|immediate|t|government|English
+kubernān|Greek|earlier|t|government|English
+grain|French|immediate|t|grain|English
+grānum|Latin|earlier|t|grain|English
+grand|French|immediate|t|grandchild|English
+grandis|Latin|earlier|t|grandchild|English
+grandis|Latin|earlier|t|granddaughter|English
+grand|French|immediate|t|granddaughter|English
+grand|French|immediate|t|grandfather|English
+grandis|Latin|earlier|t|grandfather|English
+grandis|Latin|earlier|t|grandmother|English
+grand|French|immediate|t|grandmother|English
+grandis + parens|Latin|immediate|t|grandparent|English
+grandis|Latin|earlier|t|grandson|English
+grand|French|immediate|t|grandson|English
+*krappōn|Germanic|earlier|t|grape|English
+grappe|Old French|immediate|t|grape|English
+graisse|French|immediate|t|grease|English
+crassus|Latin|earlier|t|grease|English
+grief|French (Anglo-Norman)|immediate|t|grief|English
+*grevāre|Latin|earlier|t|grief|English
+garde|French|immediate|t|guard|English
+wardōn|Frankish|earlier|t|guard|English
+Gunhild|Old Norse|immediate|t|gun|English
+hamaca|Spanish|immediate|t|hammock|English
+hamaka|Taino|earlier|t|hammock|English
+courchief|French (Anglo-Norman)|immediate|t|handkerchief, hankie|English
+cooperīre + caput|Latin|earlier|t|handkerchief, hankie|English
+happ|Old Norse|immediate|t|happy|English
+bande|French|immediate|t|headband|English
+*bindōn|Germanic|earlier|t|headband|English
+*xaigaran|Proto-Germanic|earlier|t|heron|English
+hairon|French (Anglo-Norman)|immediate|t|heron|English
+hitta|Old Norse|immediate|t|hit|English
+hospitāle|Latin|immediate|t|hospital|English
+hoste|Old French|immediate|t|host|English
+hospes|Latin|earlier|t|host|English
+ure|French (Anglo-Norman)|immediate|t|hour|English
+hōra|Greek|earlier|t|hour|English
+hurter|French (Anglo-Norman)|immediate|t|hurt|English
+húsbondi|Old Norse|immediate|t|husband|English
+*hudjā|Proto-Germanic|earlier|t|hut|English
+hutte|French|immediate|t|hut|English
+idea|Latin|immediate|t|idea|English
+idéā|Greek|earlier|t|idea|English
+idele|French (Anglo-Norman)|immediate|t|idol|English
+eidōlon|Greek|earlier|t|idol|English
+illr|Old Norse|immediate|t|ill|English
+imitārī|Latin|immediate|t|imitate|English
+immediātus|Latin|immediate|t|immediately|English
+front|French|immediate|t|in front of|English
+frōns, frontis|Latin|earlier|t|in front of|English
+iniectiō, iniicere|Latin|immediate|t|injection|English
+injurer|French|immediate|t|injure|English
+iniūria|Latin|earlier|t|injure|English
+innocen-s, -tem|Latin|immediate|t|innocent|English
+insectum|Latin|immediate|t|insect|English
+intendere|Latin|earlier|t|intention|English
+intencion|French (Anglo-Norman)|immediate|t|intention|English
+intestīnum|Latin|immediate|t|intestines|English
+invītāre|Latin|earlier|t|invite|English
+inviter|French|immediate|t|invite|English
+Unidentifiable|Unidentified|immediate|t|iron|English
+jaguara|Tupí|immediate|t|jaguar|English
+joe|Old French|immediate|t|jaw|English
+zēlos|Greek|earlier|t|jealous|English
+jaloux|French|immediate|t|jealous|English
+juel|French (Anglo-Norman)|immediate|t|jewel|English
+*gaudiellum|Late Latin|earlier|t|jewel|English
+joindre|French|immediate|t|join|English
+iungere|Latin|earlier|t|join|English
+juge|French|immediate|t|judge|English
+iūdex|Latin|earlier|t|judge|English
+jugement|French|immediate|t|judgment|English
+iūdicāmentum|Latin|earlier|t|judgment|English
+gaŋurru|Guugu Yimidhirr|immediate|t|kangaroo|English
+catillus|Latin|immediate|t|kettle|English
+*cocīna|Latin|immediate|t|kitchen|English
+knifr|Old Norse|immediate|t|knife|English
+knifr|Old Norse|immediate|t|knife|English
+laguna|Spanish|immediate|t|lagoon|English
+lacūna|Latin|earlier|t|lagoon|English
+lacus|Latin|earlier|t|lake|English
+lac|French|immediate|t|lake|English
+lampá-s, -dos|Greek|earlier|t|lamp|English
+lampe|French|immediate|t|lamp|English
+langage|French|immediate|t|language|English
+lingua|Latin|earlier|t|language|English
+large|French|immediate|t|large|English
+lazo|Spanish|immediate|t|lasso|English
+laqueus|Latin|earlier|t|lasso|English
+lache|French (Anglo-Norman)|immediate|t|latch|English
+*lacium|Late Latin|earlier|t|latch|English
+lagu|Old Norse|immediate|t|law|English
+lasich|Middle Low German|immediate|t|lazy|English
+legg-r|Old Norse|immediate|t|leg|English
+laimūn|Arabic|earlier|t|lemon|English
+limon|French|immediate|t|lemon|English
+lettre|French|immediate|t|letter|English
+litterae|Latin|earlier|t|letter|English
+liberāre|Latin|immediate|t|liberate|English
+lypta|Old Norse|immediate|t|lift|English
+ligne|French|immediate|t|line|English
+līnea|Latin|earlier|t|line|English
+leō|Latin|immediate|t|lion|English
+leōn|Greek|earlier|t|lion|English
+lacertus|Latin|earlier|t|lizard|English
+lezard|French (Anglo-Norman)|immediate|t|lizard|English
+lágr|Old Norse|immediate|t|low|English
+lágr|Old Norse|immediate|t|low tide|English
+mēkhanḗ|Greek|earlier|t|machine|English
+machine|French|immediate|t|machine|English
+maguš|Old Persian|earlier|t|magic|English
+magique|French|immediate|t|magic|English
+mahis/mahici|Taino|earlier|t|maize|English
+maiz|Spanish|immediate|t|maize|English
+male|French (Anglo-Norman)|immediate|t|male|English
+masculus|Latin|earlier|t|male|English
+male|French (Anglo-Norman)|immediate|t|male|English
+masculus|Latin|earlier|t|male|English
+manioc|French|immediate|t|manioc|English
+manioka|Tupí|earlier|t|manioc|English
+manere|French (Anglo-Norman)|immediate|t|manner|English
+manuārius|Latin|earlier|t|manner|English
+mercātus|Latin|immediate|t|market|English
+marier|French|immediate|t|marry|English
+maritāre|Latin|earlier|t|marry|English
+macium|French (Anglo-Norman)|immediate|t|mason|English
+*matiō, -nem|Late Latin|earlier|t|mason|English
+magister|Latin|immediate|t|master|English
+maţţa|Phoenician|earlier|t|mat|English
+matta|Late Latin|immediate|t|mat|English
+mèche|French|immediate|t|match|English
+múxā|Greek|earlier|t|match|English
+materas|French (Anglo-Norman)|immediate|t|mattress|English
+ţaraħa|Arabic|earlier|t|mattress|English
+mesurer|French (Anglo-Norman)|immediate|t|measure|English
+mēnsūrāre|Late Latin|earlier|t|measure|English
+medicīna|Latin|earlier|t|medicine|English
+medicine|Old French|immediate|t|medicine|English
+marchand|French (Anglo-Norman)|immediate|t|merchant|English
+mercārī|Latin|earlier|t|merchant|English
+molīna|Late Latin|immediate|t|mill|English
+millet|French|immediate|t|millet|English
+milium|Latin|earlier|t|millet|English
+minister|Latin|earlier|t|minister|English
+menestre|French (Anglo-Norman)|immediate|t|minister|English
+miroir|French|immediate|t|mirror|English
+mīrārī|Latin|earlier|t|mirror|English
+taka|Old Norse|immediate|t|mistake|English
+miscere|Latin|earlier|t|mix|English
+mixte|French|immediate|t|mix|English
+molaris|Latin|immediate|t|molar (tooth)|English
+monēta|Latin|earlier|t|money|English
+monai|French (Anglo-Norman)|immediate|t|money|English
+mos|Eastern Abenaki|immediate|t|moose|English
+mortier|French|immediate|t|mortar|English
+mortier|French (Anglo-Norman)|immediate|t|mortar|English
+mortarium|Latin|earlier|t|mortar|English
+mortarium|Latin|earlier|t|mortar|English
+meseache|Middle French|immediate|t|mosque|English
+masjid|Arabic|earlier|t|mosque|English
+mosquito|Spanish|immediate|t|mosquito|English
+motor|Latin|immediate|t|motor|English
+kúklos|Greek|immediate|t|motorcycle|English
+modulus|Latin|earlier|t|mould|English
+modle|French (Anglo-Norman)|immediate|t|mould|English
+mons; montānus|Latin|earlier|t|mountain|English
+montagne|French|immediate|t|mountain|English
+movēre|Latin|earlier|t|move|English
+mover|French (Anglo-Norman)|immediate|t|move|English
+modde|Dutch|immediate|t|mud|English
+mul|French (Anglo-Norman)|immediate|t|mule|English
+mūlus|Latin|earlier|t|mule|English
+mummelen|Middle Low German|immediate|f|mumble|English
+mummelen|Dutch|immediate|f|mumble|English
+mussirio|Late Latin|earlier|t|mushroom|English
+muserun|French (Anglo-Norman)|immediate|t|mushroom|English
+musique|French (Anglo-Norman)|immediate|t|music|English
+mousikē|Greek|earlier|t|music|English
+muet|French|immediate|t|mute|English
+mūtus|Latin|earlier|t|mute|English
+necessi-tās, -tātem|Latin|earlier|t|necessity|English
+necessite|French (Anglo-Norman)|immediate|t|necessity|English
+laqueus|Latin|earlier|t|necklace|English
+laz|French (Anglo-Norman)|immediate|t|necklace|English
+nepō-s, -tem|Latin|earlier|t|nephew|English
+neveu|French|immediate|t|nephew|English
+baggi|Old Norse|immediate|t|netbag|English
+neptia|Late Latin|earlier|t|niece|English
+nice|French (Anglo-Norman)|immediate|t|niece|English
+nōbilis|Latin|earlier|t|noble|English
+noble|French (Anglo-Norman)|immediate|t|noble|English
+nōna|Latin|immediate|t|noon|English
+nombre|French|immediate|t|number|English
+numerus|Latin|earlier|t|number|English
+nourice|French (Anglo-Norman)|immediate|t|nurse|English
+nūtrīcia|Latin|earlier|t|nurse|English
+obéir|French|immediate|t|obey|English
+obædīre < ob-audīre|Latin|earlier|t|obey|English
+obscūrus|Latin|earlier|t|obscure|English
+oscur|Old French|immediate|t|obscure|English
+ocean|Middle French|immediate|t|ocean|English
+okeanos|Greek|earlier|t|ocean|English
+oleum|Latin|immediate|t|oil|English
+unguere|Latin|earlier|t|ointment|English
+oinement|French (Anglo-Norman)|immediate|t|ointment|English
+elaiá|Greek|earlier|t|olive|English
+olīva|Latin|immediate|t|olive|English
+ōmen|Latin|immediate|t|omen|English
+opassom|Algonquian (Powhatan)|immediate|t|opossum|English
+nāram|Tamil|earlier|t|orange|English
+orenge|French (Anglo-Norman)|immediate|t|orange|English
+ordonner|French|immediate|t|order|English
+ordināre; ordō, -nem|Latin|earlier|t|order|English
+ornament|French (Anglo-Norman)|immediate|t|ornament|English
+ōrnāmentum|Latin|earlier|t|ornament|English
+orphanós|Greek|earlier|t|orphan|English
+orphanus|Latin|immediate|t|orphan|English
+Unidentifiable|Unidentified|immediate|t|outrigger|English
+padela|Late Latin|immediate|t|paddle|English
+padi|Malay|immediate|t|paddy|English
+poinē|Greek|earlier|t|pain|English
+peine|French|immediate|t|pain|English
+pingere|Latin|earlier|t|paint|English
+peint|French (Anglo-Norman)|immediate|t|paint|English
+pingere|Latin|earlier|t|paint|English
+peindre|French (Anglo-Norman)|immediate|t|paint|English
+paire|French (Anglo-Norman)|immediate|t|pair|English
+par|Latin|earlier|t|pair|English
+palma|Latin|immediate|t|palm|English
+paume|French|immediate|t|palm|English
+palma|Latin|earlier|t|palm|English
+panna|Vulgar Latin|immediate|t|pan|English
+patánē|Greek|earlier|t|pan|English
+papir|French (Anglo-Norman)|immediate|t|paper|English
+pápūros|Greek|earlier|t|paper|English
+perdonāre|Latin|earlier|t|pardon|English
+pardonner|French|immediate|t|pardon|English
+parent|French|immediate|t|parent|English
+paren-s, -tem|Latin|earlier|t|parent|English
+par-s, -tem|Latin|immediate|t|part|English
+pastura|Latin|earlier|t|pasture|English
+pastour|French (Anglo-Norman)|immediate|t|pasture|English
+Unidentifiable|Unidentified|immediate|t|path|English
+pācāre|Latin|earlier|t|pay|English
+paier|French (Anglo-Norman)|immediate|t|pay|English
+pax, -cem|Latin|earlier|t|peace|English
+pes|French (Anglo-Norman)|immediate|t|peace|English
+pilāre|Latin|immediate|t|peel|English
+pegge|Middle Dutch|immediate|t|peg|English
+penna|Latin|immediate|t|pen|English
+pēnis|Latin|immediate|t|penis|English
+populus|Latin|earlier|t|people|English
+people|French (Anglo-Norman)|immediate|t|people|English
+pippah|Sanskrit|earlier|t|pepper|English
+piper|Latin|immediate|t|pepper|English
+perjurie|French (Anglo-Norman)|immediate|t|perjury|English
+periūrium|Latin|earlier|t|perjury|English
+prósōpon|Greek|earlier|t|person|English
+persone|Middle French|immediate|t|person|English
+pistillum|Latin|earlier|t|pestle|English
+pestel|Old French|immediate|t|pestle|English
+petroleum|Late Latin|immediate|t|petrol(eum)|English
+peece|French (Anglo-Norman)|immediate|t|piece|English
+pecia|Late Latin|earlier|t|piece|English
+pile|French|immediate|t|pile up|English
+pīla|Latin|earlier|t|pile up|English
+pille|Middle Low German|immediate|f|pill|English
+pilula|Latin|earlier|t|pill|English
+pille|Dutch|immediate|f|pill|English
+pulvīnus|Latin|immediate|t|pillow|English
+pinna|Latin|immediate|t|pin|English
+*pinchier|French (Anglo-Norman)|immediate|t|pinch|English
+*pinctiāre|Late Latin|earlier|t|pinch|English
+pīnus|Latin|immediate|t|pine|English
+pīpa|Late Latin|immediate|t|pipe|English
+pisser|French|immediate|t|piss|English
+pic|French|immediate|t|pitchfork|English
+*pikka|Germanic|earlier|t|pitchfork|English
+pietā-s, -tem|Latin|earlier|t|pity|English
+pite|French (Anglo-Norman)|immediate|t|pity|English
+plateía|Greek|earlier|t|place|English
+platea|Latin|immediate|t|place|English
+plain|French|immediate|t|plain|English
+plānus|Latin|earlier|t|plain|English
+plaintif|French (Anglo-Norman)|immediate|t|plaintiff|English
+planctus|Latin|earlier|t|plaintiff|English
+*plictum|Late Latin|earlier|t|plait|English
+pleit|French (Anglo-Norman)|immediate|t|plait|English
+planta|Latin|immediate|t|plant|English
+plantare|Latin|immediate|t|plant|English
+plássein|Greek|earlier|t|plastic|English
+plastica|Italian|immediate|t|plastic|English
+plat|French (Anglo-Norman)|immediate|t|plate|English
+plattus|Late Latin|earlier|t|plate|English
+plat|French|immediate|t|plot|English
+plattus|Latin|earlier|t|plot|English
+pokete|French (Anglo-Norman)|immediate|t|pocket|English
+poiētēs|Greek|earlier|t|poet|English
+poète|French|immediate|t|poet|English
+punctum|Latin|earlier|t|pointed|English
+point|French|immediate|t|pointed|English
+potiō, -nem|Latin|earlier|t|poison|English
+poison|French|immediate|t|poison|English
+pólis|Greek|earlier|t|police|English
+police|French|immediate|t|police|English
+poncho|Spanish|immediate|t|poncho|English
+punchu|Mapudungun|earlier|t|poncho|English
+povre|French (Anglo-Norman)|immediate|t|poor|English
+pauper|Latin|earlier|t|poor|English
+porcus piscis|Latin|earlier|t|porpoise|English
+porpois|French (Anglo-Norman)|immediate|t|porpoise|English
+porta|Latin|immediate|t|port|English
+posta|Latin|immediate|t|post|English
+posita|Latin|earlier|t|post|English
+poste|French|immediate|t|post|English
+khártēs|Greek|earlier|t|postcard|English
+carte|French|immediate|t|postcard|English
+pot|French|immediate|t|pot|English
+*pottus|Latin|earlier|t|pot|English
+patata|Spanish|immediate|t|potato|English
+batata|Taino|earlier|t|potato|English
+pottus|Latin|immediate|t|potter|English
+pouleterie|French|immediate|t|poultry|English
+pullus|Latin|earlier|t|poultry|English
+pretiāre|Late Latin|earlier|t|praise|English
+preisier|French (Anglo-Norman)|immediate|t|praise|English
+prēcārī|Latin|earlier|t|pray|English
+prier|French|immediate|t|pray|English
+praedicâre|Latin|earlier|t|preach|English
+prechier|French (Anglo-Norman)|immediate|t|preach|English
+precipice|French|immediate|t|precipice|English
+praecipitium|Latin|earlier|t|precipice|English
+praegnan-s, -tem|Latin|immediate|t|pregnant|English
+praeservāre|Late Latin|earlier|t|preserve|English
+préserver|French|immediate|t|preserve|English
+praesiden-s, -tis|Latin|earlier|t|president|English
+president|French (Anglo-Norman)|immediate|t|president|English
+pressāre|Latin|earlier|t|press|English
+presser|French|immediate|t|press|English
+praevenīre|Latin|immediate|t|prevent|English
+pretium|Latin|earlier|t|price|English
+pris|French (Anglo-Norman)|immediate|t|price|English
+presbúteros|Greek|earlier|t|priest|English
+presbyter|Latin|immediate|t|priest|English
+prehensiō, -nem|Latin|earlier|t|prison|English
+prisun|French (Anglo-Norman)|immediate|t|prison|English
+prisonier|Old French|immediate|t|prisoner|English
+promittere|Latin|earlier|t|promise|English
+promettre|French|immediate|t|promise|English
+prōstitūta|Latin|immediate|t|prostitute|English
+prũt|French (Anglo-Norman)|immediate|t|proud|English
+prōdis|Latin|earlier|t|proud|English
+pūbēs|Latin|immediate|t|pubic hair|English
+pépōn|Greek|earlier|t|pumpkin|English
+pompion|French|immediate|t|pumpkin|English
+punisement|French (Anglo-Norman)|immediate|t|punishment|English
+punīre|Latin|earlier|t|punishment|English
+pupille|Old French|immediate|t|pupil|English
+pũpillus|Latin|earlier|t|pupil|English
+poursuivre|French|immediate|t|pursue|English
+persequī|Latin|earlier|t|pursue|English
+pūs|Latin|immediate|t|pus|English
+pulsāre|Latin|earlier|t|push|English
+pousser|French|immediate|t|push|English
+quaille|Old French|immediate|t|quail|English
+quacula/coacula|Late Latin|earlier|t|quail|English
+querele|Old French|immediate|t|quarrel|English
+querella|Latin|earlier|t|quarrel|English
+quiete|French (Anglo-Norman)|immediate|t|quiet|English
+quiētus|Latin|earlier|t|quiet|English
+robett|French (Walloon)|immediate|t|rabbit|English
+árehkan|Algonquian (Powhatan)|immediate|t|raccoon|English
+radius|Latin|immediate|t|radio|English
+raptr|Old Norse|immediate|t|raft|English
+ragg|Old Norse|immediate|t|rag|English
+reisa|Old Norse|immediate|t|raise|English
+rapīna|Latin|earlier|t|rape|English
+rape|French (Anglo-Norman)|immediate|t|rape|English
+*rāsāre|Latin|earlier|t|razor|English
+razor|French (Anglo-Norman)|immediate|t|razor|English
+riffe|Dutch|immediate|f|reef|English
+riffe|Middle Low German|immediate|f|reef|English
+refuser|French|immediate|t|refuse|English
+*refūsāre|Latin|earlier|t|refuse|English
+regretter|French|immediate|t|regret|English
+hreinndýri|Old Norse|immediate|t|reindeer|English
+relatīvus|Latin|earlier|t|relative|English
+relatif|Latin|immediate|t|relative|English
+religiō, -nem|Latin|earlier|t|religion|English
+religiun|French (Anglo-Norman)|immediate|t|religion|English
+remanēre|Latin|earlier|t|remain|English
+remayn-|French (Anglo-Norman)|immediate|t|remain|English
+remanēre|Latin|earlier|t|remains|English
+remanoir|French (Anglo-Norman)|immediate|t|remains|English
+remembrer|French (Anglo-Norman)|immediate|t|remember|English
+rēmemorārī|Latin|earlier|t|remember|English
+rēplicāre|Latin|earlier|t|reply|English
+replier|French|immediate|t|reply|English
+*re-excūtere|Latin|earlier|t|rescue|English
+rescoure|French (Anglo-Norman)|immediate|t|rescue|English
+rētrahere|Latin|earlier|t|retreat|English
+retraire|Old French|immediate|t|retreat|English
+*re-tornāre|Late Latin|earlier|t|return|English
+retourner|French (Anglo-Norman)|immediate|t|return|English
+riz|French|immediate|t|rice|English
+arici|Tamil|earlier|t|rice|English
+rīx|Celtic|immediate|t|rich|English
+pālus|Latin|immediate|t|ridgepole|English
+ripuārius|Latin|earlier|t|river|English
+river|French (Anglo-Norman)|immediate|t|river|English
+rostir|Old French|immediate|t|roast|English
+*raustjan|West Germanic|earlier|t|roast|English
+roque, rocque, roche|French (Anglo-Norman)|immediate|t|rock|English
+rouler|French|immediate|t|roll|English
+*rotulāre|Latin|earlier|t|roll|English
+rotinn|Old Norse|immediate|t|rotten|English
+rotundus|Latin|earlier|t|round|English
+rond|French|immediate|t|round|English
+rubben|Middle Low German|immediate|f|rub|English
+rubben|Dutch|immediate|f|rub|English
+rugga|Norwegian|immediate|t|rug|English
+rēgulāre|Late Latin|earlier|t|rule|English
+riule|French (Anglo-Norman)|immediate|t|rule|English
+sacrifice|French|immediate|t|sacrifice|English
+sacrificium|Latin|earlier|t|sacrifice|English
+sámr|Old Norse|immediate|t|same|English
+Saturnus|Latin|immediate|t|Saturday|English
+saussier|Old French|immediate|t|saucer|English
+salsārium|Late Latin|earlier|t|saucer|English
+salsīcia|Late Latin|earlier|t|sausage|English
+saussiche|Old French|immediate|t|sausage|English
+sabana|Taino|earlier|t|savanna|English
+sabana|Spanish|immediate|t|savanna|English
+*skaljā|Germanic|earlier|t|scale|English
+escale|Middle French|immediate|t|scale|English
+eacare|Middle French|immediate|t|scar|English
+eskhárā|Greek|earlier|t|scar|English
+schola|Latin|immediate|t|school|English
+skholē|Greek|earlier|t|school|English
+*cīsōria (Pl; unattested)|Late Latin|earlier|t|scissors|English
+cisoirs|Old French|immediate|t|scissors|English
+skáldr|Old Norse|immediate|t|scold|English
+skorpios|Greek|earlier|t|scorpion|English
+scorpion|French|immediate|t|scorpion|English
+skrapa|Old Norse|immediate|t|scrape|English
+escroue|Old French|immediate|t|screw|English
+sculptor|Latin|immediate|t|sculptor|English
+gwylan|Welsh|immediate|t|(sea)gull|English
+satiō, -nem|Latin|earlier|t|season|English
+seson|Old French|immediate|t|season|English
+secundus|Latin|earlier|t|second|English
+second|French|immediate|t|second|English
+secré|French (Anglo-Norman)|immediate|t|secret|English
+sēcrētum|Latin|earlier|t|secret|English
+séma|Old Norse|immediate|t|seem|English
+sēparāre|Latin|immediate|t|separate|English
+servant|French (Anglo-Norman)|immediate|t|servant|English
+servīre|Latin|earlier|t|servant|English
+schelf|Middle Low German|immediate|t|shelf|English
+schoppen|Middle Low German|earlier|t|shop|English
+eschoppe|French (Anglo-Norman)|immediate|t|shop|English
+schôre|Dutch|immediate|f|shore|English
+schôre|Middle Low German|immediate|f|shore|English
+skrækja|Old Norse|immediate|t|shriek|English
+schrimpen|Middle High German|immediate|t|shrimp|English
+secula|Latin|immediate|t|sickle|English
+sirege|Mongolian|earlier|t|silk|English
+sēricus|Latin|immediate|t|silk|English
+Unidentifiable|Unidentified|immediate|t|silver|English
+similāris|Latin|earlier|t|similar|English
+similaire|French|immediate|t|similar|English
+systir|Old Norse|immediate|t|sister|English
+skinn|Old Norse|immediate|t|skin|English
+skinn|Old Norse|immediate|t|skin|English
+skyrta|Old Norse|immediate|t|skirt|English
+skoltr|Old Norse|immediate|t|skull|English
+ský|Old Norse|immediate|t|sky|English
+esclave|French|immediate|t|slave|English
+sclavus|Latin|earlier|t|slave|English
+slede|Dutch|immediate|f|sledge|English
+slede|Middle Low German|immediate|f|sledge|English
+slinge|Dutch|immediate|f|sling|English
+slinge|Middle Low German|immediate|f|sling|English
+slippen|Dutch|immediate|t|slip|English
+*smīlen|Middle Low German|immediate|t|smile|English
+soccus|Latin|immediate|t|sock|English
+solum|Latin|earlier|t|soil|English
+seuil|French|immediate|t|soil|English
+solidārius|Late Latin|earlier|t|soldier|English
+soldier|Old French|immediate|t|soldier|English
+sorcier|Middle French|immediate|t|sorcerer|English
+*sortiārius|Late Latin|earlier|t|sorcerer|English
+son|French|immediate|t|sound|English
+sonus|Latin|earlier|t|sound|English
+*supian|Germanic|earlier|t|soup|English
+soupe|French|immediate|t|soup|English
+espine|Middle French|immediate|t|spine|English
+spīna|Latin|earlier|t|spine|English
+spirit|French (Anglo-Norman)|immediate|t|spirit|English
+spiritus|Latin|earlier|t|spirit|English
+esplen|Middle French|immediate|t|spleen|English
+splēn|Greek|earlier|t|spleen|English
+splitten|Dutch|immediate|f|split|English
+splitten|Middle Low German|immediate|f|split|English
+esquire|French (Anglo-Norman)|immediate|t|square|English
+*exquadra|Late Latin|earlier|t|square|English
+asquutasquash|Narragansett|immediate|t|squash|English
+esquirel|Old French|immediate|t|squirrel|English
+skíouros|Greek|earlier|t|squirrel|English
+estable|French (Anglo-Norman)|immediate|t|stable|English
+stabulum|Latin|earlier|t|stable|English
+*stallo|Germanic|earlier|t|stallion|English
+estalon|Old French|immediate|t|stallion|English
+statua|Latin|immediate|t|statue|English
+estaier|French (Anglo-Norman)|immediate|t|stay|English
+stāre|Latin|earlier|t|stay|English
+raia|Latin|earlier|t|(sting)ray|English
+raie|French|immediate|t|(sting)ray|English
+estomac|French|immediate|t|stomach|English
+stómakhos|Greek|earlier|t|stomach|English
+estorer|French (Anglo-Norman)|immediate|t|store|English
+instaurāre|Latin|earlier|t|store|English
+estreindre|French (Anglo-Norman)|immediate|t|strain|English
+stringere|Latin|earlier|t|strain|English
+*extrāneārius|Latin|earlier|t|stranger|English
+estrangier|Old French|immediate|t|stranger|English
+(via) strāta|Latin|immediate|t|street|English
+studium|Latin|earlier|t|study|English
+estudier|French (Anglo-Norman)|immediate|t|study|English
+stupidus|Latin|immediate|t|stupid|English
+zuchre|Old French|immediate|t|sugar|English
+sukkar|Arabic|earlier|t|sugar|English
+cane|French (Anglo-Norman)|immediate|t|sugar cane|English
+qāneh|Hebrew|earlier|t|sugar cane|English
+*supian|Germanic|earlier|t|supper|English
+super|Old French|immediate|t|supper|English
+secūrus|Latin|earlier|t|sure|English
+sur|French (Anglo-Norman)|immediate|t|sure|English
+super prēndere|Latin|earlier|t|surprised|English
+surpris|French|immediate|t|surprised|English
+surrendre|French|immediate|t|surrender|English
+suspicere|Latin|immediate|t|suspect|English
+swampen|Middle Low German|immediate|f|swamp|English
+swampen|Dutch|immediate|f|swamp|English
+svipa|Old Norse|immediate|t|sweep|English
+tabula|Latin|immediate|t|table|English
+tablete|French (Anglo-Norman)|immediate|t|tablet|English
+tabuleta|Late Latin|earlier|t|tablet|English
+tāliātōr|Latin|earlier|t|tailor|English
+tailleur|French|immediate|t|tailor|English
+taka|Old Norse|immediate|t|take|English
+tannāre|Latin|immediate|t|tan|English
+tapyra|Tupí|immediate|t|tapir|English
+taster|Old French|immediate|t|taste|English
+tastāre|Late Latin|earlier|t|taste|English
+tātau|Tahitian|immediate|t|tattoo|English
+taxāre|Latin|earlier|t|tax|English
+taxe|French (Anglo-Norman)|immediate|t|tax|English
+tiä|Min|earlier|t|tea|English
+thee|Dutch|immediate|t|tea|English
+tēle + phōnē|Greek|immediate|t|telephone|English
+tēle|Greek|immediate|t|television|English
+templum|Latin|immediate|t|temple|English
+temple|Middle French|immediate|t|temple(s)|English
+*tempula|Late Latin|earlier|t|temple(s)|English
+tēnōn|Greek|earlier|t|tendon|English
+tendō, -nem|Latin|immediate|t|tendon|English
+tente|French|immediate|t|tent|English
+tenta|Latin|earlier|t|tent|English
+term-es, -item|Latin|immediate|t|termite|English
+testis, testiculus|Latin|immediate|t|testicles|English
+þeir|Old Norse|immediate|t|they|English
+Thórsdagr|Old Norse|immediate|t|Thursday|English
+tabaco|Spanish|immediate|t|tobacco|English
+tabako|Taino|earlier|t|tobacco|English
+toilette|French|immediate|t|toilet|English
+tēla|Latin|earlier|t|toilet|English
+torca|Latin|earlier|t|torch|English
+torche|French|immediate|t|torch|English
+tucana|Tupí|immediate|t|toucan|English
+toucher|French|immediate|t|touch|English
+toccāre|Late Latin|earlier|t|touch|English
+*thwaxljō|Germanic|earlier|t|towel|English
+toaile|French (Anglo-Norman)|immediate|t|towel|English
+turris|Latin|immediate|t|tower|English
+trade|Middle Low German|immediate|f|trade|English
+trade|Dutch|immediate|f|trade|English
+train|French|immediate|t|train|English
+*tragināre|Late Latin|earlier|t|train|English
+tronc|French|immediate|t|tree trunk|English
+truncus|Latin|earlier|t|tree trunk|English
+triubhas|Gaelic (Scottish)|immediate|t|trousers|English
+trompette|French|immediate|t|trumpet|English
+tromba|Occitan|earlier|t|trumpet|English
+trier|French|immediate|t|try|English
+triāre|Late Latin|earlier|t|try|English
+tornāre|Latin|immediate|t|turn|English
+rond|French|immediate|t|turn around|English
+rotundus|Latin|earlier|t|turn around|English
+tortue|French|immediate|t|turtle|English
+tortūca|Latin|earlier|t|turtle|English
+uggligr|Old Norse|immediate|t|ugly|English
+oncle|French|immediate|t|uncle|English
+avunculus|Latin|earlier|t|uncle|English
+ūrināre|Latin|immediate|t|urinate|English
+vagina|Latin|immediate|t|vagina|English
+vallēs|Latin|earlier|t|valley|English
+vallée|French|immediate|t|valley|English
+vegetābilis|Latin|earlier|t|vegetables|English
+végétable|French|immediate|t|vegetables|English
+veile|French (Anglo-Norman)|immediate|t|veil|English
+vēlum|Latin|earlier|t|veil|English
+veine|French|immediate|t|vein|English
+vēna|Latin|earlier|t|vein|English
+victorie|Old French|immediate|t|victory|English
+victōria|Latin|earlier|t|victory|English
+village|French|immediate|t|village|English
+villāticum|Latin|earlier|t|village|English
+vigne|French|immediate|t|vine|English
+vīnea|Latin|earlier|t|vine|English
+vo-x, -cem|Latin|earlier|t|voice|English
+voiz|French (Anglo-Norman)|immediate|t|voice|English
+vomitus|Latin|immediate|t|vomit|English
+vultur|Old French|immediate|t|vulture|English
+vultur|Latin|earlier|t|vulture|English
+vulva|Latin|immediate|t|vulva|English
+*wadjam|Germanic|earlier|t|wages|English
+wage|French (Anglo-Norman)|immediate|t|wages|English
+wagen|Dutch|immediate|t|wagon|English
+vallum|Latin|immediate|t|wall|English
+vanta|Old Norse|immediate|t|want|English
+guerre|French (Anglo-Norman)|immediate|t|war|English
+*werra|Frankish|earlier|t|war|English
+hvirfla|Old Norse|immediate|t|whirlpool|English
+vindauga|Old Norse|immediate|t|window|English
+(w)oînos|Greek|earlier|t|wine|English
+vīnum|Latin|immediate|t|wine|English
+vængir|Old Norse|immediate|t|wing|English
+inhame|Portuguese|immediate|t|yam|English
+cero|Spanish|immediate|t|zero|English
+ṣifr|Arabic|earlier|t|zero|English
+(1418 rows)

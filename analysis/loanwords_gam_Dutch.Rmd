@@ -49,6 +49,8 @@ rescaleGam = function(px, n, xvar, xlab=""){
     coord_cartesian(ylim = c(0,1))
   return(plen)
 }
+
+source("GAM_derivaties.R")
 ```
 
 # Load data
@@ -204,9 +206,11 @@ So no interactions are necessary.
 
 Plot the model estimates, changing the dependent scale to probability and the independent variables to their original scales (code is hidden, but available in the Rmd file).
 
-```{r echo=F}
+```{r echo=F, fig.show="hide"}
 px = plot.gam(m0.dutch,select=1, xlab="Word length", ylab="Log odds of borrowing",shade = T)
+```
 
+```{r}
 plen = rescaleGam(px, 1, dutch$phonlengthscale,"Word length") + ggtitle("Dutch")
 paoa = rescaleGam(px, 2, dutch$AoAscale,"Age of acquisition") + ggtitle("")
 pfreq = rescaleGam(px, 3, dutch$AoAscale,"Frequency") + ggtitle("")
@@ -223,7 +227,7 @@ dev.off()
 
 Plot the model estimates, removing the influence of the random effects using the library `itsadug` (code is hidden, but available in the Rmd file).
 
-```{r echo=F}
+```{r echo=F, fig.show="hide"}
 getSmoothPlot = function(model, view, label){
   px = plot_smooth(model,view=view, 
                    rm.ranef = T,print.summary=F)
@@ -245,7 +249,9 @@ plen =getSmoothPlot(m0.dutch,"phonlengthscale","Word Length")
 paoa =getSmoothPlot(m0.dutch,"AoAscale","Age of acquisition")
 pconc =getSmoothPlot(m0.dutch,"concscale","Concreteness")
 pconc
+```
 
+```{r echo=F}
 grid.arrange(plen,pfreq,paoa, nrow=1)
 pdf("../results/graphs/Dutch_ModelResults_NoRF.pdf",
     height =3,width = 8)
@@ -254,7 +260,7 @@ dev.off()
 ```
 
 
-Random effects for Part of speech
+## Random effects for Part of speech
 
 ```{r}
 mc = m0.dutch$coefficients
@@ -274,4 +280,14 @@ abline(0,1,col='gray')
 text(raw, model.est, names(raw))
 ```
 
+## Derivatives test
+
+The plots below highlight which sections of the GAM splines are significantly increasing or decreasing.
+
+```{r}
+plotGAMSignificantSlopes(m0.dutch,"subtlexzipfscale","Frequency")
+plotGAMSignificantSlopes(m0.dutch,"AoAscale","AoA")
+plotGAMSignificantSlopes(m0.dutch,"phonlengthscale","length")
+plotGAMSignificantSlopes(m0.dutch,"concscale","Concreteness")
+```
 

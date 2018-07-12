@@ -1,6 +1,8 @@
 ---
 title: "Cognitive influences in language evolution: English data"
-output: pdf_document
+output:
+  pdf_document:
+    toc: true
 ---
 
 # Introduction
@@ -66,6 +68,8 @@ rescaleGam = function(px, n, xvar, xlab=""){
     coord_cartesian(ylim = c(0,1))
   return(plen)
 }
+# Code for assessing significance of GAM slopes
+source("GAM_derivaties.R")
 
 ```
 
@@ -115,10 +119,16 @@ attr(dataloan2$phonlengthscale,"scaled:scale") = phonlength.scale
 attr(dataloan2$phonlengthscale,"scaled:center") = phonlength.center
 
 dataloan2$concscale <- scale(dataloan2$conc)
+conc.scale = attr(dataloan2$concscale,"scaled:scale")
+conc.center = attr(dataloan2$concscale,"scaled:center")
 
 dataloan2$cat = relevel(dataloan2$cat,"Noun")
 
 dataloan2$AoA_objscaled = scale(dataloan2$AoA_obj)
+
+
+dataloan2$source.language[dataloan2$bor15==0] = "English"
+dataloan2$source.language = factor(dataloan2$source.language)
 ```
 
 
@@ -224,7 +234,6 @@ m0 = bam(bor15.cat ~
 summary(m0)
 ```
 
-
 ## Interactions
 
 Test whether an interaction between AoA and frequency is warranted using likelihood ratio comparisons:
@@ -269,7 +278,13 @@ m2 = bam(bor15.cat ~
 lrtest(m0,m2)
 ```
 
-No significant improvement.
+The `lrtest` function above suggests a significant improvement, but actually the log likelihood has not changed:
+```{r}
+logLik(m0)
+logLik(m2)
+```
+
+Therefore, there is no improvement and we should prefer the simpler model (without the interaction).
 
 Test whether an interaction between Frequency and length is warranted:
 
@@ -332,7 +347,7 @@ dev.off()
 
 We can also plot the effects when removing the random effects (using the library `itsadug`).  These are essentially the same, though not as easy to understand.
 
-```{r echo=F}
+```{r echo=F, fig.show="hide"}
 # from itsadug: plot ignoring random effects
 px = plot_smooth(m0,view="subtlexzipfscale", rm.ranef = T, print.summary=F)
 px$fv$fit = logit2per(px$fv$fit)
@@ -372,7 +387,9 @@ gLen = ggplot(px$fv, aes(x=phonlengthscale,y=fit)) +
   ylab("Probability of borrowing") +
   xlab("Word length")+
   coord_cartesian(ylim=c(0,1))
+```
 
+```{r echo=F}
 grid.arrange(gLen, gFreq, gAoA, nrow=1)
 pdf("../results/graphs/English_ModelResults_NoRF.pdf",
     height =3,width = 8)
@@ -380,6 +397,38 @@ grid.arrange(gLen, gFreq, gAoA, nrow=1)
 dev.off()
 ```
 
+## Contour plots
+
+Visualise relationships between variables.
+
+```{r}
+vis.gam(m0,view = c("AoAscale","subtlexzipfscale"),plot.type = "contour")
+vis.gam(m0,view = c("AoAscale","phonlengthscale"),plot.type = "contour")
+vis.gam(m0,view = c("AoAscale","concscale"),plot.type = "contour")
+vis.gam(m0,view = c("subtlexzipfscale","phonlengthscale"),plot.type = "contour")
+vis.gam(m0,view = c("subtlexzipfscale","concscale"),plot.type = "contour")
+vis.gam(m0,view = c("phonlengthscale","concscale"),plot.type = "contour")
+```
+
+\newpage
+
+## Significant trends
+
+The plots below highlight which sections of the GAM splines are significantly increasing or decreasing.  This method comes from [https://www.fromthebottomoftheheap.net/2014/05/15/identifying-periods-of-change-with-gams/](https://www.fromthebottomoftheheap.net/2014/05/15/identifying-periods-of-change-with-gams/).  The basic idea is to calculate the derivatives of the slope (how much the slope is increasing or decreasing) and then compute confidence intervals for the derivatives from their standard errors. If the confidence intervals of the derivatives do not overlap zero, then they are considered significant.
+
+The results suggest:
+
+-  Frequency only significantly increasing for a sub-section of the spline
+-  AoA and length significantly increasing for essentially the whole range
+-  Concreteness not significantly increasing nor decreasing in any part of the curve.
+
+```{r}
+plotGAMSignificantSlopes(m0,"subtlexzipfscale","Frequency")
+plotGAMSignificantSlopes(m0,"AoAscale","AoA")
+plotGAMSignificantSlopes(m0,"phonlengthscale","length")
+plotGAMSignificantSlopes(m0,"concscale","Concreteness")
+
+```
 
 \newpage
 
@@ -422,11 +471,13 @@ m0.objS = summary(m0.obj)
 cbind(m0=m0S$chi.sq,m0.obj=m0.objS$chi.sq)[1:4,]
 ```
 
+
+
 ## Objective AoA: Model plots
 
 Visualise the model smooth terms, independent of influence of random effects. The code is hidden, but you can view it in the Rmd file.
 
-```{r echo=F}
+```{r echo=F,fig.show='hide'}
 # from itsadug: plot ignoring random effects
 px = plot_smooth(m0.obj,view="subtlexzipfscale", 
                  rm.ranef = T,print.summary=F)
@@ -467,13 +518,38 @@ gLenO = ggplot(px$fv, aes(x=phonlengthscale,y=fit)) +
   ylab("Probability of borrowing") +
   xlab("Word length")+
   coord_cartesian(ylim=c(0,1))
+```
 
+```{r echo=F}
 grid.arrange(gLenO, gFreqO, gAoAO, nrow=1)
 pdf("../results/graphs/English_ModelResults_ObjectiveAoA_NoRF.pdf",
     height =3,width = 8)
 grid.arrange(gLenO, gFreqO, gAoAO, nrow=1)
 dev.off()
-  
+
+```
+
+
+Note that concreteness is marginally significant in this model.  However, the trend is weak, and the decrease is only significant (according to the derivitives test) for a small section of the range:
+
+```{r fig.show="hide"}
+px = plot_smooth(m0.obj,view="concscale", rm.ranef = T, print.summary=F)
+px$fv$fit = logit2per(px$fv$fit)
+px$fv$ul = logit2per(px$fv$ul)
+px$fv$ll = logit2per(px$fv$ll)
+px$fv$phonlengthscale = px$fv$concscale * conc.scale + conc.center
+```
+
+```{r}
+gConcO = ggplot(px$fv, aes(x=concscale,y=fit)) + 
+  geom_ribbon(aes(ymin=ll,ymax=ul), alpha=0.3) +
+  geom_line(size=1) +
+  ylab("Probability of borrowing") +
+  xlab("Concreteness")+
+  coord_cartesian(ylim=c(0,1))
+gConcO
+
+plotGAMSignificantSlopes(m0.obj,'concscale','Concreteness',aoaLab = "AoA_objscaled")
 ```
 
 
@@ -593,4 +669,144 @@ plot(gxpc123)
 dev.off()
 ```
 
+
+# Sensitivity analyses
+
+## Individual models for each variable
+
+Check that the response function is similar when including a variable alone in a model.  Run seperate models with single predictors:
+
+```{r}
+m0.length = bam(bor15.cat ~
+      s(phonlengthscale)+
+      s(cat,bs='re')+
+      s(cat,phonlengthscale,bs='re'),
+    data = dataloan2,
+    family='binomial')
+
+m0.AoA = bam(bor15.cat ~
+      s(AoAscale)+
+      s(cat,bs='re')+
+      s(cat,AoAscale,bs='re'),
+    data = dataloan2,
+    family='binomial')
+
+m0.frequency = bam(bor15.cat ~
+      s(subtlexzipfscale)+
+      s(cat,bs='re')+
+      s(cat,subtlexzipfscale,bs='re'),
+    data = dataloan2,
+    family='binomial')
+
+m0.conc = bam(bor15.cat ~
+      s(concscale)+
+      s(cat,bs='re')+
+      s(cat,concscale,bs='re'),
+    data = dataloan2,
+    family='binomial')
+```
+
+Plot the original curves against the single-variable model curves:
+
+```{r}
+par(mfrow=c(2,2), mar=c(1,2,3,1))
+mx = list(m0.length, m0.AoA, m0.frequency,m0.conc)
+mx.labels = c("Length","AoA","Frequency","Concreteness")
+for(i in 1:4){
+plot(m0,select=i,main=mx.labels[i],ylim=c(-4,4))
+par(new=T)
+plot(mx[[i]],select=1,ylim=c(-4,4), col=2,ylab="")
+legend(-1,-1.5,legend = c("Original","Single variable"),col=1:2,lty=1, bty='n')
+}
+par(mfrow=c(1,1))
+```
+
+Compare the EDF values.
+
+```{r}
+orig.edf = summary(m0)$edf[1:4]
+single.edf = lapply(mx,function(X){summary(X)$edf[1]})
+plot(orig.edf,
+     single.edf,
+     xlab="Original EDF",
+     ylab="Single variable EDF",
+     ylim=c(0,3),xlim=c(0,3.5),
+     main="Compare EDF values")
+text(orig.edf,single.edf,mx.labels,pos=2)
+abline(0,1,lty=2)
+
+```
+
+The results for length and AoA are almost identical.  The results for frequency are similar (non-linear relationship with a peak in the middle), although the significant slope is now for the higher values:
+
+```{r}
+plotGAMSignificantSlopes(m0.frequency,"subtlexzipfscale","Frequency")
+```
+
+By itself, concreteness is a signficant predictor.
+
+```{r}
+plotGAMSignificantSlopes(m0.conc,"concscale","Concreteness")
+```
+
+
+
+## GAM with PoS as fixed effects
+
+Part of speech was modelled above as a random effect.  Here we show that the estimates differ very little if we treat part of speech as a fixed effect:
+
+```{r}
+m0.posFE = bam(bor15.cat ~
+      s(phonlengthscale) + 
+      s(AoAscale) + 
+      s(subtlexzipfscale) +
+      s(concscale) +
+      cat,
+    data = dataloan2,
+    family='binomial')
+```
+
+```{r}
+vars = c("phonlengthscale","AoAscale","subtlexzipfscale","concscale")
+varLabels = c("Length","AoA","Frequency","Concreteness")
+
+for(i in 1:4){
+  plot(m0,select=i,main=varLabels[i],ylim=c(-4,4))
+  par(new=T)
+  plot(m0.posFE,select=i,ylim=c(-4,4), col=2)
+  legend(0,-2,legend = c("Original","PoS Fixed"),col=1:2,lty=1)
+}
+```
+
+
+Test the inclusion of interactions between cat and other fixed effects by log ratio tests:
+
+```{r}
+m0.posFE.catByLen = update(m0.posFE,~.+s(phonlengthscale,by=cat))
+lrtest(m0.posFE,m0.posFE.catByLen)
+```
+
+Adding an interaction between part of speech and length results in a better fit.  However, since there is a realtively small range of unique length values, and that many part of speech categories have very limited length ranges, then perfect seperation occurs and the model has poor convergence.  The results of the model suggest that length has a bigger effect size for some parts of speech than others.  This is better captured by a mixed effects model.  The estimates for other fixed effects are not qualitatively different in this model.
+
+
+cat x AoA is not significant:
+
+```{r}
+m0.posFE.catByAoA = update(m0.posFE.catByLen,~.+s(AoAscale,by=cat))
+lrtest(m0.posFE.catByLen,m0.posFE.catByAoA)
+```
+
+cat x frequency is not significant:
+
+```{r}
+m0.posFE.catByFreq = update(m0.posFE.catByLen,~.+s(subtlexzipfscale,by=cat))
+lrtest(m0.posFE.catByLen,m0.posFE.catByFreq)
+```
+
+cat x concreteness is not significant:
+
+```{r}
+m0.posFE.catByConc = update(m0.posFE.catByLen,~.+s(concscale,by=cat))
+lrtest(m0.posFE.catByLen,m0.posFE.catByConc)
+```
 

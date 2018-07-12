@@ -61,5 +61,12 @@ dutch$bor15.cat = factor(dutch$bor15)
 
 dutch$cat = relevel(dutch$cat,"N")
 
+write.csv(dutch[,
+                c('spelling',"Borrowed","age","age.youngest",'age.oldest',"bor15","length",'aoa',
+                  'subtlex.dominant.pos.frequency','concreteness','cat',
+                   'AoAscale','subtlexzipfscale','phonlengthscale','concscale',
+                  'bor15.cat')],
+          "../../Writeup/SI/loanwords_Dutch_Raw.csv", row.names = F, fileEncoding = 'utf-8')
+
 save(dutch,file="../data/loanwords_Dutch.Rdat")
 
