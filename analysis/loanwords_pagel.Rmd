@@ -1,6 +1,8 @@
 ---
 title: "Cognitive influences in language evolution: Rates of change"
-output: pdf_document
+output: 
+  pdf_document:
+    toc: true
 ---
 
 ```{r echo=F,eval=F}
@@ -331,6 +333,41 @@ Rates of change are higher for:
 -  Less frequent words
 -  Longer words
 -  Words acquired later in childhood
+
+\newpage
+
+# Replication of Study 1
+
+Predict borrowing by the various psychological predictors.  Below we show that only length is significantly related to borrowing in this sample of data. 
+
+Linear model:
+
+```{r}
+m0.Study1  = glmer(borrowing~
+    phonlength.scale +
+    subtlexzipf.scale + 
+    AoA.scale +
+    conc.scale +
+    (1|cat),
+    family="binomial",
+    data = d)
+summary(m0.Study1)
+```
+
+GAM:
+
+```{r}
+m0.Study1.gam  = bam(borrowing~
+    s(phonlength.scale, k=5) + 
+    s(subtlexzipf.scale) + 
+    s(AoA.scale) +
+    s(conc.scale) +
+    s(cat,bs='re'),
+    family="binomial",
+    data = d)
+summary(m0.Study1.gam)
+plot(m0.Study1.gam)
+```
 
 
 # References

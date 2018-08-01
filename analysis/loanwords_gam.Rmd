@@ -579,7 +579,7 @@ grid.arrange(plenobj,pfreqobj,paoaobj, nrow=1)
 ```
 
 
-# Distribution of words
+# Comparison to Swadesh list words
 
 Match up words with presence or absence in Swedesh list
 
@@ -638,8 +638,6 @@ grid.arrange(dLen,dFreq,dAoA,dConc, nrow=2)
 dev.off()
 ```
 
-
-
 Try a PCA plot:
 
 ```{r}
@@ -665,13 +663,56 @@ gpc2 = autoplot(pc, data = dx, x = 1,y = 3,
          loadings = TRUE, loadings.colour = 'black', loadings.label.colour='black',
          loadings.label = TRUE, loadings.label.size = 5,frame = TRUE, frame.type = 'norm') 
 gxpc123 = grid.arrange(gpc1, gpc2, nrow=1, widths=c(0.8,1))
-plot(gxpc123)
 pdf("../results/graphs/English_Swadesh_PCA.pdf",
     width = 10, height= 4.5)
 plot(gxpc123)
 dev.off()
 ```
 
+## Borrowing factors in Swadesh vs non-Swadesh words
+
+First, we make a new model with a fixed effect for whether the word is in the Swadesh list:
+
+```{r}
+dataloan2$Swadesh=factor(dataloan2$Swadesh)
+mSwadesh = update(m0,~.+Swadesh)
+```
+
+Now add an interaction for a word's length and whether it's in the Swadesh list.  Then test whether the fit to the data significantly improves.
+
+```{r}
+mSwadeshLen = update(mSwadesh,~.+
+      s(phonlengthscale,by=Swadesh))
+lrtest(mSwadesh,mSwadeshLen)
+```
+
+Same for AoA:
+
+```{r}
+mSwadeshAoA = update(mSwadesh,~.+
+      s(AoAscale,by=Swadesh))
+lrtest(mSwadesh,mSwadeshAoA)
+```
+
+Same for Frequency:
+
+```{r}
+mSwadeshFreq = update(mSwadesh,~.+
+      s(subtlexzipfscale,by=Swadesh))
+lrtest(mSwadesh,mSwadeshFreq)
+```
+
+Same for Concreteness:
+
+```{r}
+mSwadeshConc = update(mSwadesh,~.+
+      s(concscale,by=Swadesh))
+lrtest(mSwadesh,mSwadeshConc)
+```
+
+The model is not improved by adding an interaction between any predictor and whether a word is in the Swadesh list.  That is, the relationship betwen the predictors and borrowing is not significantly different for Swadesh words versus non-Swadesh words. 
+
+\newpage
 
 # Sensitivity analyses
 
@@ -822,6 +863,7 @@ Use the source word length frequency measure to control for borrowing from langa
 ```{r}
 mLenFreqControl = update(m0, ~.+s(SWF,k=3))
 summary(mLenFreqControl)
+plot(mLenFreqControl,select=10)
 ```
 
 Compare the original model with a model with control for donor language length.
@@ -845,6 +887,7 @@ Compare the original model with a model with control for average donor langauge 
 ```{r}
 mMeanLenControl = update(m0, ~.+s(SLMWL,k=3))
 summary(mMeanLenControl)
+plot(mMeanLenControl,select=10)
 ```
 
 

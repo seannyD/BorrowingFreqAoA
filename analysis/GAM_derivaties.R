@@ -21,10 +21,14 @@ plotGAMSignificantSlopes = function(gam.model, Term, Term.label, eps = 1e-7, aoa
   curve.y.lower = curve.y-smooth.plot[[which(names.smooth.plot==Term)]]$se
   
   newD = data.frame(fit=curve.y)
+  smooth.plot.VarNames = as.character(sapply(smooth.plot,function(X){X$main},simplify = F))
   for(var in t.labs){
     if(!var %in% names.smooth.plot){
       # categorical variables
-      newD[,var] = smooth.plot[[which(names.smooth.plot=="Gaussian quantiles")[1]]]$raw[1]
+      newD[,var] = smooth.plot[[
+        which(grepl(var,smooth.plot.VarNames))[1]
+        #which(names.smooth.plot=="Gaussian quantiles")[1]
+        ]]$raw[1]
     } else{
       newD[,var] = smooth.plot[[which(names.smooth.plot==var)]]$x
     }
