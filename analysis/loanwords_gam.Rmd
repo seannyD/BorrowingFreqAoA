@@ -25,6 +25,21 @@ The main fields in the data frame are:
 -  cat: Dominant part of speech according to SUBTLEX.
 -  bor15:  Conversion of the WOLD borrowing variable into a numeric (0 = not borrowed, 1 = borrowed)
 
+## A note on EDF values and random effects
+
+The Estimated Degrees of Freedom (EDF) is an indication of how non-linear a smooth term is (higher = less linear). It is intended as a diagnostic measure of the shape of the curve, rather than a value used in estimating significance. The EDF is not the same as a simple polynomial curve’s degree. Instead of a single polynomial curve, each smooth term is a collection of underlying basis functions (simpler curves). When each basis function is weighted by a coefficient, they add up to fit the data. The model attempts to find a collection of basis functions and weighting coefficients that add up to fit the data. Smaller collections of basis functions (simpler models) are preferred and larger (more complex) collections are penalised.
+
+When the model converges on a solution, each smooth term is a collection of simpler curves. Each curve might have a polynomial degree, but it is also useful to have an estimate of the linearity/non-linearity of the whole smooth term.  This is what the EDF provides: an EDF of 1 indicates a linear relationship, and higher values indicate more non-linear relationship. The definition of EDF in the implementaion we use is described in Wood (2008):
+
+> "Associated with each smooth function is one or more measures of function 'wiggliness' $\beta_T^j \tilde{S}_j \beta_j$ where $\tilde{S}_j$
+is a matrix of known coefficients. Typically the wiggliness measure evaluates something like the univariate spline penalty."
+
+That is, an EDF value is a combination of non-linearity measures of the basis functions, weighted by the weighting coefficient of each basis function. So, in general, a curve with an EDF of around 2 will look like a quadratic curve, and an EDF of around 3 will look like a cubic curve. However, this does not have to be the case: a smooth term could have a strong linear term, and a very weak non-linear term. The EDF captures this possibility as a continuous value. The simplest way to actually assess the smooth term is to plot it.
+
+Random effects in the GAM implementation we use are treated just like a smooth term with the identity matrix as the penalty coefficient matrix. When entering part of speech as a random (intercept) effect, coefficients are created for each part of speech, modelled as independent and identically distributed normal random variables. The values are defined as discrete points along a smooth function. So, just like in a mixed effects model, the probability of borrowing can be adjusted by a random intercept (the coefficients), e.g. the model can represent nouns as having a higher probability of borrowing, adjectives as slightly less probable and so on. Stronger differences between levels of the random effect would need be represented by more complex functions, which would be penalised (similar to how a linear mixed effect model penalises random effect coefficient estimates which deviate from a normal distribution). The EDF value for the random effects relates to the ‘wiggliness’ of these coefficients when plotted in a regular space. This makes the EDF difficult to interpret.  A random effect where there were no differences between levels would have an EDF of 1 (a flat line), but it would also be 1 when there were consistent distances between each level. So a high EDF would indicate something like an imbalance in the distribution of coefficients. i.e. a few parts of speech are very likely to be borrowed, and mot are very unlikely. This is in fact what we have, as shown in table 2 of the manuscript, and is consistent with previous studies of the effect of borrowing relating to grammatical category.
+
+
+\newpage
 
 ```{r echo=F,eval=F}
 setwd("~/Documents/MPI/MonaghanAoA/Stats 2/analysis/")
@@ -54,7 +69,7 @@ logit2per = function(X){
   return(exp(X)/(1+exp(X)))
 }
 
-rescaleGam = function(px, n, xvar, xlab=""){
+rescaleGam = function(px, n, xvar, xlab="",breaks=NULL,xlim=NULL){
   y = logit2per(px[[n]]$fit)
   x = px[[n]]$x *attr(xvar,"scaled:scale") + attr(xvar,"scaled:center")
   se.upper = logit2per(px[[n]]$fit+px[[n]]$se)
@@ -64,8 +79,15 @@ rescaleGam = function(px, n, xvar, xlab=""){
     geom_ribbon(aes(ymin=ci.lower,ymax=ci.upper), alpha=0.3)+
     geom_line(size=1) +
     xlab(xlab)+
-    ylab("Probability of borrowing")+
-    coord_cartesian(ylim = c(0,1))
+    ylab("Probability of borrowing")
+  if(!is.null(breaks)){
+    plen = plen + scale_x_continuous(breaks = breaks)
+  }
+  if(!is.null(xlim)){
+   plen = plen + coord_cartesian(ylim = c(0,1),xlim=xlim)
+  } else{
+    plen = plen + coord_cartesian(ylim = c(0,1))
+  }
   return(plen)
 }
 # Code for assessing significance of GAM slopes
@@ -319,9 +341,8 @@ So no interactions are necessary.
 
 Plot the model estimates, changing the dependent scale to probability and the independent variables to their original scales.  The code uses the `itsadug` package and then rescales the variables back to the original units.  This code is hidden, but you can view it in the Rmd file.
 
-```{r echo=F}
-# Old code for plotting model estimates without taking
-# random effects into account
+```{r echo=F, fig.show="hide"}
+# Code for plotting model estimates 
 px = plot.gam(m0,select=1, xlab="Word length", ylab="Log odds of borrowing",shade = T)
 y = logit2per(px[[1]]$fit)
 x = px[[1]]$x *phonlength.scale + phonlength.center
@@ -331,15 +352,21 @@ dx = data.frame(x=x,y=y,ci.upper=se.upper,ci.lower=se.lower)
 plen = ggplot(dx, aes(x=x,y=y))+
   geom_ribbon(aes(ymin=ci.lower,ymax=ci.upper), alpha=0.3)+
   geom_line(size=1) +
+  scale_x_continuous(breaks = c(2,4,6,8,10))+
   xlab("Word Length")+
   ylab("Probability of borrowing")+
-  coord_cartesian(ylim = c(0,1))
+  coord_cartesian(ylim = c(0,1),xlim = c(2,10)) + ggtitle("English")
 
 #Age of acquisition, Frequency and Concreteness.
 
-paoa = rescaleGam(px,2,dataloan2$AoAscale, "Age of acquisition")
-pfreq = rescaleGam(px,3,dataloan2$subtlexzipfscale, "Frequency")
-pconc = rescaleGam(px,4,dataloan2$concscale, "Concreteness")
+paoa = rescaleGam(px,2,dataloan2$AoAscale, "Age of acquisition",
+                  xlim=c(1.5,14.5),breaks=c(2,4,6,8,10,12,14)) +ggtitle("")
+pfreq = rescaleGam(px,3,dataloan2$subtlexzipfscale, "Frequency",
+                   xlim = c(1,12), breaks=c(2,4,6,8,10,12)) +ggtitle("")
+pconc = rescaleGam(px,4,dataloan2$concscale, "Concreteness")+ ggtitle("English")
+```
+
+```{r echo=F}
 pconc
 grid.arrange(plen,pfreq,paoa, nrow=1)
 pdf(file='../results/graphs/English_ModelResults.pdf',
@@ -347,6 +374,7 @@ pdf(file='../results/graphs/English_ModelResults.pdf',
 grid.arrange(plen,pfreq,paoa, nrow=1)
 dev.off()
 ```
+
 
 We can also plot the effects when removing the random effects (using the library `itsadug`).  These are essentially the same, though not as easy to understand.
 
@@ -858,36 +886,40 @@ lrtest(m0.posFE.catByLen,m0.posFE.catByConc)
 
 ## Controlling for source language length
 
-Use the source word length frequency measure to control for borrowing from langauges with longer words.
-
-```{r}
-mLenFreqControl = update(m0, ~.+s(SWF,k=3))
-summary(mLenFreqControl)
-plot(mLenFreqControl,select=10)
-```
-
-Compare the original model with a model with control for donor language length.
-
-```{r}
-mx.labels = c("Length","AoA","Frequency","Concreteness")
-par(mfrow=c(2,2),mar=c(2,2,1,2))
-for(i in 1:4){
-plot(m0,select=i,main=mx.labels[i],ylim=c(-4,4))
-par(new=T)
-plot(mLenFreqControl,select=i,ylim=c(-4,4), col=2,ylab="")
-legend(-1,-1.5,legend = c("Original","With length control"),col=1:2,lty=1, bty='n')
-}
-par(mfrow=c(1,1))
-```
-
-\newpage
+We attempted to obtain estimates for the distribution of word lengths in source languages (for the English dataset). This is very difficult, because there are 25 source languages from across the world, and very few of these have large word list sources. The only possibility is the Automatic Similarity Judgement Program database, which contains a small standard list of words for many languages. We obtained these words for the source languages (subsituting phylogenetically close languages for those with no data, words which were not borrowed were matched to modern English data from the ASJP).  We calculated the average word length for each source language. See the file `processing/GetSourceLanguageWordLengths.R` for details.
 
 Compare the original model with a model with control for average donor langauge word length.
 
-```{r}
-mMeanLenControl = update(m0, ~.+s(SLMWL,k=3))
+```{r warning=F}
+mMeanLenControl = bam(bor15.cat ~
+      s(phonlengthscale) + 
+      s(AoAscale) + 
+      s(subtlexzipfscale) +
+      s(concscale) +
+        s(SLMWL,k=3) +
+      s(cat,bs='re')+
+      s(cat,phonlengthscale,bs='re')+
+      s(cat,AoAscale,bs='re')+
+      s(cat,subtlexzipfscale,bs='re')+
+      s(cat,concscale,bs='re'),
+    data = dataloan2,
+    family='binomial')
+
 summary(mMeanLenControl)
-plot(mMeanLenControl,select=10)
+```
+
+The original length term is still significant. Original length term curve:
+
+```{r}
+plotGAMSignificantSlopes(mMeanLenControl,
+            "phonlengthscale",'phonlengthscale')
+```
+
+Relationship between mean word length in donor language and probaility of borrowing:
+
+```{r}
+plotGAMSignificantSlopes(mMeanLenControl,
+            "SLMWL",'SLMWL')
 ```
 
 
@@ -902,3 +934,30 @@ legend(-1,-1.5,legend = c("Original","With length control"),col=1:2,lty=1, bty='
 }
 par(mfrow=c(1,1))
 ```
+
+\newpage
+
+We also attempted to calculate the measure that the reviewer suggested: the frequency of the length of the given borrowed word in each donor language. This was done with the ASJP data. For each borrowed word, we calculated the frequency of having a word of that length in the source language. The word lists are small, so not all word lengths are represented. Missing values were imputed by regression. Frequency estimates for non-borrowed words came from estimates from the ASJP for modern English.
+
+Use the source word length frequency measure to control for borrowing from langauges with longer words.
+
+```{r}
+mLenFreqControl = update(m0, ~.+s(SWF,k=3))
+summary(mLenFreqControl)
+plot(mLenFreqControl,select=10)
+```
+
+Compare the original model with a model with control for donor language length.
+
+```{r}
+mx.labels = c("Length","AoA","Frequency","Concreteness")
+par(mfrow=c(2,2),mar=c(2,2,1,2))
+for(i in 1:4){
+plot(m0,select=i,main=mx.labels[i],ylim=c(-10,10))
+par(new=T)
+plot(mLenFreqControl,select=i,ylim=c(-10,10), col=2,ylab="")
+legend(-1,-1.5,legend = c("Original","With length control"),col=1:2,lty=1, bty='n')
+}
+par(mfrow=c(1,1))
+```
+

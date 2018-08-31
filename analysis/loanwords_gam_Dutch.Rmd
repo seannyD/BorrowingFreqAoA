@@ -35,7 +35,7 @@ logit2per = function(X){
   return(exp(X)/(1+exp(X)))
 }
 
-rescaleGam = function(px, n, xvar, xlab=""){
+rescaleGam = function(px, n, xvar, xlab="",breaks=NULL,xlim=NULL){
   y = logit2per(px[[n]]$fit)
   x = px[[n]]$x *attr(xvar,"scaled:scale") + attr(xvar,"scaled:center")
   se.upper = logit2per(px[[n]]$fit+px[[n]]$se)
@@ -45,8 +45,15 @@ rescaleGam = function(px, n, xvar, xlab=""){
     geom_ribbon(aes(ymin=ci.lower,ymax=ci.upper), alpha=0.3)+
     geom_line(size=1) +
     xlab(xlab)+
-    ylab("Probability of borrowing")+
-    coord_cartesian(ylim = c(0,1))
+    ylab("Probability of borrowing")
+  if(!is.null(breaks)){
+    plen = plen + scale_x_continuous(breaks = breaks)
+  }
+  if(!is.null(xlim)){
+   plen = plen + coord_cartesian(ylim = c(0,1),xlim=xlim)
+  } else{
+    plen = plen + coord_cartesian(ylim = c(0,1))
+  }
   return(plen)
 }
 
@@ -108,7 +115,7 @@ write.csv(catx[,c("PoS","mean",
 
 Dutch data has `r nrow(dutch)` datapoints.
 
-The range of the length variable limits the number of knots that the gam model can fit:
+The range of the length variable limits the number of knots that the gam model can fit. We use k=4, suggested by the rule of thumb in Winter & Wieling (2016) being less than half of the number of unique values.
 
 ```{r}
 m0.dutch = bam(bor15.cat ~
@@ -211,9 +218,12 @@ px = plot.gam(m0.dutch,select=1, xlab="Word length", ylab="Log odds of borrowing
 ```
 
 ```{r}
-plen = rescaleGam(px, 1, dutch$phonlengthscale,"Word length") + ggtitle("Dutch")
-paoa = rescaleGam(px, 2, dutch$AoAscale,"Age of acquisition") + ggtitle("")
-pfreq = rescaleGam(px, 3, dutch$AoAscale,"Frequency") + ggtitle("")
+plen = rescaleGam(px, 1, dutch$phonlengthscale,"Word length",
+                  xlim = c(2,10), breaks = c(2,4,6,8,10)) + ggtitle("Dutch")
+paoa = rescaleGam(px, 2, dutch$AoAscale,"Age of acquisition",
+                  xlim=c(1.5,14.5),breaks=c(2,4,6,8,10,12,14)) + ggtitle("")
+pfreq = rescaleGam(px, 3, dutch$AoAscale,"Frequency",
+                   xlim = c(1,12), breaks=c(2,4,6,8,10,12)) + ggtitle("")
 pconc = rescaleGam(px, 4, dutch$concscale,"Concreteness") + ggtitle("Dutch")
 
 pconc

@@ -3,6 +3,7 @@
 ################################################
 # Taken from https://gist.githubusercontent.com/gavinsimpson/e73f011fdaaab4bb5a30/raw/82118ee30c9ef1254795d2ec6d356a664cc138ab/Deriv.R
 # See https://www.fromthebottomoftheheap.net/2014/05/15/identifying-periods-of-change-with-gams/
+# Future implementations shoudl probably just use `fderiv` from package tsgam.
 
 plotGAMSignificantSlopes = function(gam.model, Term, Term.label, eps = 1e-7, aoaLab="AoAscale"){
   # This is a custom function for the loanwords project

@@ -138,7 +138,6 @@ m0 = bam(bor15.cat ~
 ```{r}
 mLen = update(m0, ~. + s(language, phonlengthscale,bs="re"))
 lrtest(m0,mLen)
-plot.gam(mLen,select=1)
 plotGAMSignificantSlopes(mLen,"phonlengthscale","Length")
 ```
 
@@ -147,8 +146,7 @@ plotGAMSignificantSlopes(mLen,"phonlengthscale","Length")
 ```{r}
 mAoA = update(m0, ~. + s(language, AoAscale,bs="re"))
 lrtest(m0,mAoA)
-plot.gam(mAoA,select=2)
-plotGAMSignificantSlopes(mAoA,"phonlengthscale","Length")
+plotGAMSignificantSlopes(mAoA,"AoAscale","AoA")
 ```
 
 ## Frequency
