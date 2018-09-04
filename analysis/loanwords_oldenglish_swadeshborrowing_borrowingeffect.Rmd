@@ -357,9 +357,11 @@ dataloan3$Swadesh = dataloan3$word %in% swd
 
 Run GAM:
 
+The phonetic length variable only has 10 unique values, leading to fewer unique covariate combinations than the default degrees of freedom. Following Winter & Wieling (2016), we set the number of knots to half of the unique values (k=5).
+
 ```{r}
 m0sw = bam(bor15.cat ~
-             s(phonlengthscale,k=7) + 
+             s(phonlengthscale,k=5) + 
              s(AoAscale) + 
              s(subtlexzipfscale) +
              s(concscale) +
@@ -368,8 +370,6 @@ m0sw = bam(bor15.cat ~
            subset = Swadesh == TRUE,
            family='binomial')
 ```
-
->  Previous comment: "this runs, with marginal (linear) effect of frequency - and shows high frequency less likely to be borrowed consistent with Pagel"
 
 The only significant effect is length.
 
