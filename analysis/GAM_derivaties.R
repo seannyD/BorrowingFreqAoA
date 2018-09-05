@@ -104,6 +104,15 @@ plotGAMSignificantSlopes = function(gam.model, Term, Term.label, eps = 1e-7, aoa
   # Plot significant decreases
   lines(curve.x, unlist(m2.dsig$decr), col = "red", lwd = 3)
   
+  invisible(data.frame(
+    curve.x = curve.x,
+    curve.y = curve.y,
+    curve.y.upper = curve.y.upper,
+    curve.y.lower = curve.y.lower,
+    m2.dsig.incr = unlist(m2.dsig$incr),
+    m2.dsig.decr = unlist(m2.dsig$decr)
+  ))
+  
 }
 
 

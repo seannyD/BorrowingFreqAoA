@@ -43,7 +43,7 @@ rescaleGam = function(px, n, xvar, xlab="",breaks=NULL,xlim=NULL){
   dx = data.frame(x=x,y=y,ci.upper=se.upper,ci.lower=se.lower)
   plen = ggplot(dx, aes(x=x,y=y))+
     geom_ribbon(aes(ymin=ci.lower,ymax=ci.upper), alpha=0.3)+
-    geom_line(size=1) +
+    geom_line(size=0.5,linetype=3) +
     xlab(xlab)+
     ylab("Probability of borrowing")
   if(!is.null(breaks)){
@@ -119,7 +119,7 @@ The range of the length variable limits the number of knots that the gam model c
 
 ```{r}
 m0.dutch = bam(bor15.cat ~
-      s(phonlengthscale, k=3) + 
+      s(phonlengthscale, k=4) + 
       s(AoAscale) + 
       s(subtlexzipfscale) +
       s(concscale) +
@@ -254,18 +254,18 @@ getSmoothPlot = function(model, view, label){
     coord_cartesian(ylim=c(0,0.6))
 }
 
-pfreq =getSmoothPlot(m0.dutch,"subtlexzipfscale","Frequency")
-plen =getSmoothPlot(m0.dutch,"phonlengthscale","Word Length")
-paoa =getSmoothPlot(m0.dutch,"AoAscale","Age of acquisition")
-pconc =getSmoothPlot(m0.dutch,"concscale","Concreteness")
-pconc
+pfreqR =getSmoothPlot(m0.dutch,"subtlexzipfscale","Frequency")
+plenR =getSmoothPlot(m0.dutch,"phonlengthscale","Word Length")
+paoaR =getSmoothPlot(m0.dutch,"AoAscale","Age of acquisition")
+pconcR =getSmoothPlot(m0.dutch,"concscale","Concreteness")
+pconcR
 ```
 
 ```{r echo=F}
-grid.arrange(plen,pfreq,paoa, nrow=1)
+grid.arrange(plenR,pfreqR,paoaR, nrow=1)
 pdf("../results/graphs/Dutch_ModelResults_NoRF.pdf",
     height =3,width = 8)
-grid.arrange(plen,pfreq,paoa, nrow=1)
+grid.arrange(plenR,pfreqR,paoaR, nrow=1)
 dev.off()
 ```
 
@@ -294,10 +294,42 @@ text(raw, model.est, names(raw))
 
 The plots below highlight which sections of the GAM splines are significantly increasing or decreasing.
 
-```{r}
-plotGAMSignificantSlopes(m0.dutch,"subtlexzipfscale","Frequency")
-plotGAMSignificantSlopes(m0.dutch,"AoAscale","AoA")
-plotGAMSignificantSlopes(m0.dutch,"phonlengthscale","length")
-plotGAMSignificantSlopes(m0.dutch,"concscale","Concreteness")
+```{r warning=F}
+pSigFreq = plotGAMSignificantSlopes(m0.dutch,"subtlexzipfscale","Frequency")
+pSigAoA = plotGAMSignificantSlopes(m0.dutch,"AoAscale","AoA")
+pSigLen = plotGAMSignificantSlopes(m0.dutch,"phonlengthscale","length")
+pSigConc = plotGAMSignificantSlopes(m0.dutch,"concscale","Concreteness")
 ```
 
+```{r echo=F,fig.show="hide",warning=F}
+# Rescale significant trend plots
+rescaleDerivitiesPlot = function(origPlot,sigCurveData){
+ sigCurveData$curve.x = origPlot$data$x
+ sigCurveData$m2.dsig.incr = logit2per(sigCurveData$m2.dsig.incr)
+ sigCurveData$m2.dsig.decr = logit2per(sigCurveData$m2.dsig.decr)
+
+ ret = origPlot + 
+  geom_path(data = sigCurveData, 
+            aes(x = curve.x, 
+                y = m2.dsig.incr),
+            size=0.9) +
+  geom_path(data = sigCurveData, 
+            aes(x = curve.x, 
+                y = m2.dsig.decr),
+            size=0.9) +
+  theme(legend.position = 'none') 
+ return(ret)
+}
+pSigLen2 = rescaleDerivitiesPlot(plen,pSigLen)
+pSigAoA2 = rescaleDerivitiesPlot(paoa,pSigAoA)
+pSigFreq2 = rescaleDerivitiesPlot(pfreq,pSigFreq)
+pSigConc2 = rescaleDerivitiesPlot(pconc,pSigConc)
+```
+
+```{r echo=F,warning=F}
+grid.arrange(pSigLen2,pSigFreq2,pSigAoA2, nrow=1)
+pdf(file='../results/graphs/Dutch_ModelResults_withSignificantSlopesHighlighted.pdf',
+    height =3,width = 8)
+grid.arrange(pSigLen2,pSigFreq2,pSigAoA2, nrow=1)
+dev.off()
+```

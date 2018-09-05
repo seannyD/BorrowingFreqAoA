@@ -36,7 +36,7 @@ is a matrix of known coefficients. Typically the wiggliness measure evaluates so
 
 That is, an EDF value is a combination of non-linearity measures of the basis functions, weighted by the weighting coefficient of each basis function. So, in general, a curve with an EDF of around 2 will look like a quadratic curve, and an EDF of around 3 will look like a cubic curve. However, this does not have to be the case: a smooth term could have a strong linear term, and a very weak non-linear term. The EDF captures this possibility as a continuous value. The simplest way to actually assess the smooth term is to plot it.
 
-Random effects in the GAM implementation we use are treated just like a smooth term with the identity matrix as the penalty coefficient matrix. When entering part of speech as a random (intercept) effect, coefficients are created for each part of speech, modelled as independent and identically distributed normal random variables. The values are defined as discrete points along a smooth function. So, just like in a mixed effects model, the probability of borrowing can be adjusted by a random intercept (the coefficients), e.g. the model can represent nouns as having a higher probability of borrowing, adjectives as slightly less probable and so on. Stronger differences between levels of the random effect would need be represented by more complex functions, which would be penalised (similar to how a linear mixed effect model penalises random effect coefficient estimates which deviate from a normal distribution). The EDF value for the random effects relates to the ‘wiggliness’ of these coefficients when plotted in a regular space. This makes the EDF difficult to interpret.  A random effect where there were no differences between levels would have an EDF of 1 (a flat line), but it would also be 1 when there were consistent distances between each level. So a high EDF would indicate something like an imbalance in the distribution of coefficients. i.e. a few parts of speech are very likely to be borrowed, and mot are very unlikely. This is in fact what we have, as shown in table 2 of the manuscript, and is consistent with previous studies of the effect of borrowing relating to grammatical category.
+Random effects in the GAM implementation we use are treated just like a smooth term with the identity matrix as the penalty coefficient matrix. When entering part of speech as a random (intercept) effect, coefficients are created for each part of speech, modelled as independent and identically distributed normal random variables. The values are defined as discrete points along a smooth function. So, just like in a mixed effects model, the probability of borrowing can be adjusted by a random intercept (the coefficients), e.g. the model can represent nouns as having a higher probability of borrowing, adjectives as slightly less probable and so on. Stronger differences between levels of the random effect would need be represented by more complex functions, which would be penalised (similar to how a linear mixed effect model penalises random effect coefficient estimates which deviate from a normal distribution). The EDF value for the random effects relates to the ‘wiggliness’ of these coefficients when plotted in a regular space. This makes the EDF difficult to interpret.  A random effect where there were no differences between levels would have an EDF of 1 (a flat line), but it would also be 1 when there were consistent distances between each level. So a high EDF would indicate something like an imbalance in the distribution of coefficients. i.e. a few parts of speech are very likely to be borrowed, and most are very unlikely. This is in fact what we have, as shown in table 2 of the manuscript, and is consistent with previous studies of the effect of borrowing relating to grammatical category.
 
 
 \newpage
@@ -77,7 +77,7 @@ rescaleGam = function(px, n, xvar, xlab="",breaks=NULL,xlim=NULL){
   dx = data.frame(x=x,y=y,ci.upper=se.upper,ci.lower=se.lower)
   plen = ggplot(dx, aes(x=x,y=y))+
     geom_ribbon(aes(ymin=ci.lower,ymax=ci.upper), alpha=0.3)+
-    geom_line(size=1) +
+    geom_line(size=0.5,linetype=3) +
     xlab(xlab)+
     ylab("Probability of borrowing")
   if(!is.null(breaks)){
@@ -339,7 +339,7 @@ So no interactions are necessary.
 
 # Model plots
 
-Plot the model estimates, changing the dependent scale to probability and the independent variables to their original scales.  The code uses the `itsadug` package and then rescales the variables back to the original units.  This code is hidden, but you can view it in the Rmd file.
+Plot the model estimates, changing the dependent scale to probability and the independent variables to their original scales. This code is hidden, but you can view it in the Rmd file.
 
 ```{r echo=F, fig.show="hide"}
 # Code for plotting model estimates 
@@ -351,7 +351,7 @@ se.lower = logit2per(px[[1]]$fit-px[[1]]$se)
 dx = data.frame(x=x,y=y,ci.upper=se.upper,ci.lower=se.lower)
 plen = ggplot(dx, aes(x=x,y=y))+
   geom_ribbon(aes(ymin=ci.lower,ymax=ci.upper), alpha=0.3)+
-  geom_line(size=1) +
+  geom_line(size=0.5,linetype=3) +
   scale_x_continuous(breaks = c(2,4,6,8,10))+
   xlab("Word Length")+
   ylab("Probability of borrowing")+
@@ -432,13 +432,15 @@ dev.off()
 
 Visualise relationships between variables.
 
-```{r}
+```{r,  out.height = '80%'}
+par(mfrow=c(3,2))
 vis.gam(m0,view = c("AoAscale","subtlexzipfscale"),plot.type = "contour")
 vis.gam(m0,view = c("AoAscale","phonlengthscale"),plot.type = "contour")
 vis.gam(m0,view = c("AoAscale","concscale"),plot.type = "contour")
 vis.gam(m0,view = c("subtlexzipfscale","phonlengthscale"),plot.type = "contour")
 vis.gam(m0,view = c("subtlexzipfscale","concscale"),plot.type = "contour")
 vis.gam(m0,view = c("phonlengthscale","concscale"),plot.type = "contour")
+par(mfrow=c(1,1))
 ```
 
 \newpage
@@ -454,12 +456,46 @@ The results suggest:
 -  Concreteness not significantly increasing nor decreasing in any part of the curve.
 
 ```{r}
-plotGAMSignificantSlopes(m0,"subtlexzipfscale","Frequency")
-plotGAMSignificantSlopes(m0,"AoAscale","AoA")
-plotGAMSignificantSlopes(m0,"phonlengthscale","length")
-plotGAMSignificantSlopes(m0,"concscale","Concreteness")
+pSigFreq = plotGAMSignificantSlopes(m0,"subtlexzipfscale","Frequency")
+pSigAoA =  plotGAMSignificantSlopes(m0,"AoAscale","AoA")
+pSigLen =  plotGAMSignificantSlopes(m0,"phonlengthscale","length")
+pSigConc = plotGAMSignificantSlopes(m0,"concscale","Concreteness")
 
 ```
+
+```{r echo=F,fig.show="hide"}
+# Rescale significant trend plots
+rescaleDerivitiesPlot = function(origPlot,sigCurveData){
+sigCurveData$curve.x = origPlot$data$x
+sigCurveData$m2.dsig.incr = logit2per(sigCurveData$m2.dsig.incr)
+sigCurveData$m2.dsig.decr = logit2per(sigCurveData$m2.dsig.decr)
+
+ ret = origPlot + 
+  geom_path(data = sigCurveData, 
+            aes(x = curve.x, 
+                y = m2.dsig.incr,
+                size=0.9)) +
+  geom_path(data = sigCurveData, 
+            aes(x = curve.x, 
+                y = m2.dsig.decr,
+                size=0.9)) +
+  theme(legend.position = 'none') 
+ return(ret)
+}
+pSigLen2 = rescaleDerivitiesPlot(plen,pSigLen)
+pSigAoA2 = rescaleDerivitiesPlot(paoa,pSigAoA)
+pSigFreq2 = rescaleDerivitiesPlot(pfreq,pSigFreq)
+pSigConc2 = rescaleDerivitiesPlot(pconc,pSigConc)
+```
+
+```{r echo=F}
+grid.arrange(pSigLen2,pSigFreq2,pSigAoA2, nrow=1)
+pdf(file='../results/graphs/English_ModelResults_withSignificantSlopesHighlighted.pdf',
+    height =3,width = 8)
+grid.arrange(pSigLen2,pSigFreq2,pSigAoA2, nrow=1)
+dev.off()
+```
+
 
 \newpage
 

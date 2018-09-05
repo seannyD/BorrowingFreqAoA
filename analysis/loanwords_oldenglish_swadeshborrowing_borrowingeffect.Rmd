@@ -125,7 +125,8 @@ dataloan3$old.english.lengthscale <-
   dataloan3$old.english.length - old.english.length.center
 old.english.length.scale = sd(dataloan3$old.english.lengthscale)
 dataloan3$old.english.lengthscale = dataloan3$old.english.lengthscale/old.english.length.scale
-attr(dataloan3$old.english.lengthscale,"scaled:scale") = old.english.length.scale
+attr(dataloan3$old.english.lengthscale,"scaled:scale") = 
+  old.english.length.scale
 attr(dataloan3$old.english.lengthscale,"scaled:center") = old.english.length.center
 
 ```
@@ -173,7 +174,9 @@ Classify as borrowed only those words borrowed after 900CE (so have changed sinc
 
 ```{r}
 dataloan3$age_oldest_num <- as.numeric(dataloan3$age_oldest_num)
-dataloan3$bor15oe <- ifelse(dataloan3$bor15==1 & dataloan3$age_oldest_num <=1100 ,1, ifelse(dataloan3$bor15==0,0,NA))
+dataloan3$bor15oe <- ifelse(dataloan3$bor15==1 & 
+                              dataloan3$age_oldest_num <=1100 ,
+                            1, ifelse(dataloan3$bor15==0,0,NA))
 dataloan3$bor15oe.cat <- factor(dataloan3$bor15oe)
 ```
 
@@ -218,7 +221,7 @@ This is evidence that length of the Old English form influenced the likelihood o
 What is the relationship between old english word length and probability of borrowing for each part of speech?  Below are plots which are calculated by using the model `m2oe` to predict borrowing probaility for a range of combinations of all variables, but keeping `cat` (part of speech) fixed to e.g. Nouns. Then the average borrowing probaility for each value of old english word length is plotted.  The code is hidden, but can be seen in the Rmd file.  These are for diagnosis only, formal tests are below.
 
 ```{r echo=F}
-plotLengthEffectForPoS = function(posType="Noun"){
+plotLengthEffectForPoS = function(posType="Noun",add=F,lineCol=1){
   dx = dataloan3
   # Create new data evenly across range
   predictData = expand.grid(
@@ -253,19 +256,23 @@ plotLengthEffectForPoS = function(posType="Noun"){
                   predictData$old.english.lengthscale,mean)
   # Rescale
   lenVals = lenVals * old.english.length.scale + old.english.length.center
+  if(add){
+   points(lenVals,borVals,type='l',col=lineCol) 
+  } else{
   plot(lenVals,borVals,type='l',
        ylim=c(0,1),
        xlab="Old English word length",
        ylab="Probability of borrowing",
-       main=paste0(posType,"s"))
+       main="")
+  }
   #points(lenVals,borVals.ciU,type='l',lty=2)
   #points(lenVals,borVals.ciL,type='l',lty=2)
 }
 plotLengthEffectForPoS("Noun")
-plotLengthEffectForPoS("Verb")
-plotLengthEffectForPoS("Adjective")
+plotLengthEffectForPoS("Verb",T,2)
+plotLengthEffectForPoS("Adjective",T,3)
+legend(2,1,legend=c("Nouns","Verbs","Adjectives"),lty=1,col=1:3,ncol = 3)
 ```
-
 
 
 Analyse nouns only: Old English length is significant and monotonically increasing for nouns.
@@ -369,6 +376,7 @@ m0sw = bam(bor15.cat ~
            data = dataloan3,
            subset = Swadesh == TRUE,
            family='binomial')
+summary(m0sw)
 ```
 
 The only significant effect is length.
@@ -481,72 +489,3 @@ legend(2,1,
 
 ```
 
-\newpage
-
-## Original separate binomial GAMs
-
-
-```{r}
-dataloan2$insertornot =
-  as.factor(dataloan2$effect=="Insertion")
-dataloan2$coexistornot =
-  as.factor(dataloan2$effect=="Coexistence")
-dataloan2$replaceornot =
-  as.factor(dataloan2$effect=="Replacement")
-```
-
-Run GAM:
-
-```{r}
-m0insert = bam(insertornot ~
-             s(phonlengthscale) + 
-             s(AoAscale) + 
-             s(subtlexzipfscale) +
-             s(concscale) +
-             s(cat,bs='re'),
-           data = dataloan2,
-           family='binomial')
-summary(m0insert)
-```
-
->  Previous comment: "This shows that insertion borrowings are more likely to be concrete than other types of borrowing. No other significant effects."
-
-There are significant effects for length, AoA, frequency and concreteness.
-
-```{r}
-m0coexist = bam(coexistornot ~
-                 s(phonlengthscale) + 
-                 s(AoAscale) + 
-                 s(subtlexzipfscale) +
-                 s(concscale) +
-                 s(cat,bs='re'),
-               data = dataloan2,
-               family='binomial')
-summary(m0coexist)
-```
-
-This shows that coexistence borrowings are more likely to be abstract than other types of borrowing, and affected by category.
-
-```{r}
-px = plot.gam(m0coexist,select=4, xlab="Concreteness", ylab="Log odds of coexistence borrowing",shade = T)
-```
-
-```{r}
-m0replace = bam(replaceornot ~
-                  s(phonlengthscale) + 
-                  s(AoAscale) + 
-                  s(subtlexzipfscale) +
-                  s(concscale) +
-                  s(cat,bs='re'),
-                data = dataloan2,
-                family='binomial')
-summary(m0replace)
-```
-
->  Previous comment: "This shows that replacement borrowings are more likely to be abstract than other types of borrowing, and affected by category."
-
-This shows that replacement borrowings are more likely to be abstract than other types of borrowing.
-
-```{r}
-px = plot.gam(m0replace,select=4, xlab="Concreteness", ylab="Log odds of replacement borrowing",shade = T)
-```
