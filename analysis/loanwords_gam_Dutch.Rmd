@@ -333,3 +333,80 @@ pdf(file='../results/graphs/Dutch_ModelResults_withSignificantSlopesHighlighted.
 grid.arrange(pSigLen2,pSigFreq2,pSigAoA2, nrow=1)
 dev.off()
 ```
+
+# Number of morphemes
+
+The big difference between English and Dutch is the effect of word length.  This could reflect the role of agglutination in Dutch, where longer words may be composed of multiple morphemes. We can allow the effect of length to vary by whether the word is monomorphemic or not.
+
+```{r}
+dutch$morphology = "other"
+dutch$morphology[grepl("monomorphemic",dutch$celex.morphology)] = "monomorphemic"
+#dutch$morphology[grepl("complex",dutch$celex.morphology)] = "complex"
+dutch$morphology = factor(dutch$morphology)
+```
+
+
+```{r}
+mMorph.dutch = bam(bor15.cat ~
+      s(phonlengthscale, by=morphology, k=4) + 
+      s(AoAscale) + 
+      s(subtlexzipfscale) +
+      s(concscale) +
+      s(cat,bs='re')+
+      s(cat,phonlengthscale,bs='re')+
+      s(cat,AoAscale,bs='re')+
+      s(cat,subtlexzipfscale,bs='re')+
+      s(cat,concscale,bs='re'),
+    data = dutch,
+    family='binomial')
+lrtest(m0.dutch,mMorph.dutch)
+```
+
+Adding an interaction with morphology signficantly imporves the fit of the model.  The model stats are very similar to the model above:
+
+```{r}
+summary(mMorph.dutch)
+```
+
+Plot the results from the new model. Monomorphemic words have an almost linear positive relationship between word length and probability of borrowing, just like English.
+
+```{r echo=F,warning=F,message=F,fig.show="hide"}
+px = plot.gam(mMorph.dutch,select=1, xlab="Word length", ylab="Log odds of borrowing",shade = T)
+
+plenM1 = rescaleGam(px, 1, dutch$phonlengthscale,"Word length",
+                  xlim = c(2,10), breaks = c(2,4,6,8,10)) + ggtitle("Monomorphemic")
+plenM2 = rescaleGam(px, 2, dutch$phonlengthscale,"Word length",
+                  xlim = c(2,10), breaks = c(2,4,6,8,10)) + ggtitle("Multimorphemic")
+paoaM = rescaleGam(px, 3, dutch$AoAscale,"Age of acquisition",
+                  xlim=c(1.5,14.5),breaks=c(2,4,6,8,10,12,14)) + ggtitle("")
+pfreqM = rescaleGam(px, 4, dutch$AoAscale,"Frequency",
+                   xlim = c(1,12), breaks=c(2,4,6,8,10,12)) + ggtitle("")
+pconcM = rescaleGam(px, 5, dutch$concscale,"Concreteness") + ggtitle("Dutch")
+
+pSigFreqM = plotGAMSignificantSlopes(mMorph.dutch,"subtlexzipfscale","Frequency",interactionTermValue = "monomorphemic")
+pSigAoAM = plotGAMSignificantSlopes(mMorph.dutch,"AoAscale","AoA",interactionTermValue = "monomorphemic")
+pSigLenM1 = plotGAMSignificantSlopes(mMorph.dutch,"phonlengthscale","length", subPlot = 1,interactionTermValue = "monomorphemic")
+pSigLenM2 = plotGAMSignificantSlopes(mMorph.dutch,"phonlengthscale","length", subPlot = 2,interactionTermValue = "other")
+pSigConcM = plotGAMSignificantSlopes(mMorph.dutch,"concscale","Concreteness",interactionTermValue = "monomorphemic")
+
+pSigLen2M1 = rescaleDerivitiesPlot(plenM1,pSigLenM1)
+pSigLen2M2 = rescaleDerivitiesPlot(plenM2,pSigLenM2)
+pSigAoA2M = rescaleDerivitiesPlot(paoaM,pSigAoAM)
+pSigFreq2M = rescaleDerivitiesPlot(pfreqM,pSigFreqM)
+pSigConc2M = rescaleDerivitiesPlot(pconcM,pSigConcM)
+```
+
+```{r echo=F,warning=F}
+grid.arrange(pSigLen2M1,pSigLen2M2,pSigFreq2M,pSigAoA2M, nrow=1)
+pdf(file='../results/graphs/Dutch_ModelResults_withSignificantSlopesHighlighted_ByNumMorphemes.pdf',
+    height =3,width = 10.7)
+grid.arrange(pSigLen2M1,pSigLen2M2,pSigFreq2M,pSigAoA2M, nrow=1)
+dev.off()
+
+pdf(file='../results/graphs/Dutch_ModelResults_withSignificantSlopesHighlighted_ByNumMorphemes_MonomorphemicLength.pdf',
+    height =3,width = 5.3)
+grid.arrange(pSigLen2M1,pSigLen2M2,nrow=1)
+dev.off()
+```
+
+

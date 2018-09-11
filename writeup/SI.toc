@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}English data (study 1)}{2}{section.2}
+\contentsline {section}{\numberline {3}Dutch data (study 2)}{48}{section.3}
+\contentsline {section}{\numberline {4}Combined English and Dutch analysis}{64}{section.4}
+\contentsline {section}{\numberline {5}Rates of change (study 3)}{72}{section.5}
+\contentsline {section}{\numberline {6}Types of borrowing in Old English (study 4)}{90}{section.6}

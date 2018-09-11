@@ -16,9 +16,9 @@ source("GAM_derivaties.R")
 
 Below are the main results for English and Dutch.  This analysis tests whether the differences are significant by combining the data and adding a random effect for language.
 
-![English](../results/graphs/English_ModelResults.pdf)
+![English](../results/graphs/English_ModelResults_withSignificantSlopesHighlighted.pdf)
 
-![Dutch](../results/graphs/Dutch_ModelResults.pdf)
+![Dutch](../results/graphs/Dutch_ModelResults_withSignificantSlopesHighlighted.pdf)
 
 \newpage
 
@@ -34,7 +34,7 @@ dutch$subtlexzipf =  log10(as.numeric(dutch$subtlex.dominant.pos.frequency))
 English data:
 
 ```{r warning=F}
-dataloan <- read.csv("../data/loanword9.csv",stringsAsFactors = F)
+dataloan <- read.csv("../data/loanword12.csv",stringsAsFactors = F)
 dataloan$bor15 <- ifelse(dataloan$borrowing==1,1, ifelse(dataloan$borrowing==5,0,NA))
 dataloan$bor15.cat <- factor(dataloan$bor15)
 dataloan$conc = as.numeric(dataloan$conc)

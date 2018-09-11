@@ -5,7 +5,7 @@
 # See https://www.fromthebottomoftheheap.net/2014/05/15/identifying-periods-of-change-with-gams/
 # Future implementations shoudl probably just use `fderiv` from package tsgam.
 
-plotGAMSignificantSlopes = function(gam.model, Term, Term.label, eps = 1e-7, aoaLab="AoAscale"){
+plotGAMSignificantSlopes = function(gam.model, Term, Term.label, eps = 1e-7, aoaLab="AoAscale",subPlot=1,interactionTermValue=NA){
   # This is a custom function for the loanwords project
   # It essentially uses the same code as in the original source, 
   # with some tricks to handle categorical data
@@ -16,22 +16,28 @@ plotGAMSignificantSlopes = function(gam.model, Term, Term.label, eps = 1e-7, aoa
   # this will be drawn over
   smooth.plot = plot(gam.model,select=which(t.labs==Term))
   names.smooth.plot = sapply(smooth.plot,function(X){X$xlab})
-  curve.x = smooth.plot[[which(names.smooth.plot==Term)]]$x
-  curve.y = smooth.plot[[which(names.smooth.plot==Term)]]$fit
-  curve.y.upper = curve.y+smooth.plot[[which(names.smooth.plot==Term)]]$se
-  curve.y.lower = curve.y-smooth.plot[[which(names.smooth.plot==Term)]]$se
+  plotNumber = which(names.smooth.plot==Term)[subPlot]
+  
+  curve.x = smooth.plot[[plotNumber]]$x
+  curve.y = smooth.plot[[plotNumber]]$fit
+  curve.y.upper = curve.y+smooth.plot[[plotNumber]]$se
+  curve.y.lower = curve.y-smooth.plot[[plotNumber]]$se
   
   newD = data.frame(fit=curve.y)
   smooth.plot.VarNames = as.character(sapply(smooth.plot,function(X){X$main},simplify = F))
   for(var in t.labs){
     if(!var %in% names.smooth.plot){
       # categorical variables
-      newD[,var] = smooth.plot[[
-        which(grepl(var,smooth.plot.VarNames))[1]
-        #which(names.smooth.plot=="Gaussian quantiles")[1]
-        ]]$raw[1]
+      varNum = which(grepl(var,smooth.plot.VarNames))[1]
+      if(!is.na(varNum)){
+        newD[,var] = smooth.plot[[
+          which(grepl(var,smooth.plot.VarNames))[subPlot]
+        ]]$raw[1]} else{
+          # interaction term
+          newD[,var] = interactionTermValue
+        }
     } else{
-      newD[,var] = smooth.plot[[which(names.smooth.plot==var)]]$x
+      newD[,var] = smooth.plot[[plotNumber]]$x
     }
   }
   

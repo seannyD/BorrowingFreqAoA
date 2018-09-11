@@ -65,7 +65,7 @@ rescaleGam = function(px, n, xvar, xlab="",breaks=NULL,xlim=NULL){
 # Load data
 
 ```{r}
-dataloan <- read.csv("../data/loanword10.csv",stringsAsFactors = F)
+dataloan <- read.csv("../data/loanword12.csv",stringsAsFactors = F)
 dataloan$bor15 <- ifelse(dataloan$borrowing==1,1, ifelse(dataloan$borrowing==5,0,NA))
 dataloan$bor15.cat <- factor(dataloan$bor15)
 

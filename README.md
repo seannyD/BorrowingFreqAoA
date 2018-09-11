@@ -5,7 +5,7 @@ Predicting whether a word is borrowed from psycholinguistic measures.  The file 
 
 ## data
 
--  `loanword8.csv`:  Raw data for English.
+-  `loanword9.csv`:  Raw data for English.
 -  `loanwords_Dutch.csv`: Raw data for Dutch.
 -  `loanwords_Dutch.Rdat`: Processed loanwords data for Dutch (with scaling and centering).
 

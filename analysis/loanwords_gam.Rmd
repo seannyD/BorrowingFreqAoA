@@ -15,15 +15,25 @@ The main fields in the data frame are:
 -  borrowing: variable from WOLD indicating level of evidence for borrowing:
   -  1 = definately borrowed
   -  5 = no evidence of borrowing
--  age_oldest, age_youngest: Dates from WOLD indicating estiamte of data of entry into English
+-  bor15:  Conversion of the WOLD borrowing variable into a numeric (0 = not borrowed, 1 = borrowed)
 -  phonology:  Phonological form
 -  phonlength:  Number of segments in the phonological form
 -  AoA: Age of acquisition ratings from Kuperman, Stadthagen-Gonzalez, and Brysbaert (2012).
--  AoA_obj: Objective, test-based age of acuqisition from Brysbaert & Biemiller (2017)
+-  AoA\_obj: Objective, test-based age of acuqisition from Brysbaert & Biemiller (2017)
 -  subtlexzipf:  Log frequency of word from the SUBTLEX database
 -  conc:  Concreteness ratings from Brysbaert, Warriner, & Kuperman (2014)
 -  cat: Dominant part of speech according to SUBTLEX.
--  bor15:  Conversion of the WOLD borrowing variable into a numeric (0 = not borrowed, 1 = borrowed)
+-  age\_oldest, age\_youngest: Dates from WOLD indicating estiamte of data of entry into English.
+-  age\_oldest\_num, age\_youngest\_num, age: Conversions into numeric year values for oldest, youngest and average estimate.
+-  source.language: Source language according to WOLD.
+-  source: Source language, made more specific by PM.
+-  source.word: the source word that was borrowed
+-  source.language.mean.word.length: Mean word length of Swadesh list words in the source language (from ASJP database).
+-  source.language.word.freq: Frequency of words as long as the source word in the source language (estimated from ASJP)
+-  effect: Type of transition (insertion, coexistence, replacement)
+-  modern.english, middle.english, old.english: form of the word in various stages of English
+-  old.english.length: length of the word in old English
+
 
 ## A note on EDF values and random effects
 
@@ -98,7 +108,7 @@ source("GAM_derivaties.R")
 # Load data
 
 ```{r}
-dataloan <- read.csv("../data/loanword9.csv",stringsAsFactors = F)
+dataloan <- read.csv("../data/loanword12.csv",stringsAsFactors = F)
 dataloan$bor15 <- ifelse(dataloan$borrowing==1,1, ifelse(dataloan$borrowing==5,0,NA))
 dataloan$bor15.cat <- factor(dataloan$bor15)
 ```
@@ -432,12 +442,13 @@ dev.off()
 
 Visualise relationships between variables.
 
-```{r,  out.height = '80%'}
-par(mfrow=c(3,2))
+```{r}
+par(mfrow=c(2,2))
 vis.gam(m0,view = c("AoAscale","subtlexzipfscale"),plot.type = "contour")
 vis.gam(m0,view = c("AoAscale","phonlengthscale"),plot.type = "contour")
 vis.gam(m0,view = c("AoAscale","concscale"),plot.type = "contour")
 vis.gam(m0,view = c("subtlexzipfscale","phonlengthscale"),plot.type = "contour")
+par(mfrow=c(1,2))
 vis.gam(m0,view = c("subtlexzipfscale","concscale"),plot.type = "contour")
 vis.gam(m0,view = c("phonlengthscale","concscale"),plot.type = "contour")
 par(mfrow=c(1,1))
@@ -473,12 +484,12 @@ sigCurveData$m2.dsig.decr = logit2per(sigCurveData$m2.dsig.decr)
  ret = origPlot + 
   geom_path(data = sigCurveData, 
             aes(x = curve.x, 
-                y = m2.dsig.incr,
-                size=0.9)) +
+                y = m2.dsig.incr),
+            size=0.9) +
   geom_path(data = sigCurveData, 
             aes(x = curve.x, 
-                y = m2.dsig.decr,
-                size=0.9)) +
+                y = m2.dsig.decr),
+            size=0.9) +
   theme(legend.position = 'none') 
  return(ret)
 }
@@ -544,7 +555,7 @@ cbind(m0=m0S$chi.sq,m0.obj=m0.objS$chi.sq)[1:4,]
 
 Visualise the model smooth terms, independent of influence of random effects. The code is hidden, but you can view it in the Rmd file.
 
-```{r echo=F,fig.show='hide'}
+```{r echo=F,fig.show="hide"}
 # from itsadug: plot ignoring random effects
 px = plot_smooth(m0.obj,view="subtlexzipfscale", 
                  rm.ranef = T,print.summary=F)
@@ -877,13 +888,14 @@ m0.posFE = bam(bor15.cat ~
 ```{r}
 vars = c("phonlengthscale","AoAscale","subtlexzipfscale","concscale")
 varLabels = c("Length","AoA","Frequency","Concreteness")
-
+par(mfrow=c(2,2))
 for(i in 1:4){
   plot(m0,select=i,main=varLabels[i],ylim=c(-4,4))
   par(new=T)
   plot(m0.posFE,select=i,ylim=c(-4,4), col=2)
   legend(0,-2,legend = c("Original","PoS Fixed"),col=1:2,lty=1)
 }
+par(mfrow=c(1,1))
 ```
 
 
@@ -996,4 +1008,79 @@ legend(-1,-1.5,legend = c("Original","With length control"),col=1:2,lty=1, bty='
 }
 par(mfrow=c(1,1))
 ```
+
+## Number of morphemes
+
+For the Dutch data, we found that the effect of length differed dramatically according to whether the word was monomorphemic or not. Here we run the same analysis for English.  Data is from CELEX.
+
+```{r}
+dataloan2$monomorphemic = "other"
+dataloan2$monomorphemic[dataloan2$morph_code %in% c("M","Z")] = "monomorphemic"
+dataloan2$monomorphemic = factor(dataloan2$monomorphemic)
+```
+
+
+```{r}
+mMorph = bam(bor15.cat ~
+      s(phonlengthscale, by=monomorphemic) + 
+      s(AoAscale) + 
+      s(subtlexzipfscale) +
+      s(concscale) +
+      s(cat,bs='re')+
+      s(cat,phonlengthscale,bs='re')+
+      s(cat,AoAscale,bs='re')+
+      s(cat,subtlexzipfscale,bs='re')+
+      s(cat,concscale,bs='re'),
+    data = dataloan2,
+    family='binomial')
+lrtest(m0,mMorph)
+```
+
+```{r}
+summary(mMorph)
+```
+
+Plot the results from the new model..
+
+```{r echo=F,warning=F,message=F,fig.show="hide"}
+px = plot.gam(mMorph,select=1, xlab="Word length", ylab="Log odds of borrowing",shade = T)
+
+plenM1 = rescaleGam(px, 1, dataloan2$phonlengthscale,"Word length",
+                  xlim = c(2,10), breaks = c(2,4,6,8,10)) + ggtitle("Monomorphemic")
+plenM2 = rescaleGam(px, 2, dataloan2$phonlengthscale,"Word length",
+                  xlim = c(2,10), breaks = c(2,4,6,8,10)) + ggtitle("Multimorphemic")
+paoaM = rescaleGam(px, 3, dataloan2$AoAscale,"Age of acquisition",
+                  xlim=c(1.5,14.5),breaks=c(2,4,6,8,10,12,14)) + ggtitle("")
+pfreqM = rescaleGam(px, 4, dataloan2$AoAscale,"Frequency",
+                   xlim = c(1,12), breaks=c(2,4,6,8,10,12)) + ggtitle("")
+pconcM = rescaleGam(px, 5, dataloan2$concscale,"Concreteness") + ggtitle("English")
+
+pSigFreqM = plotGAMSignificantSlopes(mMorph,"subtlexzipfscale","Frequency",interactionTermValue = "monomorphemic")
+pSigAoAM = plotGAMSignificantSlopes(mMorph,"AoAscale","AoA",interactionTermValue = "monomorphemic")
+pSigLenM1 = plotGAMSignificantSlopes(mMorph,"phonlengthscale","length", subPlot = 1,interactionTermValue = "monomorphemic")
+pSigLenM2 = plotGAMSignificantSlopes(mMorph,"phonlengthscale","length", subPlot = 2,interactionTermValue = "other")
+pSigConcM = plotGAMSignificantSlopes(mMorph,"concscale","Concreteness",interactionTermValue = "monomorphemic")
+
+pSigLen2M1 = rescaleDerivitiesPlot(plenM1,pSigLenM1)
+pSigLen2M2 = rescaleDerivitiesPlot(plenM2,pSigLenM2)
+pSigAoA2M = rescaleDerivitiesPlot(paoaM,pSigAoAM)
+pSigFreq2M = rescaleDerivitiesPlot(pfreqM,pSigFreqM)
+pSigConc2M = rescaleDerivitiesPlot(pconcM,pSigConcM)
+```
+
+```{r echo=F,warning=F}
+grid.arrange(pSigLen2M1,pSigLen2M2,pSigFreq2M,pSigAoA2M, nrow=1)
+pdf(file='../results/graphs/English_ModelResults_withSignificantSlopesHighlighted_ByNumMorphemes.pdf',
+    height =3,width = 10.7)
+grid.arrange(pSigLen2M1,pSigLen2M2,pSigFreq2M,pSigAoA2M, nrow=1)
+dev.off()
+
+pdf(file='../results/graphs/English_ModelResults_withSignificantSlopesHighlighted_ByNumMorphemes_MonomorphemicLength.pdf',
+    height =3,width = 5.3)
+grid.arrange(pSigLen2M1,pSigLen2M2,nrow=1)
+dev.off()
+```
+
+
+
 
